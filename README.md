@@ -6,3 +6,5 @@ Whoami-Labs es una plataforma educativa 100% gratuita, que proporciona laborator
 * Recursos educativos gratuitos y Mentor IA de apoyo
 
 https://whoami-labs.com/
+
+En este repositorio ire subiendo mis writeups de dichos laboratorios.
