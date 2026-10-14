@@ -1,0 +1,31 @@
+# Nmap 7.991 scan initiated Wed Oct 14 14:05:49 2026 as: /usr/lib/nmap/nmap --privileged -sC -sV -Pn -T4 -p- --min-rate=2000 -oN 01-recon/nmap-full.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000060s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE    SERVICE     VERSION
+80/tcp    open     http        Apache httpd 2.4.52 ((Ubuntu))
+|_http-title: GATEKEEPER AI - Soluciones de IA Empresarial
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+3306/tcp  open     mysql?
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   NULL: 
+|_    ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+5432/tcp  open     postgresql?
+| fingerprint-strings: 
+|   NULL: 
+|_    FATAL: password authentication failed for user "postgres"
+33333/tcp filtered dgi-serv
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3306-TCP:V=7.991%I=7%D=10/14%Time=6ACFE09E%P=x86_64-pc-linux-gnu%r(
+SF:NULL,54,"ERROR\x201045\x20\(28000\):\x20Access\x20denied\x20for\x20user
+SF:\x20'root'@'localhost'\x20\(using\x20password:\x20YES\)\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5432-TCP:V=7.991%I=7%D=10/14%Time=6ACFE09E%P=x86_64-pc-linux-gnu%r(
+SF:NULL,3A,"FATAL:\x20password\x20authentication\x20failed\x20for\x20user\
+SF:x20\"postgres\"\n");
+MAC Address: 9E:92:3D:CC:A3:08 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 14 14:05:56 2026 -- 1 IP address (1 host up) scanned in 7.57 seconds

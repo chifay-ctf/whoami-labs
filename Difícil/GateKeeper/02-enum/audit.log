@@ -1,0 +1,140 @@
+[2026-01-26 08:00:01] FIREWALL: User=maria     IP=192.168.1.10  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 08:00:05] SYSLOG: sshd[1024]: Accepted password for maria from 192.168.1.10 port 51234 ssh2  
+[2026-01-26 08:00:07] SYSLOG: maria executed `sudo nano /etc/ssh/sshd_config`  
+[2026-01-26 08:00:15] SYSLOG: maria changed `PermitRootLogin` to `no`  
+[2026-01-26 08:00:20] SYSLOG: SSH service restarted by maria  
+[2026-01-26 08:00:30] SYSLOG: maria closed SSH session  
+
+[2026-01-26 08:10:01] FIREWALL: User=juan      IP=192.168.1.11  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 08:10:04] SYSLOG: sshd[1032]: Accepted publickey for juan from 192.168.1.11 port 51322 ssh2  
+[2026-01-26 08:10:06] SYSLOG: juan created user `auditor` with `sudo useradd auditor`  
+[2026-01-26 08:10:10] SYSLOG: juan set account expiration with `chage -E 2026-02-01 auditor`  
+[2026-01-26 08:10:15] SYSLOG: juan closed SSH session  
+
+[2026-01-26 08:20:01] FIREWALL: User=pedro     IP=192.168.1.12  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 08:20:05] SYSLOG: vsftpd[1100]: pedro logged in via FTP from 192.168.1.12  
+[2026-01-26 08:20:07] SYSLOG: pedro uploaded file `backup.tar.gz` to `/srv/ftp/uploads/`  
+[2026-01-26 08:20:12] SYSLOG: pedro downloaded file `manual.pdf` from `/srv/ftp/docs/`  
+[2026-01-26 08:20:20] SYSLOG: pedro closed FTP session  
+
+[2026-01-26 08:30:01] FIREWALL: User=pablo     IP=192.168.1.13  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 08:30:04] SYSLOG: pablo executed `sudo ufw allow 443`  
+[2026-01-26 08:30:10] SYSLOG: pablo enabled HTTPS traffic for web testing  
+[2026-01-26 08:30:15] SYSLOG: pablo closed SSH session  
+
+[2026-01-26 08:40:01] FIREWALL: User=mauricio  IP=192.168.1.14  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 08:40:05] SYSLOG: vsftpd[1120]: mauricio logged in via FTP from 192.168.1.14  
+[2026-01-26 08:40:07] SYSLOG: mauricio deleted file `old_config.txt` in `/srv/ftp/config/`  
+[2026-01-26 08:40:12] SYSLOG: mauricio uploaded file `new_config.txt` to `/srv/ftp/config/`  
+[2026-01-26 08:40:20] SYSLOG: mauricio closed FTP session  
+
+[2026-01-26 08:50:01] FIREWALL: User=andrea    IP=192.168.1.15  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 08:50:04] SYSLOG: andrea executed `sudo tail -n 50 /var/log/auth.log`  
+[2026-01-26 08:50:10] SYSLOG: andrea reviewed failed login attempts  
+[2026-01-26 08:50:15] SYSLOG: andrea closed SSH session  
+
+[2026-01-26 09:00:01] FIREWALL: User=camilo    IP=192.168.1.16  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 09:00:05] SYSLOG: vsftpd[1150]: camilo logged in via FTP from 192.168.1.16  
+[2026-01-26 09:00:07] SYSLOG: camilo downloaded file `report.csv` from `/srv/ftp/reports/`  
+[2026-01-26 09:00:12] SYSLOG: camilo uploaded file `analysis.xlsx` to `/srv/ftp/reports/`  
+[2026-01-26 09:00:20] SYSLOG: camilo closed FTP session  
+
+[2026-01-26 09:10:01] FIREWALL: User=valentina IP=192.168.1.17  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 09:10:04] SYSLOG: valentina executed `sudo systemctl stop vsftpd`  
+[2026-01-26 09:10:10] SYSLOG: valentina disabled FTP service for maintenance  
+[2026-01-26 09:10:15] SYSLOG: valentina closed SSH session  
+
+[2026-01-26 09:20:01] FIREWALL: User=sebastian IP=192.168.1.18  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 09:20:05] SYSLOG: sebastian executed `sudo journalctl -xe`  
+[2026-01-26 09:20:10] SYSLOG: sebastian reviewed system error logs  
+[2026-01-26 09:20:15] SYSLOG: sebastian closed SSH session  
+
+[2026-01-26 09:30:01] FIREWALL: User=carolina  IP=192.168.1.19  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 09:30:04] SYSLOG: carolina executed `sudo ufw deny 23`  
+[2026-01-26 09:30:10] SYSLOG: carolina blocked Telnet port for security reasons  
+[2026-01-26 09:30:15] SYSLOG: carolina closed SSH session  
+
+[2026-01-26 09:40:01] FIREWALL: User=felipe    IP=192.168.1.20  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 09:40:05] SYSLOG: felipe executed `sudo systemctl restart mysql`  
+[2026-01-26 09:40:10] SYSLOG: felipe restarted database service  
+[2026-01-26 09:40:15] SYSLOG: felipe closed SSH session  
+
+[2026-01-26 09:50:01] FIREWALL: User=daniela   IP=192.168.1.21  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 09:50:04] SYSLOG: daniela executed `sudo adduser support`  
+[2026-01-26 09:50:10] SYSLOG: daniela created account for technical team  
+[2026-01-26 09:50:15] SYSLOG: daniela closed SSH session  
+
+[2026-01-26 10:00:01] FIREWALL: User=ricardo   IP=192.168.1.22  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 10:00:05] SYSLOG: ricardo executed `sudo systemctl enable ufw`  
+[2026-01-26 10:00:10] SYSLOG: ricardo enabled persistent firewall  
+[2026-01-26 10:00:15] SYSLOG: ricardo closed SSH session  
+
+[2026-01-26 10:10:01] FIREWALL: User=sofia     IP=192.168.1.23  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+
+[2026-01-26 10:20:01] FIREWALL: User=alejandro IP=192.168.1.24  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 10:20:05] SYSLOG: vsftpd[1200]: alejandro inició sesión FTP desde 192.168.1.24  
+[2026-01-26 10:20:07] SYSLOG: alejandro subió archivo `informe.docx` a `/srv/ftp/docs/`  
+[2026-01-26 10:20:12] SYSLOG: alejandro descargó archivo `plantilla.xlsx` desde `/srv/ftp/templates/`  
+[2026-01-26 10:20:20] SYSLOG: alejandro cerró sesión FTP  
+
+[2026-01-26 10:30:01] FIREWALL: User=paola     IP=192.168.1.25  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 10:30:04] SYSLOG: paola ejecutó `sudo systemctl restart ufw`  
+[2026-01-26 10:30:10] SYSLOG: paola reinició firewall para aplicar nuevas reglas  
+[2026-01-26 10:30:15] SYSLOG: paola cerró sesión SSH  
+
+[2026-01-26 10:40:01] FIREWALL: User=jorge     IP=192.168.1.26  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 10:40:05] SYSLOG: vsftpd[1220]: jorge inició sesión FTP desde 192.168.1.26  
+[2026-01-26 10:40:07] SYSLOG: jorge descargó archivo `logs.tar.gz` desde `/srv/ftp/logs/`  
+[2026-01-26 10:40:12] SYSLOG: jorge subió archivo `debug.txt` a `/srv/ftp/logs/`  
+[2026-01-26 10:40:20] SYSLOG: jorge cerró sesión FTP  
+
+[2026-01-26 10:50:01] FIREWALL: User=lucia     IP=192.168.1.27  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 10:50:04] SYSLOG: lucia ejecutó `sudo systemctl stop nginx`  
+[2026-01-26 10:50:10] SYSLOG: lucia detuvo servicio web temporalmente  
+[2026-01-26 10:50:15] SYSLOG: lucia cerró sesión SSH  
+
+[2026-01-26 11:00:01] FIREWALL: User=esteban   IP=192.168.1.28  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 11:00:05] SYSLOG: vsftpd[1240]: esteban inició sesión FTP desde 192.168.1.28  
+[2026-01-26 11:00:07] SYSLOG: esteban subió archivo `dataset.csv` a `/srv/ftp/data/`  
+[2026-01-26 11:00:12] SYSLOG: esteban descargó archivo `results.json` desde `/srv/ftp/data/`  
+[2026-01-26 11:00:20] SYSLOG: esteban cerró sesión FTP  
+
+[2026-01-26 11:10:01] FIREWALL: User=monica    IP=192.168.1.29  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 11:10:04] SYSLOG: monica ejecutó `sudo systemctl restart docker`  
+[2026-01-26 11:10:10] SYSLOG: monica reinició contenedores en producción  
+[2026-01-26 11:10:15] SYSLOG: monica cerró sesión SSH  
+
+[2026-01-26 11:20:01] FIREWALL: User=francisco IP=192.168.1.30  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 11:20:05] SYSLOG: vsftpd[1260]: francisco inició sesión FTP desde 192.168.1.30  
+[2026-01-26 11:20:07] SYSLOG: francisco descargó archivo `manual_instalacion.pdf` desde `/srv/ftp/manuales/`  
+[2026-01-26 11:20:12] SYSLOG: francisco subió archivo `configuracion.yaml` a `/srv/ftp/config/`  
+[2026-01-26 11:20:20] SYSLOG: francisco cerró sesión FTP  
+
+[2026-01-26 11:30:01] FIREWALL: User=martina   IP=192.168.1.31  Action=ALLOW  Service=SSH   Port=22   Protocol=TCP  
+[2026-01-26 11:30:04] SYSLOG: martina ejecutó `sudo systemctl restart postgresql`  
+[2026-01-26 11:30:10] SYSLOG: martina reinició servicio de base de datos  
+[2026-01-26 11:30:15] SYSLOG: martina cerró sesión SSH  
+
+[2026-01-26 11:40:01] FIREWALL: User=gustavo   IP=192.168.1.32  Action=ALLOW  Service=FTP   Port=21   Protocol=TCP  
+[2026-01-26 11:40:05] SYSLOG: vsftpd[1280]: gustavo inició sesión FTP desde 192.168.1.32  
+[2026-01-26 11:40:07] SYSLOG: gustavo subió archivo `backup_db.sql` a `/srv/ftp/backups/`  
+[2026-01-26 11:40:12] SYSLOG: gustavo descargó archivo `restore.sh` desde `/srv/ftp/scripts/`  
+[2026-01-26 11:40:20] SYSLOG: gustavo cerró sesión FTP  
+
+[2026-01-26 11:50:01] FIREWALL: User=fernanda  IP=192.168.1.33  Acción=ALLOW  Servicio=SSH   Puerto=22   Protocolo=TCP  
+[2026-01-26 11:50:04] SYSLOG: fernanda ejecutó `sudo systemctl restart cron`  
+[2026-01-26 11:50:10] SYSLOG: fernanda reinició tareas programadas  
+[2026-01-26 11:50:15] SYSLOG: fernanda cerró sesión SSH  
+
+[2026-01-26 12:00:01] FIREWALL: User=raul      IP=192.168.1.34  Acción=ALLOW  Servicio=FTP   Puerto=21   Protocolo=TCP  
+[2026-01-26 12:00:05] SYSLOG: vsftpd[1300]: raul inició sesión FTP desde 192.168.1.34  
+[2026-01-26 12:00:07] SYSLOG: raul descargó archivo `update.zip` desde `/srv/ftp/updates/`  
+[2026-01-26 12:00:12] SYSLOG: raul subió archivo `patch.sh` a `/srv/ftp/updates/`  
+[2026-01-26 12:00:20] SYSLOG: raul cerró sesión FTP  
+
+[2026-01-26 12:10:01] FIREWALL: User=veronica  IP=192.168.1.35  Acción=ALLOW  Servicio=SSH   Puerto=22   Protocolo=TCP  
+[2026-01-26 12:10:04] SYSLOG: veronica ejecutó `sudo systemctl restart rsyslog`  
+[2026-01-26 12:10:10] SYSLOG: veronica reinició servicio de logs  
+[2026-01-26 12:10:15] SYSLOG: veronica cerró sesión SSH  
+
+[2026-01-26 12:20:01] FIREWALL: User=manuel    IP=192.168.1.36  Acción=ALLOW  Servicio=SSH   Puerto=22   Protocolo=TCP

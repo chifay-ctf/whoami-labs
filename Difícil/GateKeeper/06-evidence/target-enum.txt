@@ -1,0 +1,24 @@
+=== KERNEL/HOST ===
+Linux gatekeeper 7.1.5+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 7.1.5-1kali1 (2026-07-29) x86_64 x86_64 x86_64 GNU/Linux
+gatekeeper
+=== SUDO -L ===
+Matching Defaults entries for sysadmin on gatekeeper:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User sysadmin may run the following commands on gatekeeper:
+    (ALL) NOPASSWD: /usr/local/bin/auth_root
+=== SUID ===
+/usr/bin/su
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/mount
+/usr/bin/chsh
+/usr/bin/umount
+/usr/bin/sudo
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+=== VERSIONES ===
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.13, OpenSSL 3.0.2 15 Mar 2022
+Server version: Apache/2.4.52 (Ubuntu)

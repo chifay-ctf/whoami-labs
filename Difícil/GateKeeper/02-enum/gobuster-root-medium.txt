@@ -1,0 +1,4 @@
+index.php            (Status: 200) [Size: 6811]
+admin                (Status: 301) [Size: 308] [--> http://172.17.0.2/admin/]
+backups              (Status: 301) [Size: 310] [--> http://172.17.0.2/backups/]
+server-status        (Status: 403) [Size: 275]

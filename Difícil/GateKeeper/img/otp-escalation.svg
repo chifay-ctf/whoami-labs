@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#0d1117"/>
+  <text x="500" y="38" fill="#f85149" font-family="monospace" font-size="23" font-weight="bold" text-anchor="middle">Escalada de Privilegios — Flujo OTP (Sysadmin → Root)</text>
+
+  <!-- attacker -->
+  <rect x="60" y="70" width="250" height="60" rx="8" fill="#1f3a5f" stroke="#58a6ff" stroke-width="2"/>
+  <text x="185" y="95" fill="#c9d1d9" font-family="monospace" font-size="14" text-anchor="middle">Atacante (sysadmin)</text>
+  <text x="185" y="115" fill="#8b949e" font-family="monospace" font-size="12" text-anchor="middle">sesión SSH :33333</text>
+
+  <line x1="185" y1="130" x2="185" y2="175" stroke="#8b949e" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- generar otp -->
+  <rect x="60" y="175" width="250" height="70" rx="8" fill="#161b22" stroke="#8b949e"/>
+  <text x="185" y="200" fill="#c9d1d9" font-family="monospace" font-size="13" text-anchor="middle">/root/.generate_otp.py</text>
+  <text x="185" y="220" fill="#d29922" font-family="monospace" font-size="11" text-anchor="middle">SECRET + time → SHA256 → 6 dígitos</text>
+  <text x="185" y="236" fill="#8b949e" font-family="monospace" font-size="10" text-anchor="middle">(root-only, ilegible)</text>
+
+  <line x1="185" y1="245" x2="185" y2="290" stroke="#8b949e" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- current otp VULN -->
+  <rect x="60" y="290" width="250" height="80" rx="8" fill="#2d1c1c" stroke="#f85149" stroke-width="2"/>
+  <text x="185" y="315" fill="#f85149" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">/tmp/.current_otp</text>
+  <text x="185" y="337" fill="#f85149" font-family="monospace" font-size="12" text-anchor="middle">-rw-r--r-- root root</text>
+  <text x="185" y="357" fill="#f85149" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">VULN: legible por TODOS</text>
+
+  <!-- arrow lateral to attacker -->
+  <line x1="310" y1="330" x2="430" y2="330" stroke="#f85149" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#r)"/>
+
+  <!-- attacker reads -->
+  <rect x="440" y="290" width="230" height="80" rx="8" fill="#1f3a5f" stroke="#58a6ff" stroke-width="2"/>
+  <text x="555" y="315" fill="#c9d1d9" font-family="monospace" font-size="12" text-anchor="middle">OTP=$(cat /tmp/.current_otp)</text>
+  <text x="555" y="337" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">sin conocer el SECRET</text>
+  <text x="555" y="357" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">ej: 035498</text>
+
+  <line x1="555" y1="370" x2="555" y2="420" stroke="#8b949e" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- system_auth -->
+  <rect x="440" y="420" width="230" height="80" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="555" y="445" fill="#3fb950" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">~/.system_auth &lt;OTP&gt;</text>
+  <text x="555" y="466" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">-rwxr-xr-x (world-exec)</text>
+  <text x="555" y="485" fill="#8b949e" font-family="monospace" font-size="10" text-anchor="middle">compara OTP == current_otp</text>
+
+  <line x1="555" y1="500" x2="555" y2="540" stroke="#8b949e" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- marker -->
+  <rect x="440" y="540" width="230" height="70" rx="8" fill="#2d1c1c" stroke="#d29922" stroke-width="2"/>
+  <text x="555" y="565" fill="#d29922" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">touch /tmp/.otp_validated_$USER</text>
+  <text x="555" y="586" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">marker temporal (&lt;60s)</text>
+  <text x="555" y="603" fill="#8b949e" font-family="monospace" font-size="10" text-anchor="middle">sudo /usr/local/bin/auth_root</text>
+
+  <line x1="555" y1="610" x2="555" y2="650" stroke="#f85149" stroke-width="2" marker-end="url(#r)"/>
+
+  <!-- auth_root -->
+  <rect x="440" y="650" width="230" height="42" rx="8" fill="#1c2d1c" stroke="#3fb950" stroke-width="2"/>
+  <text x="555" y="676" fill="#3fb950" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">auth_root → exec /bin/bash</text>
+
+  <text x="900" y="676" fill="#3fb950" font-family="monospace" font-size="15" font-weight="bold">ROOT</text>
+
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8b949e"/></marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#f85149"/></marker>
+  </defs>
+</svg>
