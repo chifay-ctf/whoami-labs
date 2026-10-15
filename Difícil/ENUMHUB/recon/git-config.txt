@@ -1,0 +1,10 @@
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+[remote "origin"]
+    url = https://developer:DevToken2024!@github.com/enumhub/webapp.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+    name = EnumHub Developer
+    email = dev@enumhub.local

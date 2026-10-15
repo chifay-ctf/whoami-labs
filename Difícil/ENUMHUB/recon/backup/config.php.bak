@@ -1,0 +1,15 @@
+<?php
+// Database Configuration - PRODUCTION
+define("DB_HOST", "localhost");
+define("DB_USER", "enumhub_admin");
+define("DB_PASS", "EnumHub@2024Secure!");
+define("DB_NAME", "enumhub_prod");
+
+// API Configuration
+define("API_KEY", "sk_live_a8f3c9d1e2b4f6g7h9j0");
+define("JWT_SECRET", "MySecretKey2024!DoNotShare");
+
+// Admin Configuration
+define("ADMIN_EMAIL", "admin@enumhub.local");
+define("ADMIN_PANEL", "/old-site/admin/");
+?>

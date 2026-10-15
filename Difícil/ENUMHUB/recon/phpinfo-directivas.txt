@@ -1,0 +1,13 @@
+# Directivas PHP relevantes extraidas de /dev/test.php (phpinfo)
+allow_url_fopen                        = On
+allow_url_include                      = Off
+open_basedir                           = no value
+session.save_path                      = /var/lib/php/sessions
+session.upload_progress.enabled        = On
+session.upload_progress.cleanup        = On
+session.upload_progress.name           = PHP_SESSION_UPLOAD_PROGRESS
+session.upload_progress.prefix         = upload_progress_
+session.use_strict_mode                = 0
+enable_post_data_reading               = On
+file_uploads                           = On
+disable_functions                      = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig

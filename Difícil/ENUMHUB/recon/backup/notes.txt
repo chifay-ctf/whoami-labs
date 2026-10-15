@@ -1,0 +1,10 @@
+DEVELOPMENT NOTES
+==================
+TODO LIST:
+- Migrate old site to new framework
+- Remove /old-site/admin panel (DEPRECATED)
+- Fix filemanager.php LFI vulnerability
+- Clean up .git directory from production
+
+IMPORTANT:
+Flag is located at /root/flag.txt (Only Root can read it)

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /backup
+Disallow: /dev
+Disallow: /.git
+Disallow: /old-site
+# Development server - DO NOT INDEX

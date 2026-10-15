@@ -226,7 +226,7 @@ la bandera directamente. El objetivo real es conseguir ejecución de código.
 | `session.save_path` | `/var/lib/php/sessions` | Ubicación conocida y legible por `www-data` |
 | `open_basedir` | *(sin valor)* | Sin restricción de rutas |
 
-### 5.2 Camino descartado: log poisoning
+### 5.2 Caminos descartados: por qué no funciona el *log poisoning*
 
 El WAF lleva el comentario `// Force Log Poisoning`, así que se evaluaron las vías clásicas.
 **Ninguna es viable aquí**, y el motivo es concreto:
@@ -236,7 +236,8 @@ El WAF lleva el comentario `// Force Log Poisoning`, así que se evaluaron las v
 | `php://input` | `enable_post_data_reading=On` deja el cuerpo vacío |
 | `data://text/plain,...` | `allow_url_include=Off` deshabilita el wrapper |
 | Log de PHP | Escapa `<` y `>` → `&lt;` / `&gt;`; las etiquetas no se ejecutan |
-| URI en `error.log` | El `?` de `<?php` corta la ruta, incluso codificado como `%3F` (Apache lo decodifica antes de dividir) |
+| URI en `error.log` | El `?` de `<?php` corta la ruta |
+| URI codificada (`%3F`) | Apache decodifica **antes** de dividir y solo registra `x.php` |
 | `User-Agent` / cabeceras | No se registran en `error.log` |
 
 ### 5.3 Camino viable: session upload progress
@@ -294,7 +295,7 @@ User www-data may run the following commands on enumhub:
     (root) NOPASSWD: /usr/local/bin/backup-system.sh
 ```
 
-No hay crontab, ni SUID útiles, ni `docker.sock`. Pero existe una regla `sudo` sin contraseña.
+No hay crontab, ni binarios SUID relevantes, ni `docker.sock`. Pero existe una regla `sudo` sin contraseña.
 
 ### 6.2 El script es escribible por quien lo invoca
 
@@ -461,10 +462,14 @@ compara contra `/root/flag.txt` dentro del contenedor y confirma la consecución
 ├── recon/                    Salidas de reconocimiento
 │   ├── nmap-full.txt         Escaneo completo de puertos (solo :80 abierto)
 │   ├── nmap-web.txt          Detección de servicio y versión
+│   ├── web-root.txt          index.html literal del portal
 │   ├── robots.txt            Rutas reveladas
 │   ├── git-config.txt        /.git/config con el token filtrado
 │   ├── backup/               config.php.bak, notes.txt, log.txt
 │   ├── dev/credentials.txt   Credenciales de desarrollo
+│   ├── oldsite-admin.html    Listado de /old-site/admin/ (localiza el LFI)
+│   ├── login.php.out         Aviso del panel de login obsoleto
+│   ├── gobuster-*.txt        Salidas de enumeración web
 │   ├── phpinfo-directivas.txt  Directivas PHP clave extraídas de phpinfo()
 │   └── filemanager-source.txt  Código fuente del fichero vulnerable
 ├── loot/                     Evidencia del compromiso
@@ -477,6 +482,6 @@ compara contra `/root/flag.txt` dentro del contenedor y confirma la consecución
 ```
 
 > ⚠️ **Las credenciales que aparecen en este documento son las del laboratorio de
-> entrenamiento**, no secretos reales. Aun así, en un entorno productive cualquiera de estos
-> hallazgos —token de GitHub, contraseña de base de datos, `API_KEY`— obliga a **rotar el
-> secreto** y a revisar los registros de acceso.
+> entrenamiento**, no secretos reales. Aun así, en un entorno productivo, cualquiera de estos
+> hallazgos —token de GitHub, contraseña de base de datos, `API_KEY`— obliga a **rotar los
+> secretos expuestos** y a revisar los registros de acceso.

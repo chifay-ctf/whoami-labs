@@ -1,0 +1,6 @@
+index.html           (Status: 200) [Size: 412]
+admin                (Status: 301) [Size: 308] [--> http://172.17.0.2/admin/]
+dev                  (Status: 301) [Size: 306] [--> http://172.17.0.2/dev/]
+backup               (Status: 301) [Size: 309] [--> http://172.17.0.2/backup/]
+robots.txt           (Status: 200) [Size: 136]
+server-status        (Status: 403) [Size: 275]

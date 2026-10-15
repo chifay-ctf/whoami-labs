@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Thu, 15 Oct 2026 22:09:46 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Sat, 07 Feb 2026 13:16:04 GMT
+ETag: "19c-64a3bb535ed00"
+Accept-Ranges: bytes
+Content-Length: 412
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<!DOCTYPE html><html><head><title>EnumHub - Corporate Portal</title></head><body>
+<h1>Welcome to EnumHub Corporate Portal</h1>
+<p>Leading Solutions in Web Enumeration & Security</p>
+<p>EnumHub is a leading provider of web security solutions and training. Our mission is to help organizations identify and fix vulnerabilities before attackers can exploit them.</p>
+<p>Authorized personnel only.</p></body></html>

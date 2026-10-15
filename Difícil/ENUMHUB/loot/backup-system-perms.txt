@@ -1,0 +1,5 @@
+-rwxr-xr-x 1 www-data www-data 60 Oct 15 22:35 /usr/local/bin/backup-system.sh
+--- contenido original ---
+#!/bin/bash
+# System Backup Script
+echo "Running backup..."
