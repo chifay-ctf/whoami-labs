@@ -1,12 +1,14 @@
 # GATEKEEPER — Auditoría de Seguridad / Writeup
 
-> **Autor:** chifay
-> **Fecha:** 14 de octubre de 2026
-> **Target:** `172.17.0.2` · Hostname de red: `metasploitable.vm`
-> **Categoría del lab:** SUID & Sudo — Dificultad: **Hard**
-> **Flag:** `GATEKEEPER{0TP_4uth3nt1c4t10n_M4st3r_2026}`
-> **Enfoque:** 100 % black-box (solo red + credenciales derivadas; sin acceso al host)
-> **Entorno:** Kali en VMware → red `docker0` (`172.17.0.1/16`)
+| Campo | Detalle |
+|:------|:--------|
+| **Target** | `172.17.0.2` (hostname de red: `metasploitable.vm`) |
+| **Categoría del lab** | SUID & Sudo — Dificultad **Hard** |
+| **Flag** | `GATEKEEPER{0TP_4uth3nt1c4t10n_M4st3r_2026}` |
+| **Enfoque** | 100 % black-box (solo red + credenciales derivadas; sin acceso al host) |
+| **Entorno** | Kali en VMware → red `docker0` (`172.17.0.1/16`) |
+| **Autor** | chifay |
+| **Fecha** | 14 de octubre de 2026 |
 
 ---
 
