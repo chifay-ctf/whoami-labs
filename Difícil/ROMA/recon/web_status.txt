@@ -1,0 +1,211 @@
+HTTP/1.1 200 OK
+Date: Thu, 15 Oct 2026 14:40:20 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 7412
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+    <title>🏛️ ROMA - Estado Fail2Ban</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); 
+            color: #f5f5f5; 
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .status-card { 
+            background: rgba(30, 30, 30, 0.9); 
+            border: 2px solid #D4AF37; 
+            border-radius: 10px; 
+            padding: 25px; 
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .header { 
+            text-align: center; 
+            color: #D4AF37; 
+            text-shadow: 2px 2px 4px #000; 
+            margin-bottom: 30px;
+        }
+        .banned { color: #ff4444; font-weight: bold; }
+        .safe { color: #44ff44; font-weight: bold; }
+        .warning { color: #ffaa00; font-weight: bold; }
+        .ip-badge { 
+            background: #D4AF37; 
+            color: #000; 
+            padding: 5px 15px; 
+            border-radius: 20px; 
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .log-box { 
+            background: #0a0a0a; 
+            border: 1px solid #333; 
+            border-radius: 5px; 
+            padding: 15px; 
+            max-height: 300px; 
+            overflow-y: auto; 
+            font-size: 0.85em;
+        }
+        .stat-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #D4AF37;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .stat-box h2 {
+            color: #D4AF37;
+            margin: 10px 0 0 0;
+        }
+        pre { 
+            color: #44ff44; 
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .alert {
+            border-radius: 8px;
+        }
+        .banned-ip-item {
+            background: rgba(255, 68, 68, 0.1);
+            border-left: 3px solid #ff4444;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ LABORATORIO ROMA 🏛️</h1>
+            <h3>Estado de Protección Fail2Ban</h3>
+            <p><small>🔄 Actualización automática cada 10 segundos</small></p>
+        </div>
+
+        <!-- Estado de la IP del visitante -->
+        <div class="status-card">
+            <h4>📍 ESTADO DE TU IP</h4>
+            <p>Tu dirección IP: <span class="ip-badge">172.17.0.1</span></p>
+                            <div class="alert alert-success">
+                    <h5 class="safe">✅ NO ESTÁS BANEADO</h5>
+                    <p>Tu IP puede conectarse libremente al servidor SSH (después del port knocking).</p>
+                                    </div>
+                    </div>
+
+        <!-- Estadísticas Globales -->
+        <div class="status-card">
+            <h4>📊 ESTADÍSTICAS GLOBALES DEL SISTEMA</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <strong>🚫 IPs Baneadas Ahora</strong>
+                        <h2>0</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <strong>📈 Total de Bans</strong>
+                        <h2>0</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <strong>⚠️ Fallos Actuales</strong>
+                        <h2>0</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <strong>📉 Total de Fallos</strong>
+                        <h2>0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de IPs Baneadas -->
+        
+        <!-- Logs de Autenticación -->
+        <div class="status-card">
+            <h4>📜 ÚLTIMOS EVENTOS SSH (auth.log)</h4>
+            <div class="log-box">
+                <pre>sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+</pre>
+            </div>
+        </div>
+
+        <!-- Logs de Fail2Ban -->
+        <div class="status-card">
+            <h4>🛡️ ACTIVIDAD DE FAIL2BAN</h4>
+            <div class="log-box">
+                <pre>sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+</pre>
+            </div>
+        </div>
+
+        <!-- Información del Sistema -->
+        <div class="status-card">
+            <h4>⚙️ CONFIGURACIÓN DE FAIL2BAN</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <strong>📛 Max Retry</strong>
+                        <h3>2 intentos</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <strong>⏱️ Find Time</strong>
+                        <h3>60 segundos</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <strong>🔒 Ban Time</strong>
+                        <h3>600 segundos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-warning mt-3">
+                <strong>⚠️ REGLA DE PROTECCIÓN:</strong><br>
+                Si fallas <strong>2 intentos de SSH en menos de 60 segundos</strong>, tu IP será baneada automáticamente por <strong>10 minutos (600 segundos)</strong>.
+            </div>
+            <div class="alert alert-info mt-2">
+                <strong>💡 ESTRATEGIA RECOMENDADA:</strong><br>
+                Espera <strong>más de 60 segundos</strong> entre cada intento de contraseña para evitar el ban de fail2ban.
+            </div>
+        </div>
+
+        <div class="text-center text-muted mt-4">
+            <small>🏛️ Última actualización: 2026-10-15 10:40:20 | Sistema de protección activo</small>
+        </div>
+    </div>
+
+    <script>
+        // Highlight de la IP del usuario en los logs
+        document.addEventListener('DOMContentLoaded', function() {
+            const userIP = "172.17.0.1";
+            const logs = document.querySelectorAll('.log-box pre');
+            
+            logs.forEach(function(log) {
+                if (log.textContent.includes(userIP)) {
+                    log.innerHTML = log.innerHTML.replace(
+                        new RegExp(userIP, 'g'), 
+                        '<span style="background: yellow; color: black; font-weight: bold;">' + userIP + '</span>'
+                    );
+                }
+            });
+        });
+    </script>
+</body>
+</html>

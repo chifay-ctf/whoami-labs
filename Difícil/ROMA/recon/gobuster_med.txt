@@ -1,0 +1,7 @@
+img                  (Status: 301) [Size: 306] [--> http://172.17.0.2/img/]
+css                  (Status: 301) [Size: 306] [--> http://172.17.0.2/css/]
+js                   (Status: 301) [Size: 305] [--> http://172.17.0.2/js/]
+R                    (Status: 301) [Size: 304] [--> http://172.17.0.2/R/]
+status.php           (Status: 200) [Size: 7977]
+roma                 (Status: 301) [Size: 307] [--> http://172.17.0.2/roma/]
+server-status        (Status: 403) [Size: 275]

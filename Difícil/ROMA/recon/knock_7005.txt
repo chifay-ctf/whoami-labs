@@ -1,0 +1,10 @@
+╔═══════════════════════════════════════════════════════╗
+║                                                       ║
+║           🏛️  SISTEMA ROMA - MÓDULO R2  🏛️            ║
+║                                                       ║
+║  Usuario del sistema: roma2                          ║
+║                                                       ║
+║  [!] Información confidencial                        ║
+║  [!] Este puerto es solo de diagnóstico              ║
+║                                                       ║
+╚═══════════════════════════════════════════════════════╝

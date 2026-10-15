@@ -1,0 +1,14 @@
+# Nmap 7.991 scan initiated Thu Oct 15 08:42:33 2026 as: /usr/lib/nmap/nmap --privileged -Pn -p- --min-rate 3000 -oN recon/nmap_full.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000050s latency).
+Not shown: 65529 closed tcp ports (reset)
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+22/tcp   filtered ssh
+80/tcp   open     http
+7003/tcp open     afs3-vlserver
+7005/tcp open     afs3-volser
+7007/tcp open     afs3-bos
+MAC Address: 1A:0F:2D:3F:BB:C7 (Unknown)
+
+# Nmap done at Thu Oct 15 08:42:34 2026 -- 1 IP address (1 host up) scanned in 0.90 seconds

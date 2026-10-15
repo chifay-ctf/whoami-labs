@@ -1,0 +1,10 @@
+╔═══════════════════════════════════════════════════════╗
+║                                                       ║
+║           🏛️  SISTEMA ROMA - MÓDULO R1  🏛️            ║
+║                                                       ║
+║  Usuario del sistema: roma1                          ║
+║                                                       ║
+║  [!] Información confidencial                        ║
+║  [!] Acceso no autorizado será registrado            ║
+║                                                       ║
+╚═══════════════════════════════════════════════════════╝
