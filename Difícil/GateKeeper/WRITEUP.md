@@ -17,7 +17,7 @@
 ## 1. Resumen ejecutivo
 
 GATEKEEPER es un laboratorio de escalada de privilegios construido sobre una superficie
-mínima yefnensa de *decoys*. El objetivo (`root`, flag en `/root/flag.txt`) se alcanza
+mínima y reforzada con *decoys*. El objetivo (`root`, flag en `/root/flag.txt`) se alcanza
 encadenando **seis** técnicas, todas ejecutables únicamente contra la red:
 
 | # | Etapa | Técnica | Vector |
@@ -28,7 +28,7 @@ encadenando **seis** técnicas, todas ejecutables únicamente contra la red:
 | 4 | Evasión de firewall | **Port knocking** `1337→2048→4096` | TCP SYN |
 | 5 | Acceso + escalada | Credencial débil → clave dividida → OTP | SSH + sudo |
 
-La cadena culminina en obtener una **shell root** y leer `/root/flag.txt`.
+La cadena culmina en obtener una **shell root** y leer `/root/flag.txt`.
 
 **Impacto:** compromiso total. El eslabón más débil es la combinación de un **OTP
 estático legible por todos** (`/tmp/.current_otp`, `-rw-r--r--`) con un **binario
@@ -100,7 +100,7 @@ curl -s http://172.17.0.2/backups/.env | base64 -d
 
 ### 3.2 `/backups/.backup` — log de auditoría (parcialmente engañoso)
 
-Archivo de 9905 B con un log ficticio de **27 usuarios** (nombres:"-genéricos"
+Archivo de 9905 B con un log ficticio de **27 usuarios** (nombres genéricos
 hispanoamericanos) y acciones `sudo`. La mayoría son *filler* para simular una superficie
 creíble, pero uno de ellos —**`mauricio`**— resulta ser un usuario real del sistema y el
 punto de entrada (§6).
@@ -183,8 +183,8 @@ Con el puerto abierto, el reto es autenticarse. Los usuarios reales del sistema 
 `mauricio`, `developer` y `sysadmin`. El username `mauricio` está **disclosed** en el
 audit log web (§3.2).
 
-Un **password spray / credential guessing** dirigido a los usernamesBSCRITA (incluido
-`mauricio`) encuentra una contraseña débil:
+Un **password spray / credential guessing** dirigido a los nombres de usuario conocidos
+(incluido `mauricio`) encuentra una contraseña débil:
 
 ```bash
 # login como mauricio con la credencial débil descubierta
@@ -195,7 +195,7 @@ sshpass -p 143143 ssh -p 33333 -o StrictHostKeyChecking=no \
 
 > El brute *online* de rockyou contra SSH es inviable por rate-limit (~200/min del lado
 > del servidor). La credencial válida es un **número débil y corto** que un spray
-> dirigido a los usernamesBSCRITA encuentra rápidamente.
+> dirigido a los nombres de usuario conocidos encuentra rápidamente.
 
 ---
 
@@ -245,7 +245,7 @@ ssh -i dev_key -p 33333 sysadmin@172.17.0.2 'id'
 ```
 
 > El comentario de la clave derivada (`sysadmin@gatekeeper`) revela que es la clave de
-> `sysadmin`, granting acceso al usuario con el privilegio `sudo` crítico.
+> `sysadmin`, lo que otorga acceso al usuario con el privilegio `sudo` crítico.
 
 ### 7.3 Los permisos sudo
 
@@ -364,7 +364,7 @@ cat /root/flag.txt
 [3] Análisis de banners MySQL/PG → honeytokens, se descartan
 [4] Port knocking 1337 → 2048 → 4096
       → abre 33333 (SSH OpenSSH_8.9p1)
-[5] Password spray dirigido a usernamesBSCRITA
+[5] Password spray dirigido a los nombres de usuario conocidos
       → mauricio : 143143   (credencial débil)  → login SSH
 [6] ls /home (como mauricio)
       → descubre developer, mauricio, sysadmin
@@ -387,7 +387,7 @@ cat /root/flag.txt
 | Reconnaissance | T1046 — Network Service Discovery | Escaneo nmap completo |
 | Reconnaissance | T1083 — File and Directory Discovery | Fuzzing web, dotfiles |
 | Discovery | T1087 — Account Discovery | `ls /home`, `/etc/passwd`, `log.txt` |
-| Credential Access | T1110.001 — Password Guessing | Spray dirigido a usernamesBSCRITA |
+| Credential Access | T1110.001 — Password Guessing | Spray dirigido a los nombres de usuario conocidos |
 | Credential Access | T1552.001 — Credentials In Files | Clave dividida world-readable |
 | Defense Evasion | T1562.004 — Modify System Firewall | Port knocking |
 | Lateral Movement | T1021.004 — SSH | Acceso al puerto 33333 |
@@ -400,11 +400,11 @@ cat /root/flag.txt
 
 | # | Hallazgo | Severidad | Remediación |
 |---|----------|-----------|-------------|
-| 1 | **OTP estático legible por todos** (`/tmp/.current_otp`, `-rw-r--r--`) | **Crítica** | Permisos `600 root:root`; nunca storear OTP en archivo compartido |
+| 1 | **OTP estático legible por todos** (`/tmp/.current_otp`, `-rw-r--r--`) | **Crítica** | Permisos `600 root:root`; nunca almacenar el OTP en un archivo compartido |
 | 2 | **OTP determinista basado en tiempo**, no atómico al uso | Alta | TOTP real (RFC 6238) con ventana de un solo uso y consumo atómico |
 | 3 | **Binario privilegiado confía en marker en `/tmp`** | Alta | No usar archivos como mecanismo de autorización; validar contra el actor real (`${SUDO_USER}`) |
 | 4 | **Script `.system_auth` world-executable** dispara el binario root | Alta | Restringir permisos; auditar la chain de autorización |
-| 5 | **Clave SSH dividida pero world-readable** (`-r--r--r--`) | Crítica | Nunca storingar material de clave en dirs accesibles; cifrar/passphrase |
+| 5 | **Clave SSH dividida pero world-readable** (`-r--r--r--`) | Crítica | Nunca almacenar material de clave en directorios accesibles; cifrar con passphrase |
 | 6 | **Credencial débil** (`mauricio:143143`) | Alta | Política de contraseñas robustas; MFA |
 | 7 | **Dotfiles expuestos** (`/backups/.env`) con la semilla del knocking | Media | Deshabilitar `Indexes`; mover secretos fuera del docroot; escaneo de secretos en CI |
 | 8 | **Port knocking como único control** (secreto filtrado en el mismo canal) | Media | El knocking no sustituye autenticación; el secreto no debe estar junto a lo que protege |
