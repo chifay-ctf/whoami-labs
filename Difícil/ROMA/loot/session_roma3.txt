@@ -1,0 +1,8 @@
+Warning: Permanently added '172.17.0.2' (ED25519) to the list of known hosts.
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+__OK__
+uid=1002(roma3) gid=1002(roma3) groups=1002(roma3)
+roma
+Linux roma 7.1.5+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 7.1.5-1kali1 (2026-07-29) x86_64 x86_64 x86_64 GNU/Linux
