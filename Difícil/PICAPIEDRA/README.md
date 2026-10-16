@@ -16,10 +16,6 @@
 | **Estado** | Validada por el laboratorio (16/10/2026 11:50:18) |
 | **Vector de entrada** | Credencial débil en el portal web → **LFI** en `panel.php?page=` → credenciales del sistema → `sudo /usr/bin/env` |
 | **Ruta completa** | Fuerza bruta web → LFI → lectura de credenciales → `ssh pedro` → `sudo env` → `root` |
-
-> **Restricción del ejercicio:** el análisis se hizo exclusivamente por red. No se inspeccionó la
-> configuración del contenedor ni se leyó su filesystem.
-
 ---
 
 ## 1. Resumen ejecutivo
