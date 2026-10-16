@@ -1,0 +1,18 @@
+Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-10-16 09:34:59
+[DATA] max 10 tasks per 1 server, overall 10 tasks, 520000 login tries (l:26/p:20000), ~52000 tries per task
+[DATA] attacking http-post-form://172.17.0.2:2/empleados.php:username=^USER^&password=^PASS^:Usuario o contraseña incorrectos
+[ERROR] Child with pid 382443 terminating, cannot connect
+[ERROR] Child with pid 382444 terminating, cannot connect
+[ERROR] Child with pid 382445 terminating, cannot connect
+[ERROR] Child with pid 382446 terminating, cannot connect
+[ERROR] Child with pid 382447 terminating, cannot connect
+[ERROR] Child with pid 382448 terminating, cannot connect
+[ERROR] Child with pid 382449 terminating, cannot connect
+[ERROR] Child with pid 382450 terminating, cannot connect
+[ERROR] Child with pid 382451 terminating, cannot connect
+[ERROR] Child with pid 382452 terminating, cannot connect
+[ERROR] all children were disabled due too many connection errors
+0 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-10-16 09:35:02

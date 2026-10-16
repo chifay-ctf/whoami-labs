@@ -1,0 +1,19 @@
+# Nmap 7.991 scan initiated Fri Oct 16 09:16:37 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sV -sC -T4 --min-rate 1000 -p- -oN recon_nmap_full.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000040s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     ProFTPD 1.3.5
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 14:3b:f0:8f:60:61:e8:00:e8:f8:7a:4c:de:4e:e9:70 (RSA)
+|   256 49:76:57:32:8d:6f:6e:17:ea:d7:ad:70:4e:20:e6:37 (ECDSA)
+|_  256 83:d4:86:49:3d:2b:ff:22:06:75:67:e2:68:33:5c:cc (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Cantera Picapiedra S.A.
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+MAC Address: A6:FD:CD:90:3A:A4 (Unknown)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 16 09:16:45 2026 -- 1 IP address (1 host up) scanned in 8.25 seconds

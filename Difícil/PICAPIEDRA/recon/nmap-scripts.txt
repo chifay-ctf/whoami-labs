@@ -1,0 +1,1 @@
+# Nmap 7.991 scan initiated Fri Oct 16 09:24:56 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sV --script=ftp-anon,ftp-syst,ftp-brute,ftp-vuln-cve*,ssh-brute,ssh2-enum-algos,ssh-auth-methods -p 21,22 -oN recon/nmap-scripts.txt 172.17.0.2

@@ -1,0 +1,72 @@
+FUZZ,url,redirectlocation,position,status_code,content_length,content_words,content_lines,content_type,duration,resultfile,Ffufhash
+# Attribution-Share Alike 3.0 License. To view a copy of thisbak,http://172.17.0.2/# Attribution-Share Alike 3.0 License. To view a copy of thisbak,,30,200,6082,2006,126,text/html,4.491862ms,,389b51e
+# directory-list-2.3-big.txt,http://172.17.0.2/# directory-list-2.3-big.txt,,1,200,6082,2006,126,text/html,4.777356ms,,389b51
+# directory-list-2.3-big.txttxt,http://172.17.0.2/# directory-list-2.3-big.txttxt,,4,200,6082,2006,126,text/html,5.15654ms,,389b54
+# Attribution-Share Alike 3.0 License. To view a copy of thistxt,http://172.17.0.2/# Attribution-Share Alike 3.0 License. To view a copy of thistxt,,29,200,6082,2006,126,text/html,6.191573ms,,389b51d
+"# license, visit http://creativecommons.org/licenses/by-sa/3.0/","http://172.17.0.2/# license, visit http://creativecommons.org/licenses/by-sa/3.0/",,31,200,6082,2006,126,text/html,2.081435ms,,389b51f
+"# license, visit http://creativecommons.org/licenses/by-sa/3.0/php","http://172.17.0.2/# license, visit http://creativecommons.org/licenses/by-sa/3.0/php",,32,200,6082,2006,126,text/html,2.18098ms,,389b520
+# Attribution-Share Alike 3.0 License. To view a copy of thishtml,http://172.17.0.2/# Attribution-Share Alike 3.0 License. To view a copy of thishtml,,28,200,6082,2006,126,text/html,6.113802ms,,389b51c
+"# license, visit http://creativecommons.org/licenses/by-sa/3.0/txt","http://172.17.0.2/# license, visit http://creativecommons.org/licenses/by-sa/3.0/txt",,34,200,6082,2006,126,text/html,907.753µs,,389b522
+"# license, visit http://creativecommons.org/licenses/by-sa/3.0/bak","http://172.17.0.2/# license, visit http://creativecommons.org/licenses/by-sa/3.0/bak",,35,200,6082,2006,126,text/html,663.324µs,,389b523
+"# license, visit http://creativecommons.org/licenses/by-sa/3.0/html","http://172.17.0.2/# license, visit http://creativecommons.org/licenses/by-sa/3.0/html",,33,200,6082,2006,126,text/html,1.345406ms,,389b521
+# Attribution-Share Alike 3.0 License. To view a copy of thisphp,http://172.17.0.2/# Attribution-Share Alike 3.0 License. To view a copy of thisphp,,27,200,6082,2006,126,text/html,7.508051ms,,389b51b
+# directory-list-2.3-big.txthtml,http://172.17.0.2/# directory-list-2.3-big.txthtml,,3,200,6082,2006,126,text/html,8.215553ms,,389b53
+# directory-list-2.3-big.txtbak,http://172.17.0.2/# directory-list-2.3-big.txtbak,,5,200,6082,2006,126,text/html,8.437701ms,,389b55
+# directory-list-2.3-big.txtphp,http://172.17.0.2/# directory-list-2.3-big.txtphp,,2,200,6082,2006,126,text/html,8.370842ms,,389b52
+# Attribution-Share Alike 3.0 License. To view a copy of this,http://172.17.0.2/# Attribution-Share Alike 3.0 License. To view a copy of this,,26,200,6082,2006,126,text/html,7.86325ms,,389b51a
+"# Suite 300, San Francisco, California, 94105, USA.php","http://172.17.0.2/# Suite 300, San Francisco, California, 94105, USA.php",,42,200,6082,2006,126,text/html,3.216383ms,,389b52a
+"# or send a letter to Creative Commons, 171 Second Street,html","http://172.17.0.2/# or send a letter to Creative Commons, 171 Second Street,html",,38,200,6082,2006,126,text/html,4.132063ms,,389b526
+"# Suite 300, San Francisco, California, 94105, USA.bak","http://172.17.0.2/# Suite 300, San Francisco, California, 94105, USA.bak",,45,200,6082,2006,126,text/html,1.979063ms,,389b52d
+"# Suite 300, San Francisco, California, 94105, USA.txt","http://172.17.0.2/# Suite 300, San Francisco, California, 94105, USA.txt",,44,200,6082,2006,126,text/html,4.267484ms,,389b52c
+#,http://172.17.0.2/#,,46,200,6082,2006,126,text/html,529.682µs,,389b52e
+"# or send a letter to Creative Commons, 171 Second Street,txt","http://172.17.0.2/# or send a letter to Creative Commons, 171 Second Street,txt",,39,200,6082,2006,126,text/html,4.755982ms,,389b527
+"# or send a letter to Creative Commons, 171 Second Street,","http://172.17.0.2/# or send a letter to Creative Commons, 171 Second Street,",,36,200,6082,2006,126,text/html,5.021989ms,,389b524
+"# Suite 300, San Francisco, California, 94105, USA.","http://172.17.0.2/# Suite 300, San Francisco, California, 94105, USA.",,41,200,6082,2006,126,text/html,4.837655ms,,389b529
+"# or send a letter to Creative Commons, 171 Second Street,bak","http://172.17.0.2/# or send a letter to Creative Commons, 171 Second Street,bak",,40,200,6082,2006,126,text/html,4.983524ms,,389b528
+"# Suite 300, San Francisco, California, 94105, USA.html","http://172.17.0.2/# Suite 300, San Francisco, California, 94105, USA.html",,43,200,6082,2006,126,text/html,4.930279ms,,389b52b
+"# or send a letter to Creative Commons, 171 Second Street,php","http://172.17.0.2/# or send a letter to Creative Commons, 171 Second Street,php",,37,200,6082,2006,126,text/html,4.350668ms,,389b525
+"# Priority-ordered case-sensitive list, where entries were foundbak","http://172.17.0.2/# Priority-ordered case-sensitive list, where entries were foundbak",,55,200,6082,2006,126,text/html,7.086929ms,,389b537
+# on at least 1 host,http://172.17.0.2/# on at least 1 host,,56,200,6082,2006,126,text/html,4.51005ms,,389b538
+"# Priority-ordered case-sensitive list, where entries were foundtxt","http://172.17.0.2/# Priority-ordered case-sensitive list, where entries were foundtxt",,54,200,6082,2006,126,text/html,7.407765ms,,389b536
+"# Priority-ordered case-sensitive list, where entries were foundhtml","http://172.17.0.2/# Priority-ordered case-sensitive list, where entries were foundhtml",,53,200,6082,2006,126,text/html,8.070807ms,,389b535
+#bak,http://172.17.0.2/#bak,,50,200,6082,2006,126,text/html,8.319116ms,,389b532
+#html,http://172.17.0.2/#html,,48,200,6082,2006,126,text/html,10.114439ms,,389b530
+"# Priority-ordered case-sensitive list, where entries were foundphp","http://172.17.0.2/# Priority-ordered case-sensitive list, where entries were foundphp",,52,200,6082,2006,126,text/html,10.077372ms,,389b534
+#php,http://172.17.0.2/#php,,47,200,6082,2006,126,text/html,11.324917ms,,389b52f
+#txt,http://172.17.0.2/#txt,,49,200,6082,2006,126,text/html,8.105501ms,,389b531
+"# Priority-ordered case-sensitive list, where entries were found","http://172.17.0.2/# Priority-ordered case-sensitive list, where entries were found",,51,200,6082,2006,126,text/html,13.303418ms,,389b533
+# on at least 1 hosttxt,http://172.17.0.2/# on at least 1 hosttxt,,59,200,6082,2006,126,text/html,5.516108ms,,389b53b
+#bak,http://172.17.0.2/#bak,,65,200,6082,2006,126,text/html,483.372µs,,389b541
+#html,http://172.17.0.2/#html,,63,200,6082,2006,126,text/html,1.734385ms,,389b53f
+# on at least 1 hosthtml,http://172.17.0.2/# on at least 1 hosthtml,,58,200,6082,2006,126,text/html,10.765965ms,,389b53a
+# on at least 1 hostphp,http://172.17.0.2/# on at least 1 hostphp,,57,200,6082,2006,126,text/html,11.677515ms,,389b539
+#txt,http://172.17.0.2/#txt,,64,200,6082,2006,126,text/html,5.90156ms,,389b540
+#php,http://172.17.0.2/#php,,62,200,6082,2006,126,text/html,6.231782ms,,389b53e
+,http://172.17.0.2/,,66,200,6082,2006,126,text/html,6.453244ms,,389b542
+# on at least 1 hostbak,http://172.17.0.2/# on at least 1 hostbak,,60,200,6082,2006,126,text/html,4.409474ms,,389b53c
+#,http://172.17.0.2/#,,61,200,6082,2006,126,text/html,10.393547ms,,389b53d
+img,http://172.17.0.2/img,http://172.17.0.2/img/,191,301,306,20,10,text/html; charset=iso-8859-1,3.557166ms,,389b5bf
+# This work is licensed under the Creative Commonsbak,http://172.17.0.2/# This work is licensed under the Creative Commonsbak,,25,200,6082,2006,126,text/html,180.710647ms,,389b519
+# This work is licensed under the Creative Commonshtml,http://172.17.0.2/# This work is licensed under the Creative Commonshtml,,23,200,6082,2006,126,text/html,299.891065ms,,389b517
+# This work is licensed under the Creative Commonstxt,http://172.17.0.2/# This work is licensed under the Creative Commonstxt,,24,200,6082,2006,126,text/html,297.281774ms,,389b518
+# This work is licensed under the Creative Commonsphp,http://172.17.0.2/# This work is licensed under the Creative Commonsphp,,22,200,6082,2006,126,text/html,312.688193ms,,389b516
+# This work is licensed under the Creative Commons,http://172.17.0.2/# This work is licensed under the Creative Commons,,21,200,6082,2006,126,text/html,332.189638ms,,389b515
+#bak,http://172.17.0.2/#bak,,20,200,6082,2006,126,text/html,332.944105ms,,389b514
+#txt,http://172.17.0.2/#txt,,19,200,6082,2006,126,text/html,337.539459ms,,389b513
+#,http://172.17.0.2/#,,6,200,6082,2006,126,text/html,354.068512ms,,389b56
+#,http://172.17.0.2/#,,16,200,6082,2006,126,text/html,355.543123ms,,389b510
+# Copyright 2007 James Fisherbak,http://172.17.0.2/# Copyright 2007 James Fisherbak,,15,200,6082,2006,126,text/html,362.275177ms,,389b5f
+# Copyright 2007 James Fishertxt,http://172.17.0.2/# Copyright 2007 James Fishertxt,,14,200,6082,2006,126,text/html,379.08883ms,,389b5e
+# Copyright 2007 James Fisherhtml,http://172.17.0.2/# Copyright 2007 James Fisherhtml,,13,200,6082,2006,126,text/html,436.189243ms,,389b5d
+# Copyright 2007 James Fisherphp,http://172.17.0.2/# Copyright 2007 James Fisherphp,,12,200,6082,2006,126,text/html,540.480193ms,,389b5c
+# Copyright 2007 James Fisher,http://172.17.0.2/# Copyright 2007 James Fisher,,11,200,6082,2006,126,text/html,577.998241ms,,389b5b
+#bak,http://172.17.0.2/#bak,,10,200,6082,2006,126,text/html,599.005453ms,,389b5a
+#txt,http://172.17.0.2/#txt,,9,200,6082,2006,126,text/html,641.688235ms,,389b59
+#html,http://172.17.0.2/#html,,8,200,6082,2006,126,text/html,648.538164ms,,389b58
+#php,http://172.17.0.2/#php,,7,200,6082,2006,126,text/html,658.645618ms,,389b57
+#html,http://172.17.0.2/#html,,18,200,6082,2006,126,text/html,659.655554ms,,389b512
+#php,http://172.17.0.2/#php,,17,200,6082,2006,126,text/html,666.528639ms,,389b511
+css,http://172.17.0.2/css,http://172.17.0.2/css/,2766,301,306,20,10,text/html; charset=iso-8859-1,5.914963ms,,389b5ace
+includes,http://172.17.0.2/includes,http://172.17.0.2/includes/,3171,301,311,20,10,text/html; charset=iso-8859-1,880.869µs,,389b5c63
+js,http://172.17.0.2/js,http://172.17.0.2/js/,4761,301,305,20,10,text/html; charset=iso-8859-1,2.772984ms,,389b51299
+,http://172.17.0.2/,,199916,200,6082,2006,126,text/html,3.887366ms,,389b530cec

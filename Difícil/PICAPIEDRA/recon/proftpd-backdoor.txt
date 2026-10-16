@@ -1,0 +1,46 @@
+====================================================================
+OBJETIVO: 172.17.0.2
+====================================================================
+
+--- Backdoor tras login (USER anon + CR) ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+331 Password required for anonymous
+530 Login incorrect.
+
+--- Backdoor directo con SITE EXEC (sin USER) ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+
+--- Backdoor con CR en PASS ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+331 Password required for anonymous
+530 Login incorrect.
+
+--- Backdoor doble CR (0d0d) ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+331 Password required for anonymous
+530 Login incorrect.
+
+--- SITE HELP (sin auth) ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+214-The following SITE commands are recognized (* =>'s unimplemented)
+ CPFR <sp> pathname
+ CPTO <sp> pathname
+ HELP
+ CHGRP
+ CHMOD
+214 Direct comments to root@picapiedras
+
+--- FEAT (sin auth) ---
+220 ProFTPD 1.3.5 Server (Cantera Picapiedra FTP) [172.17.0.2]
+211-Features:
+ MDTM
+ TVFS
+ SITE COPY
+ MFMT
+ SIZE
+ MFF modify;UNIX.group;UNIX.mode;
+ REST STREAM
+ MLST modify*;perm*;size*;type*;unique*;UNIX.group*;UNIX.mode*;UNIX.owner*;
+ EPRT
+ EPSV
+211 End
