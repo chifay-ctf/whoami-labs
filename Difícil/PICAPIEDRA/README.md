@@ -17,33 +17,31 @@
 | **Vector de entrada** | Credencial débil en el portal web → **LFI** en `panel.php?page=` → credenciales del sistema → `sudo /usr/bin/env` |
 | **Ruta completa** | Fuerza bruta web → LFI → lectura de credenciales → `ssh pedro` → `sudo env` → `root` |
 
-> **Restricción del ejercicio:** todo el análisis se hizo **exclusivamente por red**. No se
-> inspeccionó la configuración del contenedor ni se leyó su filesystem; el único acceso al disco
-> del objetivo fue a través de la vulnerabilidad LFI que el propio laboratorio expone, que forma
-> parte de la cadena de ataque documentada abajo.
+> **Restricción del ejercicio:** el análisis se hizo exclusivamente por red. No se inspeccionó la
+> configuración del contenedor ni se leyó su filesystem.
 
 ---
 
 ## 1. Resumen ejecutivo
 
 PICAPIEDRA expone **tres servicios**: FTP (ProFTPD 1.3.5), SSH (OpenSSH 8.2p1) y un sitio web
-corporativo bajo Apache/PHP 7.4. Ni el FTP anónimo, ni la fuerza bruta de SSH, ni la inyección SQL
-en el login web abrasionaron nada: el punto de entrada fue una **credencial débil del portal de
-empleados**, obtenible por fuerza bruta *dirigida* (el temario de la web es una pista).
+corporativo bajo Apache/PHP 7.4. Ni el acceso anónimo al FTP, ni la fuerza bruta contra el SSH, ni la
+inyección SQL en el login web dieron resultado: el punto de entrada fue una **credencial débil del
+portal de empleados**, obtenible por fuerza bruta *dirigida* (el temario de la web es la pista).
 
 Esa credencial da acceso a `panel.php`, que contiene una **LFI clásica** sobre el parámetro `page`.
 La LFI no es solo un lector de ficheros: como el `include()` solo se dispara cuando el fichero
 existe, **funciona como oráculo de existencia** y, sobre todo, **permite leer el código fuente PHP
 del propio servidor**. Ese código revela que la autenticación web se apoya en
-`includes/usuarios.php`, un array PHP con **las contraseñas en texto plano**. Resultado: el mismo
-usuario `pedro` con `password123` que existe en el portal es también una cuenta del sistema
-operativo, y entra por SSH sin ninguna otra eliminación.
+`includes/usuarios.php`, un array PHP con **las contraseñas en texto plano**. El resultado es que el
+usuario `pedro`, con la contraseña `password123` del portal, es también una cuenta del sistema
+operativo y entra por SSH sin ninguna otra barrera.
 
 La escalada final es trivial y coherente con la categoría del laboratorio: `sudo -n -l` revela una
 regla `(root) NOPASSWD: /usr/bin/env`, es decir, **se puede ejecutar cualquier binario como root**
 sin contraseña.
 
-Quinto fallo encadenado:
+Cinco fallos encadenados:
 
 1. Contraseña débil y adivinable en el portal web (`yabbadabbadoo`).
 2. LFI en `panel.php?page=` (lectura arbitraria de ficheros).
@@ -87,8 +85,8 @@ De 65 535 puertos, 65 532 cerrados. El escaneo UDP de los 20 puertos más habitu
 ### 2.2 Superficie web
 
 El `index.html` es una web corporativa estática que funciona como *cover story*: «Cantera Picapiedra
-S.A.», slogan «Extrayendo piedras desde la Era Prehistórica», y una sección de equipo con
-**Fred Flintstone (CEO)**, **Barney Rubble (Supervisor)** y **Wilma Flintstone (Finanzas)**.
+S.A.», el lema «Extrayendo piedras desde la Era Prehistórica» y una sección de equipo con Fred
+Flintstone (CEO), Barney Rubble (Supervisor) y Wilma Flintstone (Finanzas).
 
 ![Superficie web](docs/img/02-web.png)
 
@@ -106,8 +104,9 @@ Enumeración de contenido (`gobuster` + `ffuf` con la wordlist DirBuster-2007 *b
 | `/css/style.css` | 200 | Estilos, sin secretos |
 | `/js/`, `/img/` | 200 | Directorios vacíos (listado de Apache habilitado) |
 
-**No hay `robots.txt`, ni `.git`, ni backups, ni comentarios HTML, ni JavaScript.** La superficie
-expuesta es mínima y obliga a buscar por otros caminos.
+**No hay `robots.txt`, ni `.git`, ni copias de seguridad, ni comentarios HTML, ni JavaScript propio**
+(la única biblioteca externa es Bootstrap desde CDN). La superficie expuesta es mínima y obliga a
+buscar por otros caminos.
 
 ---
 
@@ -138,8 +137,9 @@ El mensaje de error es genérico y el tiempo de respuesta uniforme (~1 ms), así
 saber qué usuarios existen. La fuerza bruta genérica con `rockyou` contra 26 usuarios resultó
 infructuosa; el giro fue **dirigir el diccionario al temario del sitio**.
 
-El sitio web es una parodia de *Los Picapiedras*: el código cultural está en el propio `index.html`
-y en la contraseña de `Fred Flintstone`. Esa hipótesis se probó de forma aislada:
+El sitio es una parodia de *Los Picapiedras*, y la clave para deducir la contraseña está en la propia
+página: el lema, el nombre de los personajes y el guiño «¡Yabba-Dabba-Doo!». Esa hipótesis se probó
+directamente:
 
 ```bash
 curl -s -i -X POST http://172.17.0.2/empleados.php \
@@ -238,13 +238,13 @@ Tampoco sirven los *wrappers* (`php://filter`, `php://input`) porque `file_exist
 para todos ellos, de modo que se cae en la rama «Página no encontrada».
 
 **Conclusión:** esta LFI es deliberadamente un **lector de ficheros**, no un ejecutor. El
-laboratorio obliga a extraer información, no a inyectar código. El camino correcto es leer.
+laboratorio obliga a extraer información, no a inyectar código. La vía correcta es leer.
 
 ---
 
 ## 6. De la LFI a las credenciales del sistema
 
-Con lectura arbitraria, el objetivo obvious es el fichero que gestiona la autenticación web. El
+Con lectura arbitraria, el objetivo evidente es el fichero que gestiona la autenticación web. El
 listado de directorio de `/includes/` ya había revelado su nombre:
 
 ```bash
@@ -270,13 +270,13 @@ function autenticar($usuario, $password) {
 }
 ```
 
-**DosObservaciones críticas:**
+**Dos observaciones críticas:**
 
-1. Las contraseñas se guardan **en texto plano**, sin `password_hash()`. La comparación es con `===`,
-   sin ningún endurecimiento.
-2. **No hay hashes porque no hacen falta**: los nombres de usuario son exactamente los del sistema
-   operativo (`pedro`, `pablo`, `fred` en `/etc/passwd`), y el autor **reutilizó las mismas
-   contraseñas** para el portal y para las cuentas del sistema.
+1. Las contraseñas se guardan **en texto plano**, sin `password_hash()`, y la comparación se hace con
+   `===`, sin ningún endurecimiento.
+2. **Los nombres de usuario coinciden con los del sistema operativo** (`pedro`, `pablo` y `fred` en
+   `/etc/passwd`), y el autor **reutilizó las mismas contraseñas** para el portal y para las cuentas
+   del sistema. Por eso el hash no era necesario para la filtración: bastaba con leer el fichero.
 
 También se leyó `includes/config.php` (credenciales de MySQL `picapiedra_admin` /
 `BedR0ck_DB_2024!` sobre `cantera_db`), pero **resultaron ser un señuelo**: el puerto 3306 no está
@@ -320,9 +320,9 @@ User pedro may run the following commands on picapiedras:
     (root) NOPASSWD: /usr/bin/env
 ```
 
-Esta es una **escalada trivial**: `sudo /usr/bin/env <comando>` hace que `env` se ejecute como `root`
-y lance a continuación `<comando>` **como root**. No hay binario SUID ni GTFOBins de por medio: la
-regla `sudo` ya equivale a `root` completo.
+Esta es una **escalada trivial**: `sudo /usr/bin/env <comando>` ejecuta `env` con privilegios de `root`
+y, a continuación, `<comando>` también con esos privilegios. No hace falta ningún binario SUID ni
+ningún vector de GTFOBins: la regla `sudo` ya equivale a `root` completo.
 
 Comprobado también el inventario de SUID del sistema, que no aporta nada adicional en este
 laboratorio (solo el conjunto estándar de Ubuntu: `su`, `sudo`, `passwd`, `mount`, `umount`,
@@ -386,7 +386,7 @@ FECHA Y HORA: 2026-10-16 11:50:18 -0600
 | 4 | `sudo NOPASSWD: /usr/bin/env` | Eliminar la regla; si se necesita algo, usar un script raíz de solo lectura y no `env` |
 | 5 | Contraseña trivial y adivinable | Política de contraseñas + MFA en servicios externos |
 | 6 | FTP/SSH expuestos sin restricción de origen | Limitar por IP y deshabilitar el acceso directo a medida que se migra a SSH |
-| 7 | Credenciales de MySQL en un `.php` del *docroot* | Mover la configuración fuera del *docroot*; el fichero ya devolvía 0 B solo por suerte |
+| 7 | Credenciales de MySQL en un `.php` del *docroot* | Mover la configuración fuera del *docroot*; hoy solo devuelve 0 B porque PHP lo ejecuta, no porque esté protegido |
 
 ---
 
@@ -449,9 +449,3 @@ PICAPIEDRA/
 │   └── captures/          ← salidas de texto (ignoradas por git)
 └── docs/img/              ← imágenes del writeup
 ```
-
-> **Regenerar las imágenes:** `bash shots/capture.sh && bash shots/build_images.sh`.
-> El render (`text2png.py`) usa la paleta y la geometría de las capturas de terminal del writeup
-> ENUMHUB (fondo `#12141C`, prompt `chifay` verde + `@kali:~/PICAPIEDRA` azul, comando `#D7DAE0`,
-> salida `#7B8494`, banderas `#FBBF24`) para que ambos writeups sean visualmente idénticos.
-> `docs/img/11-validacion-flag.png` es una captura del validador del laboratorio y no se regenera.

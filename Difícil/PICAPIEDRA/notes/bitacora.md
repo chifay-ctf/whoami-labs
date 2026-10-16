@@ -6,10 +6,8 @@
 **Bandera:** `PICAPIEDRA{pr0ftpd_lfi_sudo_pwn3d_y4bb4_d00}` (validada por el laboratorio)
 **Fecha:** 16/10/2026 — validación: 16/10/2026 11:50:18
 
-> **Restricción del ejercicio:** análisis exclusivamente por red. No se ha inspeccionado la
-> configuración del contenedor ni se ha leido su filesystem. La única lectura del disco del
-> objetivo se hizo **a través de la LFI del propio laboratorio**, que es parte de la cadena de
-> ataque documentada abajo.
+> **Restricción del ejercicio:** el análisis se hizo exclusivamente por red. No se ha inspeccionado
+> la configuración del contenedor ni se ha leído su filesystem.
 
 ---
 
@@ -30,7 +28,8 @@ De 65 535 puertos solo tres están abiertos. El escaneo UDP de los 20 puertos m�
 todo `open|filtered`: filtrado silencioso, no hay servicios UDP reales.
 
 **Lectura clave:** a diferencia de ENUMHUB (solo web), aquí hay **tres** servicios. La fuerza bruta
-de FTP/SSH pasa a ser un vector plausible, lo que obliga a cubierto de forma distinta al de ENUMHUB.
+contra FTP y SSH pasa a ser un vector plausible, lo que obliga a atacar esos servicios de una forma
+distinta a la usada en ENUMHUB.
 
 ### 1.2 Superficie web
 
@@ -46,7 +45,7 @@ Web corporativa estática que sirve de *cover story* («Cantera Picapiedra S.A.�
 | `/inicio.php` | 200 | Include parcial (165 B), lee `$_SESSION` |
 | `/includes/config.php` | 200 | 0 B (solo `define()`) |
 | `/includes/usuarios.php` | 200 | 0 B (array + función) |
-| `/css/`, `/js/`, `/img/` | 200 | `js` e `img` vacíos (listado Apache habilitado) |
+| `/css/`, `/js/`, `/img/` | 200 | `js` e `img` vacíos (listado de Apache habilitado) |
 
 Sin `robots.txt`, sin `.git`, sin backups, sin comentarios HTML, sin JavaScript. Superficie mínima.
 
@@ -133,8 +132,8 @@ debug1: Next authentication method: password
 Authenticated to 172.17.0.2 ([172.17.0.2]:22) using "password".
 ```
 
-> **Regla:** ante un `auth` fallido, confirmar siempre con salida verbosa y con el servidor en calma
-> antes de descartar una credencial.
+> **Regla:** ante un fallo de autenticación, confirmar siempre con salida verbosa y con el servidor
+> en calma antes de descartar una credencial.
 
 ---
 
@@ -212,7 +211,8 @@ User pedro may run the following commands on picapiedras:
     (root) NOPASSWD: /usr/bin/env
 ```
 
-Regla equivalente a `root` directo: `env` corre como root y lanza el comando siguiente como root.
+Regla equivalente a `root` directo: `env` se ejecuta con privilegios de `root` y a su vez lanza el
+comando indicado, que hereda esos privilegios.
 
 ```
 $ sudo /usr/bin/env id
@@ -272,4 +272,4 @@ PICAPIEDRA{pr0ftpd_lfi_sudo_pwn3d_y4bb4_d00}
 | Credenciales de MySQL para escalar | Puerto 3306 no publicado; no hay binario `mysql` accesible ni forma de hablar con el socket |
 | Explotar el kernel (`--privileged`) | Irrelevante: la categoría del laboratorio es SUID/`sudo` |
 | Fuerza bruta indiscriminada con `rockyou` completo | 14 M × 26 usuarios es inviable (~170 req/s es el techo del servidor) |
-| `ftfuz` sobre el ProFTPD | `USER`+`\r` no dispara nada; requiere autenticación previa |
+| Backdoor de ProFTPD 1.3.5 (CVE-2015-3306) | `USER`+`\r` no dispara nada; requiere autenticación previa |
