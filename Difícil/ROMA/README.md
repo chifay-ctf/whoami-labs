@@ -427,7 +427,7 @@ de la confianza en el autor, cada una tiene su artefacto de respaldo.
 │   ├── decode.py             decode.py del autor (pista del knocking)
 │   └── crawl/                Ficheros de /R/ en bruto y decodificados
 ├── notes/bitacora.md         Bitácora de análisis
-├── wordlists/                roma_users.txt (orden de intento)
+└── wordlists/                roma_users.txt (orden de intento)
 ```
 
 *Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para
