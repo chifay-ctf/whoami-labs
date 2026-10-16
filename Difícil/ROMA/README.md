@@ -428,10 +428,9 @@ de la confianza en el autor, cada una tiene su artefacto de respaldo.
 │   └── crawl/                Ficheros de /R/ en bruto y decodificados
 ├── notes/bitacora.md         Bitácora de análisis
 ├── wordlists/                roma_users.txt (orden de intento)
-└── shots/                    Utilidades para regenerar las capturas
+
 ```
 
-> ⚠️ **Las claves privadas SSH obtenidas durante el compromiso (`loot/id_roma3`, `loot/id_key2`)
-> y la imagen del laboratorio (`roma.tar`) NO se publican**; están excluidas por `.gitignore`.
-> Quien clone este repositorio deberá reconstruir esas claves a partir de los fragmentos
-> descritos en las secciones 6 y 7 para reproducir los pivotes.
+*Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para
+pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la
+red del objetivo, sin acceso al host ni al filesystem del contenedor.*
