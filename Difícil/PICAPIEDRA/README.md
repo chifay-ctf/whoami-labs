@@ -449,3 +449,4 @@ PICAPIEDRA/
 │   └── captures/          ← salidas de texto (ignoradas por git)
 └── docs/img/              ← imágenes del writeup
 ```
+Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la red del objetivo, sin acceso al host ni al filesystem del contenedor.
