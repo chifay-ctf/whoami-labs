@@ -437,12 +437,6 @@ PICAPIEDRA/
 │   ├── passes_themed.txt ⭐, passes_case.txt, passes_dates.txt
 │   ├── known_creds.txt
 │   ├── web_paths_themed.txt, lfi_filenames.txt
-├── shots/                 ← script de captura y conversor a PNG
-│   ├── capture.sh         ← ejecuta los comandos y guarda las salidas en captures/
-│   ├── build_images.sh    ← convierte cada captura en su PNG de docs/img/
-│   ├── pre2txt.py         ← extrae y limpia el bloque <pre> de la LFI
-│   ├── text2png.py        ← renderiza el texto con el estilo de terminal
-│   └── captures/          ← salidas de texto (ignoradas por git)
 └── docs/img/              ← imágenes del writeup
 ```
 Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la red del objetivo, sin acceso al host ni al filesystem del contenedor.
