@@ -477,11 +477,9 @@ compara contra `/root/flag.txt` dentro del contenedor y confirma la consecución
 │   ├── rce-id.txt            id como www-data
 │   ├── sudo.txt              Salida de sudo -l
 │   └── backup-system-perms.txt  Permisos del script privilegiado
-├── notes/bitacora.md         Bitácora del análisis
-└── shots/                    Utilidades para regenerar las capturas
+└── notes/bitacora.md         Bitácora del análisis
 ```
 
-> ⚠️ **Las credenciales que aparecen en este documento son las del laboratorio de
-> entrenamiento**, no secretos reales. Aun así, en un entorno productivo, cualquiera de estos
-> hallazgos —token de GitHub, contraseña de base de datos, `API_KEY`— obliga a **rotar los
-> secretos expuestos** y a revisar los registros de acceso.
+*Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para
+pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la
+red del objetivo, sin acceso al host ni al filesystem del contenedor.*
