@@ -61,7 +61,7 @@ algo**.
 
 Concluí que el endpoint ignoraba el resto de campos. **Era un falso negativo.** `/v1/public/info` es
 una vista *pública*: no expone la configuración interna aunque se haya escrito. El mass
-assignment funcionaba; era invisible para ese oráculo.
+assignment funcionaba; no se reflejaba en ese criterio de verificación.
 
 > **Regla generalizable:** antes de concluir «el campo no se procesa», hay que comprobar si existe un
 > punto de lectura *adecuado*. Comparar un endpoint público con uno privado no demuestra nada sobre la

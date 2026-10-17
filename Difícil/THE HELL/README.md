@@ -121,7 +121,7 @@ curl -s -X POST http://172.17.0.2:3000/v1/onboarding/config \
 > **Lección de método:** mi barrido inicial de 77 claves dio la impresión de que «solo `app_name` y
 > `city` tienen efecto». Ese barrido comparaba **el contenido devuelto por `/v1/public/info`**, que es
 > una vista pública y por definición no expone la configuración interna. El mass assignment sí se
-> aceptaba; simplemente no era observable por ahí. **Un oráculo de verificación mal elegido produce un
+> aceptaba; simplemente no era observable por ahí. **Un criterio de verificación mal elegido produce un
 > falso negativo convincente.**
 
 ---
