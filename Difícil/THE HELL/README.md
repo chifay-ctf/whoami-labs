@@ -380,9 +380,6 @@ THE HELL/
 │   └── map_fields.py      ← barrido de claves (documenta el falso negativo)
 ├── wordlists/             ← diccionarios usados, con README que los explica
 ├── loot/                  ← flag
-├── shots/                 ← captura y render de las imágenes
-│   ├── capture.sh, build_images.sh
-│   ├── text2png.py
-│   └── captures/          ← salidas de texto (ignoradas por git)
 └── docs/img/              ← imágenes del writeup
 ```
+Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la red del objetivo, sin acceso al host ni al filesystem del contenedor.
