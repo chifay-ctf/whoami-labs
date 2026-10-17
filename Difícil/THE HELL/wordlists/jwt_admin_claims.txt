@@ -1,0 +1,10 @@
+{"role": "admin"}
+{"role": "administrator"}
+{"isAdmin": true}
+{"admin": true}
+{"scope": "admin"}
+{"scopes": ["admin"]}
+{"sub": "admin"}
+{"user": "admin", "role": "admin"}
+{"username": "admin", "admin": true}
+{"sub": "admin", "role": "admin"}
