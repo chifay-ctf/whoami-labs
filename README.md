@@ -5,7 +5,7 @@ Whoami-Labs es una plataforma educativa 100% gratuita, que proporciona laborator
 * Comunidad de aprendizaje de seguridad informática
 * Recursos educativos gratuitos y Mentor IA de apoyo
 
-https://whoami-labs.com/
+[Mi perfil en whoami-labs](https://whoami-labs.com/u/chifay)
 
 En este repositorio ire subiendo mis writeups de dichos laboratorios.
 
