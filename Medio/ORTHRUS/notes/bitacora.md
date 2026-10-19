@@ -6,10 +6,6 @@
 **Bandera:** `CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}`
 **Fecha:** 19/10/2026
 
-> **Restricción del ejercicio:** el análisis se hizo exclusivamente por red. No se inspeccionó la
-> imagen OVA ni su configuración; el único acceso al disco del DC fue el de la propia cadena de ataque
-> (SMB/WinRM con las credenciales obtenidas).
-
 ---
 
 ## 1. Reconocimiento
@@ -88,7 +84,7 @@ Conclusión: **no hay red interna ni segundo host**. Los SPN `intranet`/`db01` s
 
 ## 3. Enumeración de usuarios: el falso positivo que corregí
 
-Kerberos permite preguntar al KDC si un principal existe sin enviar contraseñas: un `AS-REQ` sin
+Kerberos permite preguntar al KDC si una cuenta de usuario existe sin enviar contraseñas: un `AS-REQ` sin
 preautenticación devuelve un `KRB-ERROR` cuyo código distingue «existe» (25), «deshabilitado» (18) y
 «no existe» (6). Escribí `exploits/krbenum.py` para automatizarlo sobre una lista de candidatos.
 
