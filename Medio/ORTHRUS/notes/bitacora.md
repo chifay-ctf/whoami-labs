@@ -237,7 +237,6 @@ CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}
 - [x] DCSync del hash de `Administrator`
 - [x] Pass-the-hash y lectura de la bandera
 - [x] Cadena reproducida solo con herramientas de Kali (`chain_kali.sh`)
-- [ ] Validación formal en el panel de la plataforma
 
 ```
 CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}
