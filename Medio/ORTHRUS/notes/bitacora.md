@@ -1,8 +1,7 @@
 # ORTHRUS — Bitácora del análisis
 
 **Objetivo:** `172.16.202.130` (máquina virtual OVA — controlador de dominio Windows Server 2019)
-**Atacante:** Kali Linux (`172.16.202.129`) — **Dificultad:** Media ★★★☆☆☆☆☆ (3 puntos) — **Categoría:** Pivoting & Lateral Movement
-**Dominio:** `corp.local` — **Hostname del DC:** `WIN-CFIU5AU7L2D`
+**Atacante:** Kali Linux (`172.16.202.129`) — **Dificultad:** Media ★★★☆☆☆☆☆ (3 puntos) — **Categoría:** Pivoting & Lateral Movement — **Dominio:** `corp.local` — **Hostname del DC:** `WIN-CFIU5AU7L2D`
 **Bandera:** `CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}`
 **Fecha:** 19/10/2026
 
