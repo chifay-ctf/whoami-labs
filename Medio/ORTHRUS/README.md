@@ -28,9 +28,6 @@ completo: `corp.local`, host `WIN-CFIU5AU7L2D`, Windows Server 2019. Del total d
 abiertos y todos pertenecen a la pila de AD (DNS, Kerberos, LDAP, SMB, RPC, WinRM). **No hay web de
 aplicación, ni SSH, ni FTP**: toda la superficie de ataque es el dominio.
 
-El laboratorio se publicó el 17/10/2026, dos días antes de esta auditoría, y en ese momento no existía
-ningún writeup público ni referencia externa: el análisis se hizo enteramente desde cero.
-
 La cadena es una **escalada por cuentas**, no por red:
 
 1. Sin credenciales, se enumeran los usuarios del dominio **preguntando al KDC** (AS-REQ sin
