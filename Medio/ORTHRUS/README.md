@@ -482,9 +482,6 @@ ORTHRUS/
 │   ├── asrep_hash.txt, tgs_hash.txt
 │   ├── dcsync-administrator.txt
 │   └── FLAG_DOMAIN_ADMIN.txt
-├── shots/                 ← captura y render de las imágenes
-│   ├── capture.sh, build_images.sh
-│   ├── text2png.py
-│   └── captures/          ← salidas de texto (ignoradas por git)
 └── docs/img/              ← imágenes del writeup
 ```
+Auditoría realizada sobre un laboratorio CTF aislado y con autorización explícita para pruebas ofensivas (whoami-labs.com). Toda la metodología se ejecutó únicamente contra la red del objetivo
