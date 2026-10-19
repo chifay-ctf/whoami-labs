@@ -14,14 +14,9 @@
 | **Dominio** | `corp.local` (NetBIOS `CORP`) |
 | **Stack del objetivo** | Windows Server 2019 Standard Evaluation · build 17763 · AD DS |
 | **Bandera obtenida** | `CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}` |
-| **Estado** | Obtenida y reproducida (con herramientas propias y con las incluidas en Kali); validación en el panel pendiente de envío |
+| **Estado** | Obtenida y reproducida (con herramientas propias y con las incluidas en Kali) |
 | **Vector de entrada** | AS-REP roasting de `svc_backup` (cuenta sin preautenticación) |
 | **Ruta completa** | Enumeración Kerberos → AS-REP roast `svc_backup` → Kerberoast `svc_sql` → `svc_sql` en `BUILTIN\Administrators` → DCSync de `Administrator` → pass-the-hash → bandera |
-
-> **Restricción del ejercicio:** el análisis se hizo exclusivamente por red. No se inspeccionó la
-> imagen OVA, ni su configuración, ni el disco del controlador de dominio por otra vía que la propia
-> cadena de ataque documentada aquí. El único acceso al disco del DC fue a través de las credenciales
-> obtenidas durante la auditoría.
 
 ---
 
@@ -157,7 +152,7 @@ Con LDAP, RPC y DNS cerrados, la única vía que queda para enumerar usuarios es
 
 ## 3. Enumeración de usuarios por Kerberos
 
-Kerberos permite preguntar al KDC si un principal existe **sin enviar ninguna contraseña**: basta un
+Kerberos permite preguntar al KDC si una cuenta de usuario existe **sin enviar ninguna contraseña**: basta un
 `AS-REQ` sin preautenticación y leer el código del `KRB-ERROR` que devuelve:
 
 | Código | Significado |
@@ -231,7 +226,7 @@ de robustez.
 
 ## 5. Kerberoasting: `svc_sql`
 
-Con una cuenta de dominio válida se piden boletos de servicio para todos los SPN. El TGS llega cifrado
+Con una cuenta de dominio válida se piden tickets de servicio para todos los SPN. El TGS llega cifrado
 con la clave de la cuenta de servicio y se ataca offline:
 
 ![Kerberoasting](docs/img/06-kerberoast.png)
