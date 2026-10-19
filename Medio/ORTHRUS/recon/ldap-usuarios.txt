@@ -1,0 +1,63 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=corp,dc=local> with scope subtree
+# filter: (&(objectClass=user)(objectCategory=person))
+# requesting: sAMAccountName description memberOf 
+#
+
+# Administrator, Users, corp.local
+dn: CN=Administrator,CN=Users,DC=corp,DC=local
+description: Built-in account for administering the computer/domain
+memberOf: CN=Group Policy Creator Owners,CN=Users,DC=corp,DC=local
+memberOf: CN=Domain Admins,CN=Users,DC=corp,DC=local
+memberOf: CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+memberOf: CN=Schema Admins,CN=Users,DC=corp,DC=local
+memberOf: CN=Administrators,CN=Builtin,DC=corp,DC=local
+sAMAccountName: Administrator
+
+# Guest, Users, corp.local
+dn: CN=Guest,CN=Users,DC=corp,DC=local
+description: Built-in account for guest access to the computer/domain
+memberOf: CN=Guests,CN=Builtin,DC=corp,DC=local
+sAMAccountName: Guest
+
+# krbtgt, Users, corp.local
+dn: CN=krbtgt,CN=Users,DC=corp,DC=local
+description: Key Distribution Center Service Account
+memberOf: CN=Denied RODC Password Replication Group,CN=Users,DC=corp,DC=local
+sAMAccountName: krbtgt
+
+# estudiante, Whoami-Labs, corp.local
+dn: CN=estudiante,OU=Whoami-Labs,DC=corp,DC=local
+description: Cuenta de usuario de dominio para auditoria inicial CPENT
+memberOf: CN=Remote Management Users,CN=Builtin,DC=corp,DC=local
+sAMAccountName: estudiante
+
+# svc_backup, Whoami-Labs, corp.local
+dn: CN=svc_backup,OU=Whoami-Labs,DC=corp,DC=local
+description: Cuenta de servicio de respaldos nocturnos - Legacy System
+sAMAccountName: svc_backup
+
+# svc_sql, Whoami-Labs, corp.local
+dn: CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local
+description: Cuenta de servicio de base de datos corporativa MSSQL
+memberOf: CN=Administrators,CN=Builtin,DC=corp,DC=local
+sAMAccountName: svc_sql
+
+# search reference
+ref: ldap://ForestDnsZones.corp.local/DC=ForestDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://DomainDnsZones.corp.local/DC=DomainDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://corp.local/CN=Configuration,DC=corp,DC=local
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 10
+# numEntries: 6
+# numReferences: 3

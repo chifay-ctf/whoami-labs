@@ -1,0 +1,20 @@
+=== SOA / NS ===
+win-cfiu5au7l2d.corp.local. hostmaster.corp.local. 99 900 600 86400 3600
+win-cfiu5au7l2d.corp.local.
+
+=== SRV _ldap._tcp.dc._msdcs ===
+0 100 389 win-cfiu5au7l2d.corp.local.
+
+=== SRV _kerberos._tcp ===
+0 100 88 win-cfiu5au7l2d.corp.local.
+
+=== A del DC ===
+172.16.202.130
+
+=== AXFR corp.local ===
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+
+=== nombres candidatos ===
+(fin)

@@ -1,0 +1,14 @@
+=== rootDSE ===
+dn:
+defaultNamingContext: DC=corp,DC=local
+namingContexts: DC=corp,DC=local
+namingContexts: CN=Configuration,DC=corp,DC=local
+namingContexts: CN=Schema,CN=Configuration,DC=corp,DC=local
+namingContexts: DC=DomainDnsZones,DC=corp,DC=local
+namingContexts: DC=ForestDnsZones,DC=corp,DC=local
+result: 0 Success
+
+=== consulta de usuarios sin credenciales ===
+result: 1 Operations error
+text: 000004DC: LdapErr: DSID-0C090A5C, comment: In order to perform this opera
+# numResponses: 1

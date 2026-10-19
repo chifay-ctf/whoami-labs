@@ -1,0 +1,7 @@
+  [+] administrator                EXISTE (25)
+  [+] guest                        EXISTE (18)
+  [+] krbtgt                       EXISTE (18)
+  [+] svc_backup                   ASREP_SIN_PREAUTH
+  [+] svc_sql                      EXISTE (25)
+
+=== 5 existentes de 144 probados ===

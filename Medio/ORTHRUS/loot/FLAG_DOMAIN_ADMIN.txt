@@ -1,0 +1,6 @@
+﻿CPENT{k3rb3r05_r045t_d0m41n_4dm1n_2026}
+
+[+] DOMAIN COMPROMISE VERIFIED - EXAMEN CPENT EC-COUNCIL
+[+] Modulo 09: Active Directory Penetration Testing
+[+] Instructor: Hector Camacho / Academia Edutek
+

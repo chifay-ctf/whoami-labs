@@ -1,0 +1,241 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=corp,dc=local> with scope subtree
+# filter: (objectClass=group)
+# requesting: cn member 
+#
+
+# Administrators, Builtin, corp.local
+dn: CN=Administrators,CN=Builtin,DC=corp,DC=local
+cn: Administrators
+member: CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local
+member: CN=Domain Admins,CN=Users,DC=corp,DC=local
+member: CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+member: CN=Administrator,CN=Users,DC=corp,DC=local
+
+# Users, Builtin, corp.local
+dn: CN=Users,CN=Builtin,DC=corp,DC=local
+cn: Users
+member: CN=Domain Users,CN=Users,DC=corp,DC=local
+member: CN=S-1-5-11,CN=ForeignSecurityPrincipals,DC=corp,DC=local
+member: CN=S-1-5-4,CN=ForeignSecurityPrincipals,DC=corp,DC=local
+
+# Guests, Builtin, corp.local
+dn: CN=Guests,CN=Builtin,DC=corp,DC=local
+cn: Guests
+member: CN=Domain Guests,CN=Users,DC=corp,DC=local
+member: CN=Guest,CN=Users,DC=corp,DC=local
+
+# Print Operators, Builtin, corp.local
+dn: CN=Print Operators,CN=Builtin,DC=corp,DC=local
+cn: Print Operators
+
+# Backup Operators, Builtin, corp.local
+dn: CN=Backup Operators,CN=Builtin,DC=corp,DC=local
+cn: Backup Operators
+
+# Replicator, Builtin, corp.local
+dn: CN=Replicator,CN=Builtin,DC=corp,DC=local
+cn: Replicator
+
+# Remote Desktop Users, Builtin, corp.local
+dn: CN=Remote Desktop Users,CN=Builtin,DC=corp,DC=local
+cn: Remote Desktop Users
+
+# Network Configuration Operators, Builtin, corp.local
+dn: CN=Network Configuration Operators,CN=Builtin,DC=corp,DC=local
+cn: Network Configuration Operators
+
+# Performance Monitor Users, Builtin, corp.local
+dn: CN=Performance Monitor Users,CN=Builtin,DC=corp,DC=local
+cn: Performance Monitor Users
+
+# Performance Log Users, Builtin, corp.local
+dn: CN=Performance Log Users,CN=Builtin,DC=corp,DC=local
+cn: Performance Log Users
+
+# Distributed COM Users, Builtin, corp.local
+dn: CN=Distributed COM Users,CN=Builtin,DC=corp,DC=local
+cn: Distributed COM Users
+
+# IIS_IUSRS, Builtin, corp.local
+dn: CN=IIS_IUSRS,CN=Builtin,DC=corp,DC=local
+cn: IIS_IUSRS
+member: CN=S-1-5-17,CN=ForeignSecurityPrincipals,DC=corp,DC=local
+
+# Cryptographic Operators, Builtin, corp.local
+dn: CN=Cryptographic Operators,CN=Builtin,DC=corp,DC=local
+cn: Cryptographic Operators
+
+# Event Log Readers, Builtin, corp.local
+dn: CN=Event Log Readers,CN=Builtin,DC=corp,DC=local
+cn: Event Log Readers
+
+# Certificate Service DCOM Access, Builtin, corp.local
+dn: CN=Certificate Service DCOM Access,CN=Builtin,DC=corp,DC=local
+cn: Certificate Service DCOM Access
+
+# RDS Remote Access Servers, Builtin, corp.local
+dn: CN=RDS Remote Access Servers,CN=Builtin,DC=corp,DC=local
+cn: RDS Remote Access Servers
+
+# RDS Endpoint Servers, Builtin, corp.local
+dn: CN=RDS Endpoint Servers,CN=Builtin,DC=corp,DC=local
+cn: RDS Endpoint Servers
+
+# RDS Management Servers, Builtin, corp.local
+dn: CN=RDS Management Servers,CN=Builtin,DC=corp,DC=local
+cn: RDS Management Servers
+
+# Hyper-V Administrators, Builtin, corp.local
+dn: CN=Hyper-V Administrators,CN=Builtin,DC=corp,DC=local
+cn: Hyper-V Administrators
+
+# Access Control Assistance Operators, Builtin, corp.local
+dn: CN=Access Control Assistance Operators,CN=Builtin,DC=corp,DC=local
+cn: Access Control Assistance Operators
+
+# Remote Management Users, Builtin, corp.local
+dn: CN=Remote Management Users,CN=Builtin,DC=corp,DC=local
+cn: Remote Management Users
+member: CN=estudiante,OU=Whoami-Labs,DC=corp,DC=local
+
+# Storage Replica Administrators, Builtin, corp.local
+dn: CN=Storage Replica Administrators,CN=Builtin,DC=corp,DC=local
+cn: Storage Replica Administrators
+
+# Domain Computers, Users, corp.local
+dn: CN=Domain Computers,CN=Users,DC=corp,DC=local
+cn: Domain Computers
+
+# Domain Controllers, Users, corp.local
+dn: CN=Domain Controllers,CN=Users,DC=corp,DC=local
+cn: Domain Controllers
+
+# Schema Admins, Users, corp.local
+dn: CN=Schema Admins,CN=Users,DC=corp,DC=local
+cn: Schema Admins
+member: CN=Administrator,CN=Users,DC=corp,DC=local
+
+# Enterprise Admins, Users, corp.local
+dn: CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+cn: Enterprise Admins
+member: CN=Administrator,CN=Users,DC=corp,DC=local
+
+# Cert Publishers, Users, corp.local
+dn: CN=Cert Publishers,CN=Users,DC=corp,DC=local
+cn: Cert Publishers
+
+# Domain Admins, Users, corp.local
+dn: CN=Domain Admins,CN=Users,DC=corp,DC=local
+cn: Domain Admins
+member: CN=Administrator,CN=Users,DC=corp,DC=local
+
+# Domain Users, Users, corp.local
+dn: CN=Domain Users,CN=Users,DC=corp,DC=local
+cn: Domain Users
+
+# Domain Guests, Users, corp.local
+dn: CN=Domain Guests,CN=Users,DC=corp,DC=local
+cn: Domain Guests
+
+# Group Policy Creator Owners, Users, corp.local
+dn: CN=Group Policy Creator Owners,CN=Users,DC=corp,DC=local
+cn: Group Policy Creator Owners
+member: CN=Administrator,CN=Users,DC=corp,DC=local
+
+# RAS and IAS Servers, Users, corp.local
+dn: CN=RAS and IAS Servers,CN=Users,DC=corp,DC=local
+cn: RAS and IAS Servers
+
+# Server Operators, Builtin, corp.local
+dn: CN=Server Operators,CN=Builtin,DC=corp,DC=local
+cn: Server Operators
+
+# Account Operators, Builtin, corp.local
+dn: CN=Account Operators,CN=Builtin,DC=corp,DC=local
+cn: Account Operators
+
+# Pre-Windows 2000 Compatible Access, Builtin, corp.local
+dn: CN=Pre-Windows 2000 Compatible Access,CN=Builtin,DC=corp,DC=local
+cn: Pre-Windows 2000 Compatible Access
+member: CN=S-1-5-11,CN=ForeignSecurityPrincipals,DC=corp,DC=local
+
+# Incoming Forest Trust Builders, Builtin, corp.local
+dn: CN=Incoming Forest Trust Builders,CN=Builtin,DC=corp,DC=local
+cn: Incoming Forest Trust Builders
+
+# Windows Authorization Access Group, Builtin, corp.local
+dn: CN=Windows Authorization Access Group,CN=Builtin,DC=corp,DC=local
+cn: Windows Authorization Access Group
+member: CN=S-1-5-9,CN=ForeignSecurityPrincipals,DC=corp,DC=local
+
+# Terminal Server License Servers, Builtin, corp.local
+dn: CN=Terminal Server License Servers,CN=Builtin,DC=corp,DC=local
+cn: Terminal Server License Servers
+
+# Allowed RODC Password Replication Group, Users, corp.local
+dn: CN=Allowed RODC Password Replication Group,CN=Users,DC=corp,DC=local
+cn: Allowed RODC Password Replication Group
+
+# Denied RODC Password Replication Group, Users, corp.local
+dn: CN=Denied RODC Password Replication Group,CN=Users,DC=corp,DC=local
+cn: Denied RODC Password Replication Group
+member: CN=Read-only Domain Controllers,CN=Users,DC=corp,DC=local
+member: CN=Group Policy Creator Owners,CN=Users,DC=corp,DC=local
+member: CN=Domain Admins,CN=Users,DC=corp,DC=local
+member: CN=Cert Publishers,CN=Users,DC=corp,DC=local
+member: CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+member: CN=Schema Admins,CN=Users,DC=corp,DC=local
+member: CN=Domain Controllers,CN=Users,DC=corp,DC=local
+member: CN=krbtgt,CN=Users,DC=corp,DC=local
+
+# Read-only Domain Controllers, Users, corp.local
+dn: CN=Read-only Domain Controllers,CN=Users,DC=corp,DC=local
+cn: Read-only Domain Controllers
+
+# Enterprise Read-only Domain Controllers, Users, corp.local
+dn: CN=Enterprise Read-only Domain Controllers,CN=Users,DC=corp,DC=local
+cn: Enterprise Read-only Domain Controllers
+
+# Cloneable Domain Controllers, Users, corp.local
+dn: CN=Cloneable Domain Controllers,CN=Users,DC=corp,DC=local
+cn: Cloneable Domain Controllers
+
+# Protected Users, Users, corp.local
+dn: CN=Protected Users,CN=Users,DC=corp,DC=local
+cn: Protected Users
+
+# Key Admins, Users, corp.local
+dn: CN=Key Admins,CN=Users,DC=corp,DC=local
+cn: Key Admins
+
+# Enterprise Key Admins, Users, corp.local
+dn: CN=Enterprise Key Admins,CN=Users,DC=corp,DC=local
+cn: Enterprise Key Admins
+
+# DnsAdmins, Users, corp.local
+dn: CN=DnsAdmins,CN=Users,DC=corp,DC=local
+cn: DnsAdmins
+
+# DnsUpdateProxy, Users, corp.local
+dn: CN=DnsUpdateProxy,CN=Users,DC=corp,DC=local
+cn: DnsUpdateProxy
+
+# search reference
+ref: ldap://ForestDnsZones.corp.local/DC=ForestDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://DomainDnsZones.corp.local/DC=DomainDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://corp.local/CN=Configuration,DC=corp,DC=local
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 52
+# numEntries: 48
+# numReferences: 3

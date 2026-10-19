@@ -1,0 +1,30 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=corp,dc=local> with scope subtree
+# filter: (objectClass=computer)
+# requesting: cn dNSHostName operatingSystem 
+#
+
+# WIN-CFIU5AU7L2D, Domain Controllers, corp.local
+dn: CN=WIN-CFIU5AU7L2D,OU=Domain Controllers,DC=corp,DC=local
+cn: WIN-CFIU5AU7L2D
+operatingSystem: Windows Server 2019 Standard Evaluation
+dNSHostName: WIN-CFIU5AU7L2D.corp.local
+
+# search reference
+ref: ldap://ForestDnsZones.corp.local/DC=ForestDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://DomainDnsZones.corp.local/DC=DomainDnsZones,DC=corp,DC=local
+
+# search reference
+ref: ldap://corp.local/CN=Configuration,DC=corp,DC=local
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 5
+# numEntries: 1
+# numReferences: 3

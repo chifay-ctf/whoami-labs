@@ -1,0 +1,47 @@
+/usr/lib/python3/dist-packages/cme/cli.py:37: SyntaxWarning: "\ " is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\ "? A raw string is also an option.
+  formatter_class=RawTextHelpFormatter)
+/usr/lib/python3/dist-packages/impacket/mssql/version.py:182: SyntaxWarning: 'return' in a 'finally' block
+  return string
+/usr/lib/python3/dist-packages/cme/protocols/smb/smbexec.py:49: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  stringbinding = 'ncacn_np:%s[\pipe\svcctl]' % self.__host
+/usr/lib/python3/dist-packages/cme/protocols/smb/smbexec.py:93: SyntaxWarning: "\{" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\{"? A raw string is also an option.
+  command = self.__shell + 'echo '+ data + ' ^> \\\\127.0.0.1\\{}\\{} 2^>^&1 > %TEMP%\{} & %COMSPEC% /Q /c %TEMP%\{} & %COMSPEC% /Q /c del %TEMP%\{}'.format(self.__share_name, self.__output, self.__batchFile, self.__batchFile, self.__batchFile)
+/usr/lib/python3/dist-packages/cme/protocols/winrm.py:324: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  self.conn.execute_cmd("reg save HKLM\SAM C:\\windows\\temp\\SAM && reg save HKLM\SYSTEM C:\\windows\\temp\\SYSTEM")
+/usr/lib/python3/dist-packages/cme/protocols/winrm.py:338: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  self.conn.execute_cmd("reg save HKLM\SECURITY C:\\windows\\temp\\SECURITY && reg save HKLM\SYSTEM C:\\windows\\temp\\SYSTEM")
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 x64 (name:WIN-CFIU5AU7L2D) (domain:corp.local) (signing:True) (SMBv1:False)
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  [+] corp.local\svc_backup:Password123 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  [+] Enumerated shares
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Share           Permissions     Remark
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  -----           -----------     ------
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  ADMIN$                          Remote Admin
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  C$                              Default share
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  IPC$            READ            Remote IPC
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  NETLOGON        READ            Logon server share 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  SYSVOL          READ            Logon server share 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  [+] Enumerated domain user(s)
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\svc_sql                        badpwdcount: 0 desc: Cuenta de servicio de base de datos corporativa MSSQL
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\svc_backup                     badpwdcount: 0 desc: Cuenta de servicio de respaldos nocturnos - Legacy System
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\estudiante                     badpwdcount: 1 desc: Cuenta de usuario de dominio para auditoria inicial CPENT
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\krbtgt                         badpwdcount: 0 desc: Key Distribution Center Service Account
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\Guest                          badpwdcount: 0 desc: Built-in account for guest access to the computer/domain
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  corp.local\Administrator                  badpwdcount: 0 desc: Built-in account for administering the computer/domain
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  [+] Dumping password info for domain: CORP
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Minimum password length: 7
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Password history length: 24
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Maximum password age: 41 days 23 hours 53 minutes 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Password Complexity Flags: 000001
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Refuse Password Change: 0
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Password Store Cleartext: 0
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Password Lockout Admins: 0
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Password No Clear Change: 0
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Password No Anon Change: 0
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  	Domain Password Complex: 1
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Minimum password age: 1 day 4 minutes 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Reset Account Lockout Counter: 10 minutes 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Locked Account Duration: 10 minutes 
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Account Lockout Threshold: None
+SMB                      172.16.202.130  445    WIN-CFIU5AU7L2D  Forced Log off Time: Not Set
