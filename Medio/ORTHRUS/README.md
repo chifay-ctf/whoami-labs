@@ -4,7 +4,7 @@
 |---|---|
 | **Laboratorio** | ORTHRUS — *CPENT · Active Directory* |
 | **Plataforma** | Whoami-Labs |
-| **Dificultad** | Media |
+| **Dificultad** | Media ★★★☆☆☆☆☆ (3 puntos) |
 | **Categoría** | Pivoting |
 | **Autor del writeup** | chifay |
 | **Fecha** | 19/10/2026 |
