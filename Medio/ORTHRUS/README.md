@@ -5,7 +5,7 @@
 | **Laboratorio** | ORTHRUS — *CPENT · Active Directory* |
 | **Plataforma** | Whoami-Labs |
 | **Dificultad** | Media ★★★☆☆☆☆☆ (3 puntos) |
-| **Categoría** | Pivoting |
+| **Categoría** | Pivoting & Lateral Movement |
 | **Autor del writeup** | chifay |
 | **Fecha** | 19/10/2026 |
 | **Objetivo** | `172.16.202.130` (máquina virtual OVA — DC Windows Server 2019) |
