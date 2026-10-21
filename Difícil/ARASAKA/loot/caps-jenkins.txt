@@ -1,0 +1,22 @@
+=== caps jenkins ===
+Uid:	999	999	999	999
+Gid:	999	999	999	999
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+=== pid102 ===
+Uid:	999	999	999	999
+Gid:	999	999	999	999
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+=== capsh ===
+/usr/bin/setpriv
+=== python setuid test ===
+uid 999
+setuid fail [Errno 1] Operation not permitted
+

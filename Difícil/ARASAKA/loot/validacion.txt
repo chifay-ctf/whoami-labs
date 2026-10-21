@@ -1,0 +1,15 @@
+================================================================================
+
+ LAB: ARASAKA
+ DIFICULTAD: ★★★★★☆☆☆ difícil (5 puntos)
+
+================================================================================
+IP del laboratorio: 172.17.0.2
+
+Ingresa la flag (formato ARASAKA{...}):
+¡Felicitaciones! Has infiltrado Arasaka Tower.
+
+FECHA Y HORA: 2026-10-21 09:53:02 -0600
+================================================================================
+
+[*] Presiona Ctrl+C para eliminar el laboratorio

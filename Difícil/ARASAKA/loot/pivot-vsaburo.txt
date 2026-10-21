@@ -1,0 +1,28 @@
+uid=1002(vsaburo) gid=1002(vsaburo) groups=1002(vsaburo)
+=== HOME ===
+/home/vsaburo
+total 28
+drwxr-x--- 1 vsaburo vsaburo 4096 Oct 21 15:34 .
+drwxr-xr-x 1 root    root    4096 Feb 10  2026 ..
+-rw-r--r-- 1 vsaburo vsaburo  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 vsaburo vsaburo 3771 Jan  6  2022 .bashrc
+drwx------ 2 vsaburo vsaburo 4096 Oct 21 15:34 .cache
+-rw-r--r-- 1 vsaburo vsaburo  807 Jan  6  2022 .profile
+=== SUDO -l ===
+[sudo] password for vsaburo: Sorry, user vsaburo may not run sudo on arasaka.
+=== SUDO -n -l ===
+sudo: a password is required
+=== SUID custom ===
+-rwsr-xr-x root root 55680 /usr/bin/su
+-rwsr-xr-x root root 40496 /usr/bin/newgrp
+-rwsr-xr-x root root 72072 /usr/bin/gpasswd
+-rwsr-xr-x root root 59976 /usr/bin/passwd
+-rwsr-xr-x root root 72712 /usr/bin/chfn
+-rwsr-xr-x root root 47488 /usr/bin/mount
+-rwsr-xr-x root root 44808 /usr/bin/chsh
+-rwsr-xr-x root root 35200 /usr/bin/umount
+-rwsr-xr-x root root 232416 /usr/bin/sudo
+-rwsr-xr-x root root 338536 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-- root messagebus 35112 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+=== groups ===
+vsaburo

@@ -1,0 +1,51 @@
+uid=1000(netrunner) gid=1000(netrunner) groups=1000(netrunner)
+=== HOME ===
+/home/netrunner:
+total 32
+drwxr-x--- 1 netrunner netrunner 4096 Oct 21 15:46 .
+drwxr-xr-x 1 root      root      4096 Feb 10  2026 ..
+-rw-r--r-- 1 netrunner netrunner  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 netrunner netrunner 3771 Jan  6  2022 .bashrc
+drwx------ 2 netrunner netrunner 4096 Oct 21 15:46 .cache
+-rw-r--r-- 1 netrunner netrunner  807 Jan  6  2022 .profile
+drwxr-xr-x 2 netrunner netrunner 4096 Feb 10  2026 exploit
+
+/home/netrunner/.cache:
+total 8
+drwx------ 2 netrunner netrunner 4096 Oct 21 15:46 .
+drwxr-x--- 1 netrunner netrunner 4096 Oct 21 15:46 ..
+-rw-r--r-- 1 netrunner netrunner    0 Oct 21 15:46 motd.legal-displayed
+
+/home/netrunner/exploit:
+total 12
+drwxr-xr-x 2 netrunner netrunner 4096 Feb 10  2026 .
+drwxr-x--- 1 netrunner netrunner 4096 Oct 21 15:46 ..
+-rw-r--r-- 1 netrunner netrunner   34 Feb 10  2026 README.txt
+=== SUDO -l ===
+Matching Defaults entries for netrunner on arasaka:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User netrunner may run the following commands on arasaka:
+    (ALL) NOPASSWD: /usr/bin/sudo
+=== SUDO -n -l ===
+Matching Defaults entries for netrunner on arasaka:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User netrunner may run the following commands on arasaka:
+    (ALL) NOPASSWD: /usr/bin/sudo
+=== SUDO -n id ===
+sudo: a password is required
+=== SUID ===
+-rwsr-xr-x root root 55680 /usr/bin/su
+-rwsr-xr-x root root 40496 /usr/bin/newgrp
+-rwsr-xr-x root root 72072 /usr/bin/gpasswd
+-rwsr-xr-x root root 59976 /usr/bin/passwd
+-rwsr-xr-x root root 72712 /usr/bin/chfn
+-rwsr-xr-x root root 47488 /usr/bin/mount
+-rwsr-xr-x root root 44808 /usr/bin/chsh
+-rwsr-xr-x root root 35200 /usr/bin/umount
+-rwsr-xr-x root root 232416 /usr/bin/sudo
+-rwsr-xr-x root root 338536 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-- root messagebus 35112 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+=== groups ===
+netrunner

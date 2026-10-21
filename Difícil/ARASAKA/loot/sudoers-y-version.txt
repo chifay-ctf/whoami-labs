@@ -1,0 +1,82 @@
+=== sudoers ===
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+Defaults	mail_badpass
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+Defaults	use_pty
+
+# This preserves proxy settings from user environments of root
+# equivalent users (group sudo)
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_proxy"
+
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "@include" directives:
+
+@includedir /etc/sudoers.d
+netrunner ALL=(ALL) NOPASSWD: /usr/bin/sudo
+=== sudoers.d ===
+total 12
+drwxr-xr-x 2 root root 4096 Feb 10  2026 .
+drwxr-xr-x 1 root root 4096 Oct 21 15:19 ..
+-r--r----- 1 root root 1096 Aug  3  2022 README
+=== version ===
+Sudo version 1.9.9
+Sudoers policy plugin version 1.9.9
+Sudoers file grammar version 48
+Sudoers I/O plugin version 1.9.9
+Sudoers audit plugin version 1.9.9
+=== chroot option ===
+                                target's
+  -p, --prompt=prompt           use the specified password prompt
+  -R, --chroot=directory        change the root directory before running command
+  -r, --role=role               create SELinux security context with specified
+                                role
+=== binario ===
+-rwsr-xr-x 1 root root 232416 Jun 25  2025 /usr/bin/sudo
+/usr/bin/sudo: setuid ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=6628c9744f3cea17480d00ac823a9815c6d3cf2c, for GNU/Linux 3.2.0, stripped
+=== README dir ===
+total 12
+drwxr-xr-x 2 netrunner netrunner 4096 Feb 10  2026 .
+drwxr-x--- 1 netrunner netrunner 4096 Oct 21 15:46 ..
+-rw-r--r-- 1 netrunner netrunner   34 Feb 10  2026 README.txt
+CVE-2025-32463 Research Directory
