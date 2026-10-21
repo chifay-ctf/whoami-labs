@@ -537,8 +537,6 @@ tomada en una segunda ejecución a las **10:19:33 -0600**, confirma la misma ban
 ```text
 .
 ├── README.md                     Este documento
-├── .gitignore                    Excluye la imagen Docker y temporales
-├── startlab.sh                   Validador oficial del laboratorio
 ├── docs/img/                     13 capturas del writeup
 │   ├── 01-recon.png              Puertos y servicios
 │   ├── 02-web.png                Portada estática
@@ -582,10 +580,6 @@ tomada en una segunda ejecución a las **10:19:33 -0600**, confirma la misma ban
 │   ├── pivot-netrunner.txt       Acceso como netrunner
 │   └── jenkins-config.txt        Configuración y contraseña en claro
 ├── notes/bitacora.md             Cronología y decisiones del análisis
-├── shots/
-│   ├── capture.sh                Regenera las salidas reales
-│   ├── make_images.py            Genera los PNG del writeup
-│   └── captures/                 Salidas crudas usadas por las imágenes
 └── wordlists/
     ├── arasaka_users.txt         Usuarios probados con Hydra
     ├── arasaka_passwords.txt     1 582 contraseñas temáticas
@@ -647,4 +641,5 @@ sudo -n /usr/bin/sudo -n cat /root/flag.txt
 
 > Ejecutar solo contra el contenedor del laboratorio. `hydra` y `sshpass` deben usarse con permiso
 > explícito del propietario del sistema auditado.
+
 
