@@ -1,0 +1,24 @@
+$ cat ~/exploit/README.txt
+CVE-2025-32463 Research Directory
+
+$ sudo --version
+Sudo version 1.9.9
+Sudoers policy plugin version 1.9.9
+Sudoers file grammar version 48
+Sudoers I/O plugin version 1.9.9
+Sudoers audit plugin version 1.9.9
+
+$ dpkg -s sudo | grep -E "^(Package|Version|Status):"
+Package: sudo
+Status: install ok installed
+Version: 1.9.9-1ubuntu2.5
+
+$ zcat /usr/share/doc/sudo/changelog.Debian.gz | grep -i -A4 -B1 3246
+  * SECURITY UPDATE: Local Privilege Escalation via host option
+    - debian/patches/CVE-2025-32462.patch: only allow specifying a host
+      when listing privileges.
+    - CVE-2025-32462
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 25 Jun 2025 08:48:23 -0400
+
+sudo (1.9.9-1ubuntu2.4) jammy-security; urgency=medium

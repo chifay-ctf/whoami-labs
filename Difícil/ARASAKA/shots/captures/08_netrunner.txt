@@ -1,0 +1,12 @@
+uid=1000(netrunner) gid=1000(netrunner) groups=1000(netrunner)
+
+total 32
+drwxr-x--- 1 netrunner netrunner 4096 Oct 21 15:46 .
+drwxr-xr-x 1 root      root      4096 Feb 10  2026 ..
+-rw-r--r-- 1 netrunner netrunner  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 netrunner netrunner 3771 Jan  6  2022 .bashrc
+drwx------ 2 netrunner netrunner 4096 Oct 21 15:46 .cache
+-rw-r--r-- 1 netrunner netrunner  807 Jan  6  2022 .profile
+drwxr-xr-x 2 netrunner netrunner 4096 Feb 10  2026 exploit
+
+CVE-2025-32463 Research Directory

@@ -1,0 +1,12 @@
+# Nmap 7.991 scan initiated Wed Oct 21 09:25:59 2026 as: /usr/lib/nmap/nmap --privileged -Pn -p- --min-rate 4000 -T4 -oN recon/nmap-full.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000050s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+8080/tcp  open  http-proxy
+38799/tcp open  unknown
+MAC Address: 4A:14:D0:EC:29:29 (Unknown)
+
+# Nmap done at Wed Oct 21 09:26:00 2026 -- 1 IP address (1 host up) scanned in 0.81 seconds

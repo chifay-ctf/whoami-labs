@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARASAKA CORPORATION</title>
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            font-family:Arial,sans-serif;
+            background:#0a0a0f;
+            color:#fff;
+            text-align:center;
+            padding:50px;
+        }
+        h1 {
+            font-size:5rem;
+            color:#ff0040;
+            text-shadow:0 0 20px #ff0040;
+            margin-bottom:20px;
+        }
+        .subtitle {
+            font-size:1.5rem;
+            color:#00ffff;
+            letter-spacing:10px;
+            margin-bottom:50px;
+        }
+        .btn {
+            display:inline-block;
+            padding:15px 40px;
+            background:#ff0040;
+            color:#fff;
+            text-decoration:none;
+            font-size:1.2rem;
+            margin:20px;
+            border:2px solid #ff0040;
+            transition:0.3s;
+        }
+        .btn:hover {
+            background:transparent;
+            box-shadow:0 0 30px #ff0040;
+        }
+        .projects {
+            margin-top:100px;
+        }
+        .card {
+            display:inline-block;
+            background:#1a1a2e;
+            border:2px solid #ff0040;
+            padding:30px;
+            margin:20px;
+            width:300px;
+            vertical-align:top;
+        }
+        .card h3 {
+            color:#ff0040;
+            margin-bottom:15px;
+        }
+        .warning {
+            background:#1a1a2e;
+            border:2px solid #ffaa00;
+            padding:20px;
+            margin:50px auto;
+            max-width:600px;
+            color:#ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <h1>荒坂 ARASAKA</h1>
+    <p class="subtitle">CORPORATION</p>
+    <p style="font-size:1.5rem;color:#00ffff;margin:30px 0;">DOMINATING NIGHT CITY SINCE 2020</p>
+    
+    <div class="warning">
+        <strong>⚠ SYSTEM ACCESS</strong><br><br>
+        Corporate employees must authenticate via Jenkins Portal
+    </div>
+    
+    <a href="http://172.17.0.2:8080" class="btn" target="_blank">ACCESS JENKINS PORTAL</a>
+    
+    <div class="projects">
+        <h2 style="color:#00ffff;font-size:2rem;margin-bottom:30px;">CLASSIFIED PROJECTS</h2>
+        <div class="card">
+            <h3>SOULKILLER</h3>
+            <p>Neural interface technology for consciousness digitization and transfer protocols.</p>
+        </div>
+        <div class="card">
+            <h3>RELIC PROTOCOL</h3>
+            <p>Experimental biochip technology for personality engram storage.</p>
+        </div>
+        <div class="card">
+            <h3>MIKOSHI DATABASE</h3>
+            <p>Secure storage facility for digitized consciousness.</p>
+        </div>
+    </div>
+    
+    <footer style="margin-top:100px;color:#666;font-size:0.9rem;">
+        <p>© 2077 ARASAKA CORPORATION | NIGHT CITY, JAPAN</p>
+        <p style="margin-top:10px;font-size:0.8rem;">ALL ACCESS ATTEMPTS ARE MONITORED</p>
+    </footer>
+</body>
+</html>

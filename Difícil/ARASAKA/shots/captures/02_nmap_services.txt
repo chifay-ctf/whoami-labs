@@ -1,0 +1,58 @@
+# Nmap 7.991 scan initiated Wed Oct 21 09:26:19 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sV -sC -p 22,80,8080,38799 -oN recon/nmap-services.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000043s latency).
+
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 11:eb:27:4f:6b:cb:ba:23:65:3b:14:09:c6:23:65:63 (ECDSA)
+|_  256 d9:b3:2d:69:c2:95:1d:a5:5e:79:7d:61:8c:9a:5a:4b (ED25519)
+80/tcp    open  http    Apache httpd 2.4.52 ((Ubuntu))
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+|_http-title: ARASAKA CORPORATION
+8080/tcp  open  http    Jetty 10.0.20
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Jetty(10.0.20)
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
+38799/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, Kerberos, SMBProgNeg, afp: 
+|     Unrecognized protocol:
+|   DNSVersionBindReqTCP: 
+|     Unrecognized protocol: 
+|     version
+|     bind
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/plain;charset=UTF-8
+|     Found
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Type: text/plain;charset=UTF-8
+|     X-Content-Type-Options: nosniff
+|     Jenkins-Agent-Protocols: JNLP4-connect, Ping
+|     Jenkins-Version: 2.452.4
+|     Jenkins-Session: 9cb0b322
+|     Client: 172.17.0.1
+|     Server: 172.17.0.2
+|_    Remoting-Minimum-Version: 4.13
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port38799-TCP:V=7.991%I=7%D=10/21%Time=6AD8D9A7%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,107,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/plain;
+SF:charset=UTF-8\r\nX-Content-Type-Options:\x20nosniff\r\n\r\nJenkins-Agen
+SF:t-Protocols:\x20JNLP4-connect,\x20Ping\r\nJenkins-Version:\x202\.452\.4
+SF:\r\nJenkins-Session:\x209cb0b322\r\nClient:\x20172\.17\.0\.1\r\nServer:
+SF:\x20172\.17\.0\.2\r\nRemoting-Minimum-Version:\x204\.13\r\n")%r(DNSVers
+SF:ionBindReqTCP,36,"Unrecognized\x20protocol:\x20\0\x06\x01\0\0\x01\0\0\0
+SF:\0\0\0\x07version\x04bind\0\0\x10\0\x03\n")%r(DNSStatusRequestTCP,24,"U
+SF:nrecognized\x20protocol:\x20\0\0\x10\0\0\0\0\0\0\0\0\0\n")%r(Kerberos,1
+SF:8,"Unrecognized\x20protocol:\x20\n")%r(SMBProgNeg,18,"Unrecognized\x20p
+SF:rotocol:\x20\n")%r(FourOhFourRequest,4D,"HTTP/1\.0\x20404\x20Not\x20Fou
+SF:nd\r\nContent-Type:\x20text/plain;charset=UTF-8\r\n\r\nNot\x20Found\r\n
+SF:")%r(afp,1B,"Unrecognized\x20protocol:\x20\0\x01\0\n");
+MAC Address: 4A:14:D0:EC:29:29 (Unknown)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 21 09:28:36 2026 -- 1 IP address (1 host up) scanned in 136.82 seconds

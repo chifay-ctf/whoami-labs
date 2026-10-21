@@ -1,0 +1,13 @@
+Fuente: https://ubuntu.com/security/CVE-2025-32463
+Consultado: 2026-10-21
+
+CVE-2025-32463 | Ubuntu | Your submission was sent successfully! | Close
+Assurances | CVE-2025-32463 | Publication date | 30 June 2025
+Toggle table of contents | Description | Status | Severity score breakdown
+References | Description | Sudo before 1.9.17p1 allows local users to obtain root access because | /etc/nsswitch.conf from a user-controlled directory is used with the
+jammy | Not affected | 20.04 | LTS
+focal | Not affected | 18.04 | LTS
+bionic | Not affected | 16.04 | LTS
+xenial | Not affected | 14.04 | LTS
+trusty | Not affected | How can I get the fixes? | What do statuses mean?
+Other references | https://www.cve.org/CVERecord?id=CVE-2025-32463 | https://www.sudo.ws/security/advisories/chroot_bug/ | https://www.cisa.gov/known-exploited-vulnerabilities-catalog

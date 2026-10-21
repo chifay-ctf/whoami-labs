@@ -1,0 +1,9 @@
+HTTP/1.1 302 Found
+Date: Wed, 21 Oct 2026 15:52:05 GMT
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID.efa5997e=node01lok33e0s3cbf5vp8kxynzip5122.node0; Path=/; HttpOnly
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: http://172.17.0.2:8080/
+Content-Length: 0
+Server: Jetty(10.0.20)
+

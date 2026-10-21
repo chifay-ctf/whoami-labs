@@ -1,0 +1,9 @@
+uid=1001(johnny) gid=1001(johnny) groups=1001(johnny)
+
+total 28
+drwxr-x--- 1 johnny johnny 4096 Oct 21 15:37 .
+drwxr-xr-x 1 root   root   4096 Feb 10  2026 ..
+-rw-r--r-- 1 johnny johnny  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 johnny johnny 3771 Jan  6  2022 .bashrc
+drwx------ 2 johnny johnny 4096 Oct 21 15:37 .cache
+-rw-r--r-- 1 johnny johnny  807 Jan  6  2022 .profile
