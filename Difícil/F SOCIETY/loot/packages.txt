@@ -1,7 +1,0 @@
-PWNEDii  apache2            2.4.29-1ubuntu4.27      amd64        Apache HTTP Server
-ii  libapache2-mod-php 1:7.2+60ubuntu1         all          server-side, HTML-embedded scripting language (Apache 2 module) (default)
-ii  openssh-server     1:7.6p1-4ubuntu0.7      amd64        secure shell (SSH) server, for secure access from remote machines
-ii  sudo               1.8.21p2-3ubuntu1.6     amd64        Provide limited super user privileges to specific users
-===
-Status: hold ok installed
-Version: 0.105-20ubuntu0.18.04.6
