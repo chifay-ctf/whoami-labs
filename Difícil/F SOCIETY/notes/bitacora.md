@@ -266,7 +266,7 @@ Evidencia: `loot/16_john.txt`, `loot/17_flag.txt`, `docs/img/09-hash-crack.png`.
 - Se redacta `README.md` con la cadena completa, las dos flags y la validación.
 - Se generan las 12 capturas terminal con `shots/make_images.py`.
 - Se incorpora la captura real de validación como `docs/img/13-validacion-flag.png`.
-- Se crean `notes/bitacora.md`, `shots/README.md`, `exploits/README.md` y `.gitignore`.
+- Se crean `notes/bitacora.md`, y `exploits/README.md`.
 
 ## 3. Decisiones clave
 
