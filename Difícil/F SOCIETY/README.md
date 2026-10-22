@@ -541,7 +541,6 @@ fi
 ```
 F SOCIETY/
 ├── README.md                       Este documento
-├── .gitignore                      Excluye la imagen y la evidencia sensible
 ├── docs/img/                       13 capturas (12 generadas + 1 validación real)
 ├── exploits/
 │   ├── upload_shell.sh             Subida de cmd.php.jpg + RCE
@@ -587,11 +586,6 @@ F SOCIETY/
 │   ├── tyrell_tmp.txt              Copia de /home/tyrell/.tmp
 │   └── README.md                   Explicación de la wordlist
 ├── notes/bitacora.md               Bitácora del análisis
-├── shots/
-│   ├── make_images.py              Genera las capturas terminal
-│   └── README.md                   Cómo regenerarlas
-├── startlab.sh                     Script del laboratorio
-└── fsociety.tar                    Imagen Docker (no se publica)
 ```
 
 ---
