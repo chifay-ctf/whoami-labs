@@ -1,0 +1,9 @@
+=== 1. Se rechaza .php ===
+alert alert-error">Invalid file type. Allowed: jpg, jpeg, png, gif, pdf, txt
+
+=== 2. Se acepta .php.jpg (la última extensión es jpg) ===
+alert alert-success">File uploaded successfully: bypass.php.jpg
+
+=== 3. Apache ejecuta el .jpg como PHP (FilesMatch .+\.php sin anclar) ===
+EXEC_OK
+uid=33(www-data) gid=33(www-data) groups=33(www-data)

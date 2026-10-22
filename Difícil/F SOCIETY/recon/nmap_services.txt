@@ -1,0 +1,18 @@
+# Nmap 7.991 scan initiated Thu Oct 22 07:42:57 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sV -sC -p22,80 -oN recon/nmap_services.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000031s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 fc:c3:1e:ed:ab:f4:46:83:52:22:4a:75:b6:35:65:b2 (RSA)
+|   256 05:91:7a:09:2b:5d:38:d3:66:b9:c4:d7:f3:c7:a5:eb (ECDSA)
+|_  256 8d:cb:89:66:53:70:a1:bb:17:71:5e:4a:10:6e:78:56 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: E CORP - Evil Corp
+MAC Address: FA:7D:61:A1:DD:6E (Unknown)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct 22 07:43:04 2026 -- 1 IP address (1 host up) scanned in 6.84 seconds

