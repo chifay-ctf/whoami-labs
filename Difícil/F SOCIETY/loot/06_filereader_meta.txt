@@ -1,0 +1,12 @@
+-rwsr-xr-x 1 root root 8520 Feb 10  2026 /usr/local/bin/filereader
+/usr/local/bin/filereader: setuid ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=2d3f449daf9766aca8cf25759cfb046fcf0b8947, not stripped
+--- strings ---
+setuid
+system
+setgid
+File Reader v1.0
+Usage: %s <filename>
+cat %s 2>/dev/null || echo 'File not found'
+system@@GLIBC_2.2.5
+setgid@@GLIBC_2.2.5
+setuid@@GLIBC_2.2.5

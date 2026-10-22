@@ -1,0 +1,9 @@
+ACTUAL_FLAG (contenido literal de /root/flag.txt):
+phillip_price:$6$hg7hrQCqa53OdOo/$1YkvYxeBnOTCltn7lRMKqOyhUWIWTA/6yI7JjsCd9os68hvEhJQrwyDUlAr9if0j2hIj8BDIXfmp0JEUZ4i2r0
+
+Candidatos probados contra la comparación exacta de startlab.sh:
+FAIL  FSOCIETY{pwn_k1t_3_c0rp_0wn3d}
+FAIL  fsociety{pwn_k1t_3_c0rp_0wn3d}
+FAIL  fs0c13ty{pwn_k1t_3_c0rp_0wn3d}
+FAIL  $6$hg7hrQCqa53OdOo/$1YkvYxeBnOTCltn7lRMKqOyhUWIWTA/6yI7JjsCd9os68hvEhJQrwyDUlAr9if0j2hIj8BDIXfmp0JEUZ4i2r0
+PASS  phillip_price:$6$hg7hrQCqa53OdOo/$1YkvYxeBnOTCltn7lRMKqOyhUWIWTA/6yI7JjsCd9os68hvEhJQrwyDUlAr9if0j2hIj8BDIXfmp0JEUZ4i2r0

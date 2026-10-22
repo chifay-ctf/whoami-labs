@@ -1,0 +1,9 @@
+total 24
+drwxr-xr-x 1 root    root    4096 Feb 10  2026 .
+drwxr-xr-x 1 root    root    4096 Oct 22 13:42 ..
+drwxr-xr-x 2 angela  angela  4096 Feb 10  2026 angela
+drwxr-xr-x 2 darlene darlene 4096 Feb 10  2026 darlene
+drwxr-xr-x 1 elliot  elliot  4096 Feb 10  2026 elliot
+drwxr-xr-x 1 tyrell  tyrell  4096 Feb 10  2026 tyrell
+--- README elliot ---
+Remember: Enumeration is key. Check hidden files in user directories.

@@ -1,0 +1,17 @@
+PWNED===SUID_DETAIL
+-rwsr-xr-x 1 root root  22520 Jan 12  2022 /usr/bin/pkexec
+-rwsr-xr-x 1 root root 149080 Apr  4  2023 /usr/bin/sudo
+-rwsr-xr-x 1 root root   8520 Feb 10  2026 /usr/local/bin/filereader
+===POLKIT_ACTIONS
+total 60
+drwxr-xr-x 1 root root  4096 Feb 10  2026 .
+drwxr-xr-x 1 root root  4096 Feb 10  2026 ..
+-rw-r--r-- 1 root root  1117 May 25  2022 org.dpkg.pkexec.update-alternatives.policy
+-rw-r--r-- 1 root root  2574 Mar  2  2023 org.freedesktop.hostname1.policy
+-rw-r--r-- 1 root root  1923 Mar  2  2023 org.freedesktop.locale1.policy
+-rw-r--r-- 1 root root 21681 Mar  2  2023 org.freedesktop.login1.policy
+-rw-r--r-- 1 root root  1524 Jan 12  2022 org.freedesktop.policykit.policy
+-rw-r--r-- 1 root root  2011 Mar  2  2023 org.freedesktop.resolve1.policy
+-rw-r--r-- 1 root root  3667 Mar  2  2023 org.freedesktop.systemd1.policy
+===SUDO_VERSION
+Sudo version 1.8.21p2

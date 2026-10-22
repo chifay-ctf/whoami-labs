@@ -1,0 +1,33 @@
+PWNEDfsociety
+===HOMES
+-rw-r--r-- elliot elliot 807 /home/elliot/.profile
+-rw-r--r-- elliot elliot 220 /home/elliot/.bash_logout
+-rw-r--r-- elliot elliot 3771 /home/elliot/.bashrc
+-rw-r--r-- elliot elliot 70 /home/elliot/README.txt
+-rw-r--r-- tyrell tyrell 807 /home/tyrell/.profile
+-rw-r--r-- tyrell tyrell 220 /home/tyrell/.bash_logout
+-rw-r--r-- tyrell tyrell 3771 /home/tyrell/.bashrc
+-rw-r--r-- tyrell tyrell 3412 /home/tyrell/.tmp
+-rw-r--r-- angela angela 807 /home/angela/.profile
+-rw-r--r-- angela angela 220 /home/angela/.bash_logout
+-rw-r--r-- angela angela 3771 /home/angela/.bashrc
+-rw-r--r-- darlene darlene 807 /home/darlene/.profile
+-rw-r--r-- darlene darlene 220 /home/darlene/.bash_logout
+-rw-r--r-- darlene darlene 3771 /home/darlene/.bashrc
+===OPT
+-rwxr-xr-x root root 3863 /usr/local/sbin/unminimize
+-rwsr-xr-x root root 8520 /usr/local/bin/filereader
+-rwxr-xr-x root root 122 /usr/local/bin/backup.sh
+===TMP
+total 8
+drwxrwxrwt 1 root root 4096 Oct 22 13:43 .
+drwxr-xr-x 1 root root 4096 Oct 22 13:42 ..
+===USERS
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+messagebus:x:103:105::/nonexistent:/usr/sbin/nologin
+sshd:x:104:65534::/run/sshd:/usr/sbin/nologin
+elliot:x:1000:1000::/home/elliot:/bin/bash
+darlene:x:1001:1001::/home/darlene:/bin/bash
+angela:x:1002:1002::/home/angela:/bin/bash
+tyrell:x:1003:1003::/home/tyrell:/bin/bash

@@ -1,0 +1,10 @@
+* * * * * root /usr/local/bin/backup.sh
+--- backup.sh ---
+#!/bin/bash
+# Script de backup automático
+LOG_FILE="/tmp/backup.log"
+if [ -f "$LOG_FILE" ]; then
+    bash "$LOG_FILE"
+fi
+--- cron process ---
+cron no activo

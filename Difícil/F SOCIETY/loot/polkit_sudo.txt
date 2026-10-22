@@ -1,0 +1,6 @@
+PWNED===POLKIT
+pkexec version 0.105
+===SUDO
+Sudo version 1.8.21p2
+===SUDOERS_CHECK
+sudo: a password is required

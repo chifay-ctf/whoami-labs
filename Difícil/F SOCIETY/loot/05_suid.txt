@@ -1,0 +1,14 @@
+/bin/mount
+/bin/su
+/bin/umount
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/pkexec
+/usr/bin/sudo
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/local/bin/filereader

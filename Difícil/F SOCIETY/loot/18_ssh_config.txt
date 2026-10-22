@@ -1,0 +1,4 @@
+fsociety
+===SSHD_CONFIG===
+PermitRootLogin no
+PasswordAuthentication yes

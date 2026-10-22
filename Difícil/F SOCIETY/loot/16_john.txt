@@ -1,0 +1,9 @@
+Using default input encoding: UTF-8
+Loaded 1 password hash (sha512crypt, crypt(3) $6$ [SHA512 256/256 AVX2 4x])
+Cost 1 (iteration count) is 5000 for all loaded hashes
+Will run 4 OpenMP threads
+Press Ctrl-C to abort, or send SIGUSR1 to john process for status
+FSOCIETY{pwn_k1t_3_c0rp_0wn3d} (phillip_price)     
+1g 0:00:00:00 DONE (2026-10-22 08:59) 14.28g/s 3428p/s 3428c/s 3428C/s elliot..FSOCIETY{pwn_k1t_3_c0rp_0wn3d}
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 

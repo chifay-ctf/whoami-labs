@@ -1,0 +1,4 @@
+fsociety
+uid=0(root) gid=0(root) groups=0(root),33(www-data)
+===FLAG_HASH===
+phillip_price:$6$hg7hrQCqa53OdOo/$1YkvYxeBnOTCltn7lRMKqOyhUWIWTA/6yI7JjsCd9os68hvEhJQrwyDUlAr9if0j2hIj8BDIXfmp0JEUZ4i2r0

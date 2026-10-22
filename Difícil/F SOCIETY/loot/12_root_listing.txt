@@ -1,0 +1,10 @@
+fsociety
+total 20
+drwx------ 1 root root 4096 Feb 10  2026 .
+drwxr-xr-x 1 root root 4096 Oct 22 13:42 ..
+-rw-r--r-- 1 root root 3106 Apr  9  2018 .bashrc
+-rw-r--r-- 1 root root  148 Aug 17  2015 .profile
+-rw------- 1 root root  121 Feb 10  2026 flag.txt
+===
+121 /root/flag.txt
+phillip_price:$6$hg7hrQCqa53OdOo/$1YkvYxeBnOTCltn7lRMKqOyhUWIWTA/6yI7JjsCd9os68hvEhJQrwyDUlAr9if0j2hIj8BDIXfmp0JEUZ4i2r0$

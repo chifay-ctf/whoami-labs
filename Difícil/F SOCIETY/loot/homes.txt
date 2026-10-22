@@ -1,0 +1,38 @@
+PWNEDtotal 24
+drwxr-xr-x 1 root    root    4096 Feb 10  2026 .
+drwxr-xr-x 1 root    root    4096 Oct 22 13:42 ..
+drwxr-xr-x 2 angela  angela  4096 Feb 10  2026 angela
+drwxr-xr-x 2 darlene darlene 4096 Feb 10  2026 darlene
+drwxr-xr-x 1 elliot  elliot  4096 Feb 10  2026 elliot
+drwxr-xr-x 1 tyrell  tyrell  4096 Feb 10  2026 tyrell
+---
+[/home/angela]
+total 20
+drwxr-xr-x 2 angela angela 4096 Feb 10  2026 .
+drwxr-xr-x 1 root   root   4096 Feb 10  2026 ..
+-rw-r--r-- 1 angela angela  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 angela angela 3771 Apr  4  2018 .bashrc
+-rw-r--r-- 1 angela angela  807 Apr  4  2018 .profile
+[/home/darlene]
+total 20
+drwxr-xr-x 2 darlene darlene 4096 Feb 10  2026 .
+drwxr-xr-x 1 root    root    4096 Feb 10  2026 ..
+-rw-r--r-- 1 darlene darlene  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 darlene darlene 3771 Apr  4  2018 .bashrc
+-rw-r--r-- 1 darlene darlene  807 Apr  4  2018 .profile
+[/home/elliot]
+total 24
+drwxr-xr-x 1 elliot elliot 4096 Feb 10  2026 .
+drwxr-xr-x 1 root   root   4096 Feb 10  2026 ..
+-rw-r--r-- 1 elliot elliot  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 elliot elliot 3771 Apr  4  2018 .bashrc
+-rw-r--r-- 1 elliot elliot  807 Apr  4  2018 .profile
+-rw-r--r-- 1 elliot elliot   70 Feb 10  2026 README.txt
+[/home/tyrell]
+total 24
+drwxr-xr-x 1 tyrell tyrell 4096 Feb 10  2026 .
+drwxr-xr-x 1 root   root   4096 Feb 10  2026 ..
+-rw-r--r-- 1 tyrell tyrell  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 tyrell tyrell 3771 Apr  4  2018 .bashrc
+-rw-r--r-- 1 tyrell tyrell  807 Apr  4  2018 .profile
+-rw-r--r-- 1 tyrell tyrell 3412 Feb 10  2026 .tmp
