@@ -1,8 +1,0 @@
-PWNED=== sudoers effective ===
-
-=== users with shells ===
-root 0 0 /root /bin/bash
-elliot 1000 1000 /home/elliot /bin/bash
-darlene 1001 1001 /home/darlene /bin/bash
-angela 1002 1002 /home/angela /bin/bash
-tyrell 1003 1003 /home/tyrell /bin/bash
