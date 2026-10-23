@@ -633,8 +633,6 @@ La captura real del terminal, tomada a las **16:22:59 -0600**, confirma la misma
 ```text
 QUANTUM/
 ├── README.md                     Este documento
-├── startlab.sh                   Validador oficial del laboratorio
-├── quantum.tar                   Imagen Docker del laboratorio
 ├── docs/img/                     Capturas del writeup
 │   ├── 01-recon.png              Puertos y servicios
 │   ├── 02-web.png                Del Apache por defecto a /quantum/
@@ -676,8 +674,6 @@ QUANTUM/
 │   └── api-admin.txt             Token admin y /admin
 ├── notes/bitacora.md             Cronología y decisiones del análisis
 ├── shots/
-│   ├── capture.sh                Regenera las salidas reales
-│   ├── make_images.py            Genera los PNG del writeup
 │   └── captures/                 Salidas crudas usadas por las imágenes
 └── wordlists/                    (no usadas: no hubo fuerza bruta)
 ```
