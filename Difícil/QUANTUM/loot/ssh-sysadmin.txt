@@ -1,0 +1,4 @@
+uid=1002(sysadmin) gid=1002(sysadmin) groups=1002(sysadmin)
+quantum
+
+sudo: a password is required

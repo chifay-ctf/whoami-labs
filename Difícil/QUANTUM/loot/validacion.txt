@@ -1,0 +1,14 @@
+LAB: QUANTUM
+  DIFICULTAD: ★★★★★☆☆☆ dificil (5 puntos)
+
+================================================================================
+IP del laboratorio: 172.17.0.2
+================================================================================
+
+Ingresa la flag (formato QUANTUM{...}):
+¡Felicitaciones! Has conquistado QuantumAI.
+
+FECHA Y HORA: 2026-10-23 16:21:31 -0600
+================================================================================
+
+[*] Presiona Ctrl+C para eliminar el laboratorio

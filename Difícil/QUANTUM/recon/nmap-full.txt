@@ -1,0 +1,20 @@
+# Nmap 7.991 scan initiated Fri Oct 23 16:10:12 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sV -sC -T4 --min-rate 1000 -p- -oN /tmp/quantum-nmap-full.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000040s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 f3:fc:16:35:80:49:65:01:36:e1:2c:36:54:ef:48:ce (ECDSA)
+|_  256 a6:43:69:b8:21:85:7f:f4:5d:b0:a0:8d:9b:45:53:68 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.52 ((Ubuntu))
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+5000/tcp open  http    Werkzeug httpd 3.1.6 (Python 3.10.12)
+|_http-server-header: Werkzeug/3.1.6 Python/3.10.12
+|_http-title: Site doesn't have a title (application/json).
+MAC Address: 32:45:76:AE:37:F8 (Unknown)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 23 16:10:19 2026 -- 1 IP address (1 host up) scanned in 7.38 seconds

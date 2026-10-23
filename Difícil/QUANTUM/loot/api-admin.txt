@@ -1,0 +1,6 @@
+[+] payload: {"exp": 1792880448, "role": "admin", "user_id": 3, "username": "sysadmin"}
+[+] token:   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2V...
+[200] GET /data: {"data":"Research data placeholder","status":"success"}
+
+[200] GET /admin: {"message":"Admin panel access granted","status":"admin_access"}
+
