@@ -1,0 +1,8 @@
+===== /start.sh =====
+#!/bin/bash
+service apache2 start
+service ssh start
+nohup python3 /opt/api/app.py > /var/log/api.log 2>&1 &
+echo "[+] QuantumAI Lab started"
+tail -f /dev/null
+

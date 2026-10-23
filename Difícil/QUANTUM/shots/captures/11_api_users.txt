@@ -1,0 +1,8 @@
+GET /user/1 -> {"id":1,"role":"user","username":"researcher"}
+
+GET /user/2 -> {"id":2,"role":"developer","username":"aidev"}
+
+GET /user/3 -> {"id":3,"role":"admin","username":"sysadmin"}
+
+GET /user/4 -> {"error":"User not found"}
+

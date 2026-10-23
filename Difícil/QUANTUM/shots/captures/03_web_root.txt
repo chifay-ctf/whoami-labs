@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Fri, 23 Oct 2026 22:20:47 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Fri, 20 Feb 2026 06:57:25 GMT
+ETag: "29af-64b3beefd5f40"
+Accept-Ranges: bytes
+Content-Length: 10671
+Vary: Accept-Encoding
+
+    <title>Apache2 Ubuntu Default Page: It works</title>

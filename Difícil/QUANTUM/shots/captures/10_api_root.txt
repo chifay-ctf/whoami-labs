@@ -1,0 +1,1 @@
+{"endpoints":["/auth","/user/<id>","/data","/admin"],"service":"QuantumAI API v1.0"}

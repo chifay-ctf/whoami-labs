@@ -1,0 +1,26 @@
+==== 921df341f39638115358aa8ffbdf06e232a5eb08 tree
+100644 .env eef248f4312b4a7cfc369df56646c8d9ce43ede3
+100644 README.md 0b48fd16e6e1142645630893fbb88baca94b7a34
+==== 9d96eb4591fa57385cd3b61af964029a7596cdbc tree
+100644 .env 3221bd5bca33013c48d8092c87eb7e0c1c452760
+100644 README.md 0b48fd16e6e1142645630893fbb88baca94b7a34
+==== 14a427eed2c5a746f88981685498703d315ca98b commit
+tree 921df341f39638115358aa8ffbdf06e232a5eb08
+parent 3041d7e6cb78b448babbbc12040183c40d68e7c6
+author AI Developer <aidev@quantum.local> 1771570659 +0000
+committer AI Developer <aidev@quantum.local> 1771570659 +0000
+
+Remove credentials
+==== 3221bd5bca33013c48d8092c87eb7e0c1c452760 blob
+API_KEY=QAI_dev_2024
+SYSADMIN_PASS=SysAdm1n@Q
+==== eef248f4312b4a7cfc369df56646c8d9ce43ede3 blob
+API_KEY=<REMOVED>
+==== 0b48fd16e6e1142645630893fbb88baca94b7a34 blob
+# QuantumAI Development Project
+==== 3041d7e6cb78b448babbbc12040183c40d68e7c6 commit
+tree 9d96eb4591fa57385cd3b61af964029a7596cdbc
+author AI Developer <aidev@quantum.local> 1771570659 +0000
+committer AI Developer <aidev@quantum.local> 1771570659 +0000
+
+Initial setup

@@ -1,0 +1,5 @@
+$ sudo -n -l
+sudo: a password is required
+
+$ sudo -l   # con la contraseña del usuario
+[sudo] password for researcher: Sorry, user researcher may not run sudo on quantum.
