@@ -1,0 +1,41 @@
+$ ldapsearch -x -H ldap://172.16.202.131 -s base -b "" "(objectClass=*)"
+domainFunctionality: 7
+forestFunctionality: 7
+domainControllerFunctionality: 7
+rootDomainNamingContext: DC=corp,DC=local
+ldapServiceName: corp.local:win-cfiu5au7l2d$@CORP.LOCAL
+isGlobalCatalogReady: TRUE
+
+$ ldapsearch -x -H ldap://172.16.202.131 -b "DC=corp,DC=local" "(objectClass=user)" sAMAccountName
+# search result
+result: 1 Operations error
+# El rootDSE es anónimo; el subárbol del directorio no.
+
+$ domaindump / BloodHound (consolidado)
+Usuarios: 28 | Grupos: 56 | Equipos: 1
+Equipo: WIN-CFIU5AU7L2D | Windows Server 2019 Standard Evaluation 10.0 (17763)
+Domain SID: S-1-5-21-2314756761-1692085105-450277737
+
+[+] Grupos y miembros relevantes
+Domain Admins .............. c.duque, a.salazar, Administrator
+Enterprise Admins .......... Administrator
+Administrators ............. Core-Infrastructure-Admins, Tier1-Admins, svc_sql,
+                             Domain Admins, Enterprise Admins, Administrator
+Core-Infrastructure-Admins . s.velez, titan_api
+Data-Analytics-Ops ......... titan_api, d.morales
+IT-Helpdesk ................ julian.zapata, d.morales
+Remote Management Users .... d.morales, m.torres, estudiante
+
+[+] Política de dominio
+Minimum password length: 7
+Lockout threshold: Never
+Maximum password age: 42 days
+Password complexity: enabled
+
+[+] GPO del dominio (SYSVOL)
+LockoutBadCount = 0
+MinimumPasswordLength = 7
+PasswordComplexity = 1
+
+[+] Un solo DC y un solo equipo en el dominio.
+[+] La superficie es Active Directory: Kerberos, LDAP, SMB y WinRM.

