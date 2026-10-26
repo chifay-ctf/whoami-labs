@@ -882,7 +882,6 @@ TITANCORP/
 │   └── sysvol-files.txt              Inventario de SYSVOL
 └── shots/
     ├── captures/                     Salidas crudas 01–10 y 12
-    └── make_images.py                Generador de los PNG
 ```
 
 > `shots/captures/11` no existe: la imagen `11-cadena.png` se genera con el diagrama de
