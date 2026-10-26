@@ -1,0 +1,19 @@
+SMB                      172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 (name:WIN-CFIU5AU7L2D) (domain:corp.local)
+HTTP                     172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] http://172.16.202.131:5985/wsman
+[+] corp.local\titan_api:Password123 (Pwn3d!)
+[+] Executed command
+∩╗┐======================================================================
+ CPENTv2 / LPT MASTER - EC-COUNCIL EXAM SIMULATION
+ LAB MASTER: OPERACION TITANCORP COMPLETA (PWN3D!)
+======================================================================
+ FLAG: CPENT{t1t4n_c0rp_mult1h0p_bl00dh0und_m4st3r_2026}
+======================================================================
+ Cadena Ofensiva Validada:
+ 1. Entrypoint WinRM: d.morales (Helpdesk L1)
+ 2. WriteDacl Abuse sobre grupo Data-Analytics-Ops
+ 3. GenericAll Abuse / Kerberoasting sobre titan_api
+ 4. GenericWrite Abuse sobre Core-Infrastructure-Admins
+ 5. Compromiso Total del Domain Controller (Administrators)
+======================================================================
+ Instructor: Hector Camacho (Cyberdark) - Academia Edutek / Whoami-Labs
+

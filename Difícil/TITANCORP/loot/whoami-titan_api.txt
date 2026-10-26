@@ -1,0 +1,71 @@
+SMB                      172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 (name:WIN-CFIU5AU7L2D) (domain:corp.local)
+HTTP                     172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] http://172.16.202.131:5985/wsman
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  [+] corp.local\titan_api:Password123 (Pwn3d!)
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  [+] Executed command
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  
+USER INFORMATION
+----------------
+
+User Name      SID                                          
+============== =============================================
+corp\titan_api S-1-5-21-2314756761-1692085105-450277737-1127
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                 Type             SID                                           Attributes                                                     
+========================================== ================ ============================================= ===============================================================
+Everyone                                   Well-known group S-1-1-0                                       Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Users                              Alias            S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Pre-Windows 2000 Compatible Access Alias            S-1-5-32-554                                  Mandatory group, Enabled by default, Enabled group             
+BUILTIN\Administrators                     Alias            S-1-5-32-544                                  Mandatory group, Enabled by default, Enabled group, Group owner
+NT AUTHORITY\NETWORK                       Well-known group S-1-5-2                                       Mandatory group, Enabled by default, Enabled group             
+NT AUTHORITY\Authenticated Users           Well-known group S-1-5-11                                      Mandatory group, Enabled by default, Enabled group             
+NT AUTHORITY\This Organization             Well-known group S-1-5-15                                      Mandatory group, Enabled by default, Enabled group             
+CORP\Core-Infrastructure-Admins            Group            S-1-5-21-2314756761-1692085105-450277737-1123 Mandatory group, Enabled by default, Enabled group             
+CORP\Data-Analytics-Ops                    Group            S-1-5-21-2314756761-1692085105-450277737-1122 Mandatory group, Enabled by default, Enabled group             
+NT AUTHORITY\NTLM Authentication           Well-known group S-1-5-64-10                                   Mandatory group, Enabled by default, Enabled group             
+Mandatory Label\High Mandatory Level       Label            S-1-16-12288                                                                                                 
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                            Description                                                        State  
+========================================= ================================================================== =======
+SeIncreaseQuotaPrivilege                  Adjust memory quotas for a process                                 Enabled
+SeMachineAccountPrivilege                 Add workstations to domain                                         Enabled
+SeSecurityPrivilege                       Manage auditing and security log                                   Enabled
+SeTakeOwnershipPrivilege                  Take ownership of files or other objects                           Enabled
+SeLoadDriverPrivilege                     Load and unload device drivers                                     Enabled
+SeSystemProfilePrivilege                  Profile system performance                                         Enabled
+SeSystemtimePrivilege                     Change the system time                                             Enabled
+SeProfileSingleProcessPrivilege           Profile single process                                             Enabled
+SeIncreaseBasePriorityPrivilege           Increase scheduling priority                                       Enabled
+SeCreatePagefilePrivilege                 Create a pagefile                                                  Enabled
+SeBackupPrivilege                         Back up files and directories                                      Enabled
+SeRestorePrivilege                        Restore files and directories                                      Enabled
+SeShutdownPrivilege                       Shut down the system                                               Enabled
+SeDebugPrivilege                          Debug programs                                                     Enabled
+SeSystemEnvironmentPrivilege              Modify firmware environment values                                 Enabled
+SeChangeNotifyPrivilege                   Bypass traverse checking                                           Enabled
+SeRemoteShutdownPrivilege                 Force shutdown from a remote system                                Enabled
+SeUndockPrivilege                         Remove computer from docking station                               Enabled
+SeEnableDelegationPrivilege               Enable computer and user accounts to be trusted for delegation     Enabled
+SeManageVolumePrivilege                   Perform volume maintenance tasks                                   Enabled
+SeImpersonatePrivilege                    Impersonate a client after authentication                          Enabled
+SeCreateGlobalPrivilege                   Create global objects                                              Enabled
+SeIncreaseWorkingSetPrivilege             Increase a process working set                                     Enabled
+SeTimeZonePrivilege                       Change the time zone                                               Enabled
+SeCreateSymbolicLinkPrivilege             Create symbolic links                                              Enabled
+SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for another user in the same session Enabled
+
+
+USER CLAIMS INFORMATION
+-----------------------
+
+User claims unknown.
+
+Kerberos support for Dynamic Access Control on this device has been disabled.
+

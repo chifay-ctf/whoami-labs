@@ -1,0 +1,2 @@
+SMB                      172.16.202.131  445    WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 x64 (name:WIN-CFIU5AU7L2D) (domain:corp.local) (signing:True) (SMBv1:False)
+SMB                      172.16.202.131  445    WIN-CFIU5AU7L2D  [+] corp.local\m.torres:Summer2026! 

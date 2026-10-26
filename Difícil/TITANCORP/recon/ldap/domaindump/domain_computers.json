@@ -1,0 +1,146 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "WIN-CFIU5AU7L2D"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "WIN-CFIU5AU7L2D.corp.local"
+        ],
+        "dSCorePropagationData": [
+            "2026-09-26 14:40:14+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=WIN-CFIU5AU7L2D,OU=Domain Controllers,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-26 18:05:41.392918+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-17 13:18:52.147514+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            21
+        ],
+        "msDFSR-ComputerReferenceBL": [
+            "CN=WIN-CFIU5AU7L2D,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=corp,DC=local"
+        ],
+        "msDS-GenerationId": [
+            {
+                "encoded": "rxdYQGZYOKk=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "WIN-CFIU5AU7L2D"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{6d1260c8-94a8-444b-a477-01748caaf5b9}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1000"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard Evaluation"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            516
+        ],
+        "pwdLastSet": [
+            "2026-09-26 14:40:39.672083+00:00"
+        ],
+        "rIDSetReferences": [
+            "CN=RID Set,CN=WIN-CFIU5AU7L2D,OU=Domain Controllers,DC=corp,DC=local"
+        ],
+        "sAMAccountName": [
+            "WIN-CFIU5AU7L2D$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "serverReferenceBL": [
+            "CN=WIN-CFIU5AU7L2D,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=corp,DC=local"
+        ],
+        "servicePrincipalName": [
+            "Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/WIN-CFIU5AU7L2D.corp.local",
+            "ldap/WIN-CFIU5AU7L2D.corp.local/ForestDnsZones.corp.local",
+            "ldap/WIN-CFIU5AU7L2D.corp.local/DomainDnsZones.corp.local",
+            "DNS/WIN-CFIU5AU7L2D.corp.local",
+            "GC/WIN-CFIU5AU7L2D.corp.local/corp.local",
+            "RestrictedKrbHost/WIN-CFIU5AU7L2D.corp.local",
+            "RestrictedKrbHost/WIN-CFIU5AU7L2D",
+            "RPC/639794ba-1483-47e1-b51c-426cc0298b5b._msdcs.corp.local",
+            "HOST/WIN-CFIU5AU7L2D/CORP",
+            "HOST/WIN-CFIU5AU7L2D.corp.local/CORP",
+            "HOST/WIN-CFIU5AU7L2D",
+            "HOST/WIN-CFIU5AU7L2D.corp.local",
+            "HOST/WIN-CFIU5AU7L2D.corp.local/corp.local",
+            "E3514235-4B06-11D1-AB04-00C04FC2DCD2/639794ba-1483-47e1-b51c-426cc0298b5b/corp.local",
+            "ldap/WIN-CFIU5AU7L2D/CORP",
+            "ldap/639794ba-1483-47e1-b51c-426cc0298b5b._msdcs.corp.local",
+            "ldap/WIN-CFIU5AU7L2D.corp.local/CORP",
+            "ldap/WIN-CFIU5AU7L2D",
+            "ldap/WIN-CFIU5AU7L2D.corp.local",
+            "ldap/WIN-CFIU5AU7L2D.corp.local/corp.local"
+        ],
+        "uSNChanged": [
+            20488
+        ],
+        "uSNCreated": [
+            12293
+        ],
+        "userAccountControl": [
+            532480
+        ],
+        "whenChanged": [
+            "2026-10-17 13:18:52+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:40:13+00:00"
+        ]
+    },
+    "dn": "CN=WIN-CFIU5AU7L2D,OU=Domain Controllers,DC=corp,DC=local"
+}]

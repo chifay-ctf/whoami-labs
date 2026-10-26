@@ -1,0 +1,2 @@
+cn	sAMAccountName	dNSHostName	operatingSystem	operatingSystemServicePack	operatingSystemVersion	lastLogon	userAccountControl	whenCreated	objectSid	description
+WIN-CFIU5AU7L2D	WIN-CFIU5AU7L2D$	WIN-CFIU5AU7L2D.corp.local	Windows Server 2019 Standard Evaluation		10.0 (17763)	10/26/26 18:05:41	SERVER_TRUST_ACCOUNT, TRUSTED_FOR_DELEGATION	09/26/26 14:40:13	S-1-5-21-2314756761-1692085105-450277737-1000	

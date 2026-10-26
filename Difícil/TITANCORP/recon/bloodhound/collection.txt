@@ -1,0 +1,7 @@
+# Recolección BloodHound (dirkjanm/BloodHound.py, venv)
+cd /tmp/bh
+/tmp/bhvenv/bin/bloodhound-python -u svc_sql -p 'Password123' -d corp.local \
+  -ns 172.16.202.131 -c All --zip
+
+# Salida: titancorp_20261026121900_bloodhound.zip
+# Extraído en este directorio: users/groups/computers/domains/ous/gpos/containers JSON.

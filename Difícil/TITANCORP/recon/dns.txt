@@ -1,0 +1,62 @@
+### DNS ANY corp.local
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61210
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; ANSWER SECTION:
+corp.local.		600	IN	A	172.16.202.131
+corp.local.		3600	IN	NS	win-cfiu5au7l2d.corp.local.
+corp.local.		3600	IN	SOA	win-cfiu5au7l2d.corp.local. hostmaster.corp.local. 154 900 600 86400 3600
+
+
+### DNS SRV _ldap._tcp.dc._msdcs.corp.local
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20610
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; ANSWER SECTION:
+_ldap._tcp.dc._msdcs.corp.local. 600 IN	SRV	0 100 389 win-cfiu5au7l2d.corp.local.
+
+
+### DNS SRV _kerberos._tcp.corp.local
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51295
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; ANSWER SECTION:
+_kerberos._tcp.corp.local. 600	IN	SRV	0 100 88 win-cfiu5au7l2d.corp.local.
+
+
+### DNS A WIN-CFIU5AU7L2D.corp.local
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61823
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; ANSWER SECTION:
+WIN-CFIU5AU7L2D.corp.local. 3600 IN	A	172.16.202.131
+
+
+### reverse 172.16.202.131
+;; communications error to 172.16.202.131#53: timed out
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 52522
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000

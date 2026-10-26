@@ -1,0 +1,2698 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Julian Zapata"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Tecnico de Soporte Terreno"
+        ],
+        "distinguishedName": [
+            "CN=Julian Zapata,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=IT-Helpdesk,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Julian Zapata"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{4e2bfb36-160d-4122-a715-de297097c744}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1135"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:50.286963+00:00"
+        ],
+        "sAMAccountName": [
+            "julian.zapata"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28957
+        ],
+        "uSNCreated": [
+            28953
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "julian.zapata@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:50+00:00"
+        ]
+    },
+    "dn": "CN=Julian Zapata,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Camila Restrepo"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Asesora Legal Corporativa"
+        ],
+        "distinguishedName": [
+            "CN=Camila Restrepo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Camila Restrepo"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{8c94622c-9da5-4e61-8f6a-14f56a8f04e9}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1134"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:50.224150+00:00"
+        ],
+        "sAMAccountName": [
+            "camila.restrepo"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28951
+        ],
+        "uSNCreated": [
+            28947
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "camila.restrepo@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:50+00:00"
+        ]
+    },
+    "dn": "CN=Camila Restrepo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Andres Giraldo"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Jefe de Compras y Suministros"
+        ],
+        "distinguishedName": [
+            "CN=Andres Giraldo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Andres Giraldo"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{1a6ef2ca-faea-4592-9a85-8d7efe6c6cbb}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1133"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:50.162050+00:00"
+        ],
+        "sAMAccountName": [
+            "andres.giraldo"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28945
+        ],
+        "uSNCreated": [
+            28941
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "andres.giraldo@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:50+00:00"
+        ]
+    },
+    "dn": "CN=Andres Giraldo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Valeria Rios"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Especialista de Marca y Comunicaciones"
+        ],
+        "distinguishedName": [
+            "CN=Valeria Rios,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Valeria Rios"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{992ed27f-073c-41ec-99a6-d47521cd32b6}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1132"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:50.114878+00:00"
+        ],
+        "sAMAccountName": [
+            "valeria.rios"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28939
+        ],
+        "uSNCreated": [
+            28935
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "valeria.rios@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:50+00:00"
+        ]
+    },
+    "dn": "CN=Valeria Rios,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Esteban Parra"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Analista Contable y Tributario"
+        ],
+        "distinguishedName": [
+            "CN=Esteban Parra,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Esteban Parra"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{8da64945-9a8a-4ceb-9cb8-c96fa8b4b59d}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1131"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:50.052340+00:00"
+        ],
+        "sAMAccountName": [
+            "esteban.parra"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28933
+        ],
+        "uSNCreated": [
+            28929
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "esteban.parra@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:50+00:00"
+        ]
+    },
+    "dn": "CN=Esteban Parra,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Sofia Castro"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Coordinadora de Talento Humano"
+        ],
+        "distinguishedName": [
+            "CN=Sofia Castro,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Sofia Castro"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{e9f4ed55-4cca-4e7a-b38a-d9ebf738af24}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1130"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.989933+00:00"
+        ],
+        "sAMAccountName": [
+            "sofia.castro"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28927
+        ],
+        "uSNCreated": [
+            28923
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "sofia.castro@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:52:50+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=Sofia Castro,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Camilo Duque"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-26 18:05:22+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Director de Ciberseguridad e Infraestructura"
+        ],
+        "distinguishedName": [
+            "CN=Camilo Duque,OU=Executive,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Domain Admins,CN=Users,DC=corp,DC=local"
+        ],
+        "name": [
+            "Camilo Duque"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{84d0979b-5122-42e5-ba1f-80a4ab52d9db}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1129"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.896095+00:00"
+        ],
+        "sAMAccountName": [
+            "c.duque"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            32804
+        ],
+        "uSNCreated": [
+            28914
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "c.duque@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:05:22+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=Camilo Duque,OU=Executive,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Sara Velez"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-26 18:05:22+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Ingeniera de Infraestructura y Servidores"
+        ],
+        "distinguishedName": [
+            "CN=Sara Velez,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Sara Velez"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{3a1c2bd0-6884-4152-8fea-4afdb4805611}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1128"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.802666+00:00"
+        ],
+        "sAMAccountName": [
+            "s.velez"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            32805
+        ],
+        "uSNCreated": [
+            28905
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "s.velez@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:05:22+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=Sara Velez,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "TitanCorp BI Service"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-26 18:05:22+00:00",
+            "2026-10-25 03:52:50+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta de Servicio Backend API y Cluster PowerBI"
+        ],
+        "distinguishedName": [
+            "CN=TitanCorp BI Service,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-25 04:27:21.833849+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-25 04:27:21.802439+00:00"
+        ],
+        "logonCount": [
+            2
+        ],
+        "memberOf": [
+            "CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local",
+            "CN=Data-Analytics-Ops,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "TitanCorp BI Service"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{34f8caed-6e29-4e50-abad-c13ed92a246f}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1127"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.724117+00:00"
+        ],
+        "sAMAccountName": [
+            "titan_api"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "MSSQLSvc/bi-cluster.corp.local:1433",
+            "HTTP/api-bi.corp.local:8443"
+        ],
+        "uSNChanged": [
+            32806
+        ],
+        "uSNCreated": [
+            28896
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "titan_api@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:05:22+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=TitanCorp BI Service,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Auditor Externo Seguridad"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta Temporal de Auditoria Externa - Firma PwC 2026"
+        ],
+        "distinguishedName": [
+            "CN=Auditor Externo Seguridad,OU=External_Partners,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-26 18:07:25.642847+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-26 18:07:25.642847+00:00"
+        ],
+        "logonCount": [
+            2
+        ],
+        "memberOf": [
+            "CN=External-Auditors,OU=External_Partners,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Auditor Externo Seguridad"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{f7fdc273-f549-4ede-aeeb-80ec8e44734b}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1126"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.630556+00:00"
+        ],
+        "sAMAccountName": [
+            "auditor_externo"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            34818
+        ],
+        "uSNCreated": [
+            28887
+        ],
+        "userAccountControl": [
+            4260352
+        ],
+        "userPrincipalName": [
+            "auditor_externo@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:07:25+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=Auditor Externo Seguridad,OU=External_Partners,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2026-10-26 18:09:02.331167+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Diego Morales"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Especialista Mesa de Ayuda L1"
+        ],
+        "distinguishedName": [
+            "CN=Diego Morales,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-26 18:17:19.314674+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-25 03:59:46.692854+00:00"
+        ],
+        "logonCount": [
+            2
+        ],
+        "memberOf": [
+            "CN=Data-Analytics-Ops,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local",
+            "CN=IT-Helpdesk,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local",
+            "CN=Remote Management Users,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "Diego Morales"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{12cc2bc2-ed04-4ae7-8978-c602c59cea7c}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1125"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:52:49.536783+00:00"
+        ],
+        "sAMAccountName": [
+            "d.morales"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28974
+        ],
+        "uSNCreated": [
+            28878
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "d.morales@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:59:46+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:52:49+00:00"
+        ]
+    },
+    "dn": "CN=Diego Morales,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Roberto Navarro"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Soporte Tecnico Nivel 1"
+        ],
+        "distinguishedName": [
+            "CN=Roberto Navarro,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=IT-Support-L1,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Roberto Navarro"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{131dffa5-1ef9-4e0b-ad83-89427be08fc3}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1120"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.380861+00:00"
+        ],
+        "sAMAccountName": [
+            "r.navarro"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28849
+        ],
+        "uSNCreated": [
+            28792
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "r.navarro@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Roberto Navarro,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Patricia Castillo"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Abogada Corporativa TitanCorp"
+        ],
+        "distinguishedName": [
+            "CN=Patricia Castillo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Patricia Castillo"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{61ccb7e5-60eb-41f2-96e7-a0c31ebbd4de}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1119"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.318089+00:00"
+        ],
+        "sAMAccountName": [
+            "p.castillo"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28846
+        ],
+        "uSNCreated": [
+            28786
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "p.castillo@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Patricia Castillo,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Jorge Rodriguez"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Analista de Operaciones Logistica"
+        ],
+        "distinguishedName": [
+            "CN=Jorge Rodriguez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Jorge Rodriguez"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{78feafba-5b89-4c04-abc4-fd86df7a5f41}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1118"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.271315+00:00"
+        ],
+        "sAMAccountName": [
+            "j.rodriguez"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28843
+        ],
+        "uSNCreated": [
+            28780
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "j.rodriguez@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Jorge Rodriguez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Karen Mendez"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Coordinadora de Mercadeo y Medios"
+        ],
+        "distinguishedName": [
+            "CN=Karen Mendez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Karen Mendez"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{dbf25758-c1f5-403d-8b86-deeafb678c5b}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1117"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.208620+00:00"
+        ],
+        "sAMAccountName": [
+            "k.mendez"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28840
+        ],
+        "uSNCreated": [
+            28774
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "k.mendez@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Karen Mendez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Felipe Herrera"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Analista Contable y Financiero"
+        ],
+        "distinguishedName": [
+            "CN=Felipe Herrera,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Felipe Herrera"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{07ab3a95-590f-4304-bf1a-e13c4111484a}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1116"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.161808+00:00"
+        ],
+        "sAMAccountName": [
+            "f.herrera"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28837
+        ],
+        "uSNCreated": [
+            28768
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "f.herrera@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Felipe Herrera,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Laura Gomez"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Especialista en Recursos Humanos"
+        ],
+        "distinguishedName": [
+            "CN=Laura Gomez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Laura Gomez"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{f965e790-f7bb-4034-86e1-516670aa689f}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1115"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:53.099125+00:00"
+        ],
+        "sAMAccountName": [
+            "l.gomez"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28834
+        ],
+        "uSNCreated": [
+            28762
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "l.gomez@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:53+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Laura Gomez,OU=Employees,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Alejandra Salazar"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-25 03:42:27+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Chief Information Security Officer (CISO)"
+        ],
+        "distinguishedName": [
+            "CN=Alejandra Salazar,OU=Executive,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Domain Admins,CN=Users,DC=corp,DC=local"
+        ],
+        "name": [
+            "Alejandra Salazar"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{101e37c9-bc6d-49d4-8e6a-55369b9a5382}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1114"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:52.943020+00:00"
+        ],
+        "sAMAccountName": [
+            "a.salazar"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28830
+        ],
+        "uSNCreated": [
+            28753
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "a.salazar@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:52+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Alejandra Salazar,OU=Executive,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Daniel Vargas"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-25 03:42:27+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Administrador de Sistemas Tier 1"
+        ],
+        "distinguishedName": [
+            "CN=Daniel Vargas,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Tier1-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Daniel Vargas"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{ea38ef9a-f82b-4208-9842-1061d6287c7a}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1113"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:52.849289+00:00"
+        ],
+        "sAMAccountName": [
+            "d.vargas"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28826
+        ],
+        "uSNCreated": [
+            28744
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "d.vargas@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-25 03:44:52+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Daniel Vargas,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Oracle Database Service"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-10-25 03:44:53+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta de Servicio Produccion Oracle Database 19c"
+        ],
+        "distinguishedName": [
+            "CN=Oracle Database Service,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-26 18:08:22.642986+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Database-Operators,OU=Database_Admins,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Oracle Database Service"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{7255541d-0402-4c77-bb47-422658577e39}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1112"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:52.771072+00:00"
+        ],
+        "sAMAccountName": [
+            "svc_oracle"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "OracleSvc/db-prod.corp.local",
+            "OracleSvc/db-prod.corp.local:1521"
+        ],
+        "uSNChanged": [
+            34823
+        ],
+        "uSNCreated": [
+            28735
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "svc_oracle@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:08:22+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:25+00:00"
+        ]
+    },
+    "dn": "CN=Oracle Database Service,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Carlos Ramirez"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Operador de Respaldos de TitanCorp - Cuenta Legacy"
+        ],
+        "distinguishedName": [
+            "CN=Carlos Ramirez,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-26 18:07:26.345919+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-26 18:07:26.345919+00:00"
+        ],
+        "logonCount": [
+            2
+        ],
+        "memberOf": [
+            "CN=Legacy-Backups,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "name": [
+            "Carlos Ramirez"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{f70def01-9705-4653-bd47-48c19b17286e}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1111"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:52.693218+00:00"
+        ],
+        "sAMAccountName": [
+            "c.ramirez"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            34820
+        ],
+        "uSNCreated": [
+            28726
+        ],
+        "userAccountControl": [
+            4260352
+        ],
+        "userPrincipalName": [
+            "c.ramirez@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:07:26+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:24+00:00"
+        ]
+    },
+    "dn": "CN=Carlos Ramirez,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2026-10-26 18:09:07.691063+00:00"
+        ],
+        "badPwdCount": [
+            2
+        ],
+        "cn": [
+            "Mateo Torres"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Tecnico de Soporte Helpdesk L1"
+        ],
+        "distinguishedName": [
+            "CN=Mateo Torres,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-26 18:29:17.549278+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=IT-Support-L1,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local",
+            "CN=Remote Management Users,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "Mateo Torres"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{4627a8d2-33a9-4836-a3b1-62516372d655}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1110"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-10-25 03:44:52.599478+00:00"
+        ],
+        "sAMAccountName": [
+            "m.torres"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            34842
+        ],
+        "uSNCreated": [
+            28717
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "m.torres@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:29:17+00:00"
+        ],
+        "whenCreated": [
+            "2026-10-25 03:42:24+00:00"
+        ]
+    },
+    "dn": "CN=Mateo Torres,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "svc_sql"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-09-26 15:08:03+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta de servicio de base de datos corporativa MSSQL"
+        ],
+        "distinguishedName": [
+            "CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-26 18:08:20.440702+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Administrators,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "svc_sql"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{31fdd978-fdc2-45ef-93b0-10842f97fa04}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1105"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-09-26 15:24:48.537788+00:00"
+        ],
+        "sAMAccountName": [
+            "svc_sql"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "HTTP/intranet.corp.local",
+            "MSSQLSvc/db01.corp.local",
+            "MSSQLSvc/db01.corp.local:1433"
+        ],
+        "uSNChanged": [
+            34822
+        ],
+        "uSNCreated": [
+            12778
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "svc_sql@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-26 18:08:20+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:45:45+00:00"
+        ]
+    },
+    "dn": "CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "svc_backup"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta de servicio de respaldos nocturnos - Legacy System"
+        ],
+        "distinguishedName": [
+            "CN=svc_backup,OU=Whoami-Labs,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-26 18:07:25.642847+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-17 13:25:48.741468+00:00"
+        ],
+        "logonCount": [
+            15
+        ],
+        "name": [
+            "svc_backup"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{dc446eff-f588-4845-a8f7-e63383831e27}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1104"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-09-26 15:18:23.193718+00:00"
+        ],
+        "sAMAccountName": [
+            "svc_backup"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            20496
+        ],
+        "uSNCreated": [
+            12771
+        ],
+        "userAccountControl": [
+            4260352
+        ],
+        "userPrincipalName": [
+            "svc_backup@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-17 13:25:48+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:45:45+00:00"
+        ]
+    },
+    "dn": "CN=svc_backup,OU=Whoami-Labs,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2026-10-26 18:08:57.002390+00:00"
+        ],
+        "badPwdCount": [
+            2
+        ],
+        "cn": [
+            "estudiante"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "description": [
+            "Cuenta de usuario de dominio para auditoria inicial CPENT"
+        ],
+        "distinguishedName": [
+            "CN=estudiante,OU=Whoami-Labs,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-24 17:03:26.735003+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-17 17:48:21.545378+00:00"
+        ],
+        "logonCount": [
+            4
+        ],
+        "memberOf": [
+            "CN=Remote Management Users,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "estudiante"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{cc0f2284-356a-4b01-bc1c-85d0a3d69b37}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-1103"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-09-26 14:45:45.156391+00:00"
+        ],
+        "sAMAccountName": [
+            "estudiante"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            20547
+        ],
+        "uSNCreated": [
+            12762
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "estudiante@corp.local"
+        ],
+        "whenChanged": [
+            "2026-10-17 17:48:21+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:45:45+00:00"
+        ]
+    },
+    "dn": "CN=estudiante,OU=Whoami-Labs,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "krbtgt"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-09-26 15:08:03+00:00",
+            "2026-09-26 14:40:14+00:00",
+            "1601-01-01 00:04:16+00:00"
+        ],
+        "description": [
+            "Key Distribution Center Service Account"
+        ],
+        "distinguishedName": [
+            "CN=krbtgt,CN=Users,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Denied RODC Password Replication Group,CN=Users,DC=corp,DC=local"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "krbtgt"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{8d719e44-9300-4926-be9c-3e9a2e170470}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-502"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-09-26 14:40:14.046995+00:00"
+        ],
+        "sAMAccountName": [
+            "krbtgt"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "kadmin/changepw"
+        ],
+        "showInAdvancedViewOnly": [
+            true
+        ],
+        "uSNChanged": [
+            16424
+        ],
+        "uSNCreated": [
+            12324
+        ],
+        "userAccountControl": [
+            514
+        ],
+        "whenChanged": [
+            "2026-09-26 15:08:03+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:40:14+00:00"
+        ]
+    },
+    "dn": "CN=krbtgt,CN=Users,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Guest"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-09-26 14:40:14+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "description": [
+            "Built-in account for guest access to the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Guest,CN=Users,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Guests,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "Guest"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{f7728850-bab9-4556-beda-66694cc8d56d}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-501"
+        ],
+        "primaryGroupID": [
+            514
+        ],
+        "pwdLastSet": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "sAMAccountName": [
+            "Guest"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            8197
+        ],
+        "uSNCreated": [
+            8197
+        ],
+        "userAccountControl": [
+            66082
+        ],
+        "whenChanged": [
+            "2026-09-26 14:39:26+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:39:26+00:00"
+        ]
+    },
+    "dn": "CN=Guest,CN=Users,DC=corp,DC=local"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2026-09-26 14:54:08.959513+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Administrator"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2026-09-26 15:08:03+00:00",
+            "2026-09-26 15:08:03+00:00",
+            "2026-09-26 14:40:14+00:00",
+            "1601-01-01 18:12:16+00:00"
+        ],
+        "description": [
+            "Built-in account for administering the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Administrator,CN=Users,DC=corp,DC=local"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-10-25 04:32:21.411783+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-10-17 18:02:45.263954+00:00"
+        ],
+        "logonCount": [
+            10
+        ],
+        "memberOf": [
+            "CN=Group Policy Creator Owners,CN=Users,DC=corp,DC=local",
+            "CN=Domain Admins,CN=Users,DC=corp,DC=local",
+            "CN=Enterprise Admins,CN=Users,DC=corp,DC=local",
+            "CN=Schema Admins,CN=Users,DC=corp,DC=local",
+            "CN=Administrators,CN=Builtin,DC=corp,DC=local"
+        ],
+        "name": [
+            "Administrator"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=corp,DC=local"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{d33f9f11-1b11-4612-98e5-e348d833ab7a}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2314756761-1692085105-450277737-500"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2026-08-31 04:39:49.837227+00:00"
+        ],
+        "sAMAccountName": [
+            "Administrator"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            20548
+        ],
+        "uSNCreated": [
+            8196
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "whenChanged": [
+            "2026-10-17 18:02:45+00:00"
+        ],
+        "whenCreated": [
+            "2026-09-26 14:39:26+00:00"
+        ]
+    },
+    "dn": "CN=Administrator,CN=Users,DC=corp,DC=local"
+}]

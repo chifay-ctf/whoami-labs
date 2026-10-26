@@ -1,0 +1,73 @@
+=== Domain Admins ===
+DN: CN=Domain Admins,CN=Users,DC=corp,DC=local
+Description: Designated administrators of the domain
+  - CN=Camilo Duque,OU=Executive,OU=TitanCorp,DC=corp,DC=local
+  - CN=Alejandra Salazar,OU=Executive,OU=TitanCorp,DC=corp,DC=local
+  - CN=Administrator,CN=Users,DC=corp,DC=local
+
+=== Enterprise Admins ===
+DN: CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+Description: Designated administrators of the enterprise
+  - CN=Administrator,CN=Users,DC=corp,DC=local
+
+=== Administrators ===
+DN: CN=Administrators,CN=Builtin,DC=corp,DC=local
+Description: Administrators have complete and unrestricted access to the computer/domain
+  - CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=Tier1-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=svc_sql,OU=Whoami-Labs,DC=corp,DC=local
+  - CN=Domain Admins,CN=Users,DC=corp,DC=local
+  - CN=Enterprise Admins,CN=Users,DC=corp,DC=local
+  - CN=Administrator,CN=Users,DC=corp,DC=local
+
+=== Core-Infrastructure-Admins ===
+DN: CN=Core-Infrastructure-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+Description: Administradores de Infraestructura Critica
+  - CN=Sara Velez,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=TitanCorp BI Service,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local
+
+=== Tier1-Admins ===
+DN: CN=Tier1-Admins,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+Description: Administradores de Infraestructura Servidores
+  - CN=Daniel Vargas,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+
+=== Data-Analytics-Ops ===
+DN: CN=Data-Analytics-Ops,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local
+Description: Operadores del Pipeline de Datos y BI
+  - CN=TitanCorp BI Service,OU=Data_Analytics,OU=TitanCorp,DC=corp,DC=local
+  - CN=Diego Morales,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+
+=== IT-Helpdesk ===
+DN: CN=IT-Helpdesk,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+Description: Mesa de Ayuda y Soporte Nivel 1
+  - CN=Julian Zapata,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=Diego Morales,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+
+=== IT-Support-L1 ===
+DN: CN=IT-Support-L1,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+Description: Soporte Tecnico Nivel 1
+  - CN=Roberto Navarro,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=Mateo Torres,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+
+=== Database-Operators ===
+DN: CN=Database-Operators,OU=Database_Admins,OU=TitanCorp,DC=corp,DC=local
+Description: Operadores de Bases de Datos Corporativas
+  - CN=Oracle Database Service,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local
+
+=== Legacy-Backups ===
+DN: CN=Legacy-Backups,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local
+Description: Operadores de Sistemas de Respaldos Historicos
+  - CN=Carlos Ramirez,OU=Service_Accounts,OU=TitanCorp,DC=corp,DC=local
+
+=== Remote Management Users ===
+DN: CN=Remote Management Users,CN=Builtin,DC=corp,DC=local
+Description: Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.
+  - CN=Diego Morales,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=Mateo Torres,OU=IT_Operations,OU=TitanCorp,DC=corp,DC=local
+  - CN=estudiante,OU=Whoami-Labs,DC=corp,DC=local
+
+=== External-Auditors ===
+DN: CN=External-Auditors,OU=External_Partners,OU=TitanCorp,DC=corp,DC=local
+Description: Auditores de Seguridad y Cumplimiento
+  - CN=Auditor Externo Seguridad,OU=External_Partners,OU=TitanCorp,DC=corp,DC=local
+
