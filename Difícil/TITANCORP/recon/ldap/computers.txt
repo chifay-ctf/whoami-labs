@@ -1,1 +1,0 @@
-WIN-CFIU5AU7L2D	WIN-CFIU5AU7L2D.corp.local	Windows Server 2019 Standard Evaluation	CN=WIN-CFIU5AU7L2D,OU=Domain Controllers,DC=corp,DC=local

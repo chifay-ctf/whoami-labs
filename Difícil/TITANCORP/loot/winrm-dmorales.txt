@@ -1,3 +1,0 @@
-SMB                      172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 (name:WIN-CFIU5AU7L2D) (domain:corp.local)
-HTTP                     172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] http://172.16.202.131:5985/wsman
-WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  [+] corp.local\d.morales:c5944a4b6fd2e7bd92b44fced7400ee0 (Pwn3d!)
