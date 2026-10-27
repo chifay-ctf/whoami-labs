@@ -1,0 +1,32 @@
+SMB                      172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] Windows 10 / Server 2019 Build 17763 (name:WIN-CFIU5AU7L2D) (domain:corp.local)
+HTTP                     172.16.202.131  5985   WIN-CFIU5AU7L2D  [*] http://172.16.202.131:5985/wsman
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  [+] corp.local\svc_sql:Password123 (Pwn3d!)
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  [+] Executed command
+WINRM                    172.16.202.131  5985   WIN-CFIU5AU7L2D  User name                    d.morales
+Full Name                    
+Comment                      Especialista Mesa de Ayuda L1
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            10/24/2026 8:52:49 PM
+Password expires             Never
+Password changeable          10/25/2026 8:52:49 PM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   10/26/2026 6:32:31 PM
+
+Logon hours allowed          All
+
+Local Group Memberships      *Remote Management Use
+Global Group memberships     *IT-Helpdesk          *Data-Analytics-Ops   
+                             *Domain Users         
+The command completed successfully.
+
+
