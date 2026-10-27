@@ -1,8 +1,8 @@
 # TITANCORP — Writeup de resolución
 
 **Laboratorio:** TITANCORP  
-**Nivel:** Difícil 
-**Categoría:** Pivoting & Lateral Movement
+**Nivel:** Difícil  
+**Categoría:** Pivoting & Lateral Movement  
 **Autor:** chifay  
 **Fecha de ejecución:** 27/10/2026  
 **Objetivo:** `172.16.202.131` — `WIN-CFIU5AU7L2D.corp.local`  
