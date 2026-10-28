@@ -878,27 +878,25 @@ Los hives y las copias `.txt` contienen material de credenciales; deben eliminar
 ### 12.2. Evidencia local
 
 ```text
-writeup/INFORME.md
-writeup/evidencia/01-recon-nmap-full.png
-writeup/evidencia/02-recon-nmap-services.png
-writeup/evidencia/03-webdav-enum.png
-writeup/evidencia/04-brute-hydra.png
-writeup/evidencia/05-brute-medusa.png
-writeup/evidencia/06-brute-ncrack.png
-writeup/evidencia/07-brute-nmap.png
-writeup/evidencia/08-brute-ffuf.png
-writeup/evidencia/09-brute-wget.png
-writeup/evidencia/10-brute-cadaver.png
-writeup/evidencia/11-creds-validated.png
-writeup/evidencia/12-webshell-upload.png
-writeup/evidencia/13-privileges.png
-writeup/evidencia/14-printspoofer.png
-writeup/evidencia/15-flag.png
-writeup/evidencia/16-sam-dump.png
-writeup/evidencia/17-secretsdump.png
-writeup/evidencia/18-pth-winrm.png
-writeup/evidencia/raw/
-writeup/evidencia/raw/tiempos/
+README.md
+evidencia/01-recon-nmap-full.png
+evidencia/02-recon-nmap-services.png
+evidencia/03-webdav-enum.png
+evidencia/04-brute-hydra.png
+evidencia/05-brute-medusa.png
+evidencia/06-brute-ncrack.png
+evidencia/07-brute-nmap.png
+evidencia/08-brute-ffuf.png
+evidencia/09-brute-wget.png
+evidencia/10-brute-cadaver.png
+evidencia/11-creds-validated.png
+evidencia/12-webshell-upload.png
+evidencia/13-privileges.png
+evidencia/14-printspoofer.png
+evidencia/15-flag.png
+evidencia/16-sam-dump.png
+evidencia/17-secretsdump.png
+evidencia/18-pth-winrm.png
 ```
 
 ---
