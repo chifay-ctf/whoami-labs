@@ -1,0 +1,31 @@
+$ id; hostname; uname -a
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+listener
+Linux listener 7.1.5+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 7.1.5-1kali1 (2026-07-29) x86_64 GNU/Linux
+
+$ sudo -n -l
+sudo: a password is required
+
+$ find / -xdev -perm -4000 -type f
+/bin/su
+/bin/mount
+/bin/umount
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/sudo
+
+$ getcap -r /
+/bin/ping cap_net_raw=ep
+
+$ find / -xdev -type f -writable (excluyendo webroot)
+/tmp/passwd.new
+/tmp/r.sh
+/tmp/passwd.bak
+/tmp/passwd.before
+/etc/passwd
+
+$ ls -la /etc/passwd
+-rw-rw-rw- 1 root root 1204 Oct 29 15:45 /etc/passwd

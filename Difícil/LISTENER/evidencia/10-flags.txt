@@ -1,0 +1,6 @@
+== Flag de usuario ==
+LISTENER{y0u_g0t_www_d4t4_v14_f1l3_upl04d}
+
+== Flag de root (via cuenta UID 0 pwned) ==
+Password: 
+LISTENER{pwn_c4t_m4st3r_3tc_p4sswd_wr1t4bl3}

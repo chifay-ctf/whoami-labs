@@ -1,0 +1,17 @@
+# Nmap 7.991 scan initiated Thu Oct 29 09:42:20 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -p8080 -oN /tmp/opencode/listener/svc_8080.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000044s latency).
+
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    Apache httpd 2.4.66 ((Debian))
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.4.66 (Debian)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Hosting Profesional | NexHost \xE2\x80\x94 Web Hosting
+MAC Address: 12:AE:94:3C:7C:66 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct 29 09:42:27 2026 -- 1 IP address (1 host up) scanned in 6.63 seconds

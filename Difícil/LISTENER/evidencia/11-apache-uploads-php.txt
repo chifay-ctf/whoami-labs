@@ -1,0 +1,7 @@
+$ cat /etc/apache2/conf-enabled/uploads-php.conf
+<Directory /var/www/html/uploads>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+    SetHandler application/x-httpd-php
+</Directory>

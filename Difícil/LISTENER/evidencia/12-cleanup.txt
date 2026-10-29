@@ -1,0 +1,34 @@
+== Estado antes de restaurar ==
+$ wc -l /tmp/passwd.bak /etc/passwd
+  20 /tmp/passwd.bak
+  22 /etc/passwd
+
+== Restauración de /etc/passwd ==
+$ cat /tmp/passwd.bak > /etc/passwd
+restore_rc=0
+$ grep '^root:' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+$ id pwned
+id: 'pwned': no such user
+
+== Eliminación de webshells subidos ==
+$ rm -f /var/www/html/uploads/logos/shell.php.jpg \
+        /var/www/html/uploads/logos/shell.php.jpeg \
+        /var/www/html/uploads/logos/cmd.php.jpg
+$ ls -la /var/www/html/uploads/logos
+total 16
+drwxr-xr-x 1 www-data www-data 4096 Oct 29 15:48 .
+drwxr-xr-x 1 www-data www-data 4096 Feb 22  2026 ..
+-rw-r--r-- 1 www-data www-data   68 Feb 22  2026 default.jpg
+
+== Eliminación de temporales ==
+$ rm -f /tmp/passwd.bak /tmp/passwd.before /tmp/passwd.new /tmp/r.sh
+$ ls -la /tmp
+total 8
+drwxrwxrwt 1 root root 4096 Oct 29 15:48 .
+drwxr-xr-x 1 root root 4096 Oct 29 15:23 ..
+
+== Verificación de la webshell temporal de limpieza ==
+$ curl -s -o /dev/null -w '%{http_code}\n' \
+    http://172.17.0.2:8080/uploads/logos/cleanup.php.jpg
+404
