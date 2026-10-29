@@ -1,7 +1,7 @@
 # LISTENER — Writeup de resolución
 
 **Laboratorio:** LISTENER  
-**Nivel:** Difícil  
+**Nivel:** Hard  
 **Categoría:** Concept & Beginner  
 **Autor:** chifay  
 **Fecha:** 2026-10-29  
@@ -347,7 +347,7 @@ cat /etc/apache2/conf-enabled/uploads-php.conf
 
 ![Configuración de Apache que ejecuta todo /uploads](evidencia/11-apache-uploads-php.png)
 
-*`SetHandler application/x-httpd-php` convierte todo `/uploads` en código ejecutable.*
+*`SetHandler application/x-httpd-php` convierte todo `/uploads` en código ejecutable; la configuración se leyó desde la sesión de `www-data`.*
 
 ### 4.4. Webshell de comandos
 
@@ -429,7 +429,7 @@ pwncat-cs -lp 4444
 
 ![Listener TCP y reverse shell](evidencia/07-listener-revshell.png)
 
-*El objetivo abre una conexión saliente hacia `172.17.0.1:4444`; el `curl` que la dispara se ejecutó desde otra terminal.*
+*El objetivo abre una conexión saliente hacia `172.17.0.1:4444`; el `curl` que la dispara se ejecutó desde otra terminal. El prompt final `www-data@listener:/var/www/html$` representa la variante interactiva (`bash -i`); el callback registrado en `evidencia/07-listener-revshell.txt` fue el no interactivo, que imprime la flag y cierra la conexión.*
 
 ---
 
@@ -512,7 +512,7 @@ ls -la /etc/passwd
 
 ![Enumeración local: /etc/passwd escribible](evidencia/08-post-enum.png)
 
-*`/etc/passwd` es escribible por cualquier usuario local.*
+*`/etc/passwd` es escribible por cualquier usuario local; la sesión ya se ejecuta en el objetivo como `www-data`.*
 
 ### 5.3. Servicios internos
 
@@ -610,7 +610,7 @@ LISTENER{pwn_c4t_m4st3r_3tc_p4sswd_wr1t4bl3}
 
 ![Escalada a root mediante /etc/passwd](evidencia/09-privesc-root.png)
 
-*La cuenta `pwned` tiene UID `0`; `su` devuelve una sesión `root`.*
+*La cuenta `pwned` tiene UID `0`; tras `su`, el prompt cambia a `root@listener`.*
 
 ### 6.4. Flag de root
 
@@ -633,7 +633,7 @@ LISTENER{pwn_c4t_m4st3r_3tc_p4sswd_wr1t4bl3}
 
 ![Flags de usuario y root](evidencia/10-flags.png)
 
-*Ambas flags leídas desde el sistema comprometido.*
+*Ambas flags leídas desde el sistema comprometido; la segunda, ya con prompt de `root@listener`.*
 
 ### 7.1. Validación en la plataforma
 
