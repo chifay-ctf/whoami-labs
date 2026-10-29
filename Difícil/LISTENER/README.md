@@ -1,7 +1,7 @@
 # LISTENER — Writeup de resolución
 
 **Laboratorio:** LISTENER  
-**Nivel:** Hard  
+**Nivel:** Difícil  
 **Categoría:** Concept & Beginner  
 **Autor:** chifay  
 **Fecha:** 2026-10-29  
