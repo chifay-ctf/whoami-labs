@@ -1,0 +1,21 @@
+$ whatweb -a 3 http://172.17.0.2:8080/
+http://172.17.0.2:8080/ [200 OK] Apache[2.4.66], Cookies[PHPSESSID], Country[RESERVED][ZZ], Email[soporte@nexhost.loca], HTML5, HTTPServer[Debian Linux][Apache/2.4.66 (Debian)], IP[172.17.0.2], Title[Hosting Profesional | NexHost — Web Hosting]
+
+$ curl -sS -i http://172.17.0.2:8080/ | head -12
+HTTP/1.1 200 OK
+Date: Thu, 29 Oct 2026 15:48:12 GMT
+Server: Apache/2.4.66 (Debian)
+Set-Cookie: PHPSESSID=ccf3geka5m7ua5iothi4vum5m5; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 6502
+Content-Type: text/html; charset=UTF-8
+
+<!doctype html>
+
+$ feroxbuster ... (hallazgos)
+200      GET      157l      317w     6502c http://172.17.0.2:8080/
+301      GET        9l       29w      357c http://172.17.0.2:8080/uploads => http://172.17.0.2:8080/uploads/
+301      GET        9l       29w      363c http://172.17.0.2:8080/uploads/logos => http://172.17.0.2:8080/uploads/logos/
