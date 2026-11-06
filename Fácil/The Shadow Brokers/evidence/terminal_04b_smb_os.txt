@@ -1,0 +1,32 @@
+
+chfay@kali:~/The Shadow Brokers$ nmap -Pn -p445 --script smb-os-discovery 172.16.202.133
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-06 13:37 -0600
+Nmap scan report for 172.16.202.133
+Host is up (0.00060s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:00:28:1B (VMware)
+
+Host script results:
+| smb-os-discovery:
+|   OS: Windows 7 Professional 7600 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::-:professional
+|   Computer name: WIN-N4B35F4APQ5
+|   NetBIOS computer name: WIN-N4B35F4APQ5\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-11-06T13:37:35-05:00
+
+Nmap done: 1 IP address (1 host up) scanned in 0.68 seconds
+
+chfay@kali:~/The Shadow Brokers$
+
+
+
+
+
+
+
+
+
+
