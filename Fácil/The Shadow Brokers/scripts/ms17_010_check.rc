@@ -1,5 +1,0 @@
-use exploit/windows/smb/ms17_010_eternalblue
-set RHOSTS 172.16.202.133
-set RPORT 445
-check
-exit
