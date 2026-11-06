@@ -1,0 +1,32 @@
+
+chfay@kali:~/The Shadow Brokers$ nmap -Pn -p445 --script smb-vuln-ms17-010 172.16.202.133
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-06 13:35 -0600
+Nmap scan report for 172.16.202.133
+Host is up (0.00085s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:00:28:1B (VMware)
+
+Host script results:
+| smb-vuln-ms17-010:
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+
+Nmap done: 1 IP address (1 host up) scanned in 0.68 seconds
+
+chfay@kali:~/The Shadow Brokers$
+
+
+

