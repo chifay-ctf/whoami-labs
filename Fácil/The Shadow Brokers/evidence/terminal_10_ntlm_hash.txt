@@ -1,0 +1,32 @@
+
+chfay@kali:~/The Shadow Brokers$ python3 -c "import hashlib; print(hashlib.new('md4','XXXXX'.encode('utf-16le')).hexdigest(
+))"
+8264f96dd3dacba5cc8197c43b19e221
+
+chfay@kali:~/The Shadow Brokers$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
