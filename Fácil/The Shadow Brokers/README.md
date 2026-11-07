@@ -13,7 +13,7 @@
 
 ## 1. Resumen ejecutivo
 
-El laboratorio **The Shadow Brokers** reproduce un Windows 7 sin parches expuesto por SMBv1. La validación con Nmap y Metasploit confirmó que el host era vulnerable a **MS17-010 (EternalBlue, CVE-2017-0143)**. La explotación permitió abrir una sesión Meterpreter x64 como **`NT AUTHORITY\SYSTEM`** sin credenciales previas.
+El laboratorio **The Shadow Brokers** reproduce un Windows 7 sin parches expuesto por SMBv1. La validación con Nmap y Metasploit confirmó que el host era vulnerable a **XXXXX (EternalBlue, CVE-2017-0143)**. La explotación permitió abrir una sesión Meterpreter x64 como **`NT AUTHORITY\SYSTEM`** sin credenciales previas.
 
 A partir de esa sesión se obtuvo:
 
