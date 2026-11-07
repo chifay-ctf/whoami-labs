@@ -21,7 +21,7 @@ A partir de esa sesión se obtuvo:
 - Volcado de la base SAM (`hashdump`).
 - Recuperación del hash NTLM de `student` y `Zero`:
   - `8264f96dd3dacba5cc8197c43b19e221`
-  - Contraseña correspondiente: **`MS17-010`** (verificada por cálculo NTLM y autenticación SMB real).
+  - Contraseña correspondiente: **`XXXXX`** (verificada por cálculo NTLM y autenticación SMB real).
 - Acceso al share `Users` con la cuenta `student`.
 - Búsqueda de la flag con privilegios **SYSTEM** en las rutas protegidas del sistema.
 - Recuperación de la flag real desde el stream alternativo NTFS `C:\Users\Administrator\Desktop\flag.txt:secret`:
