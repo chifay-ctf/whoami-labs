@@ -1,0 +1,194 @@
+[*] Interface status for wlan0;cat /app/app.py
+wlan0: error fetching interface information: Device not found
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import os
+import base64
+import urllib.parse
+import subprocess
+import pwd
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from pathlib import Path
+
+FIRMWARE_PATH = Path("/app/firmware/camsec_v1.08.bin")
+
+HTML_PORTAL = """<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whoami-CamSec-IoT v1.08 — IP Camera Console</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050b14; color: #cbd5e1; }
+        .code { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-6">
+    <header class="border-b border-cyan-900/60 pb-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-3.5 h-3.5 rounded-full bg-cyan-400 animate-ping"></div>
+            <h1 class="text-xl font-bold text-white tracking-wider">CamSec-Pro IP Camera <span class="text-xs bg-cyan-950 text-cyan-300 border border-cyan-700/80 px-2 py-0.5 rounded">v1.08 (ARM32)</span></h1>
+        </div>
+        <div class="text-xs text-slate-400 code">
+            STREAM: <span class="text-cyan-400 font-semibold">FEED-01 (1080p H.264)</span> | HTTP: 80
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto my-8 w-full space-y-6">
+        <div class="bg-slate-900 border border-cyan-900/80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="bg-slate-950 p-3 border-b border-slate-800 flex justify-between items-center text-xs code text-slate-400">
+                <span>📹 CANAL 01: PASILLO DATA CENTER</span>
+                <span class="text-red-400 font-bold flex items-center gap-1">● REC (30 FPS)</span>
+            </div>
+            <div class="h-64 bg-slate-950 flex flex-col items-center justify-center text-slate-600 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+                <div class="text-4xl mb-2">🎥</div>
+                <span class="text-xs code text-slate-400">[VIDEO FEED ENCRIPTADO AES-128]</span>
+                <span class="text-xs code text-cyan-500 mt-1">SERIAL: CAMSEC-ARM32-9982-PRO</span>
+            </div>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 shadow-xl">
+            <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-cyan-400">🔒</span> Módulo de Diagnóstico de Hardware y Telemetría
+            </h2>
+            <p class="text-sm text-slate-400 mb-4">
+                El acceso a la interfaz de diagnóstico de hardware y parámetros de señal de radio está restringido exclusivamente a ingenieros de soporte técnico autorizados. Las invocaciones no autenticadas son bloqueadas y registradas en auditoría.
+            </p>
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg text-xs code text-slate-400 flex justify-between items-center">
+                <span>ESTADO DEL SERVICIO: <span class="text-emerald-400 font-bold">ACTIVO</span></span>
+                <span class="text-amber-400 font-semibold">AUTENTICACIÓN REQUERIDA (RFC 2617)</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-xl p-5">
+                <h3 class="text-sm font-semibold text-slate-200 mb-2">📦 Descarga Oficial de Firmware</h3>
+                <p class="text-xs text-slate-400 mb-3">Descarga la imagen oficial para análisis forense offline de arquitectura ARM32.</p>
+                <a href="/firmware/camsec_v1.08.bin" class="inline-block bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-semibold px-4 py-2 rounded-lg border border-slate-700 code">
+                    ⬇️ Descargar camsec_v1.08.bin (ARM32 / SquashFS)
+                </a>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-xl p-5">
+                <h3 class="text-sm font-semibold text-slate-200 mb-2">🎯 Especificaciones de Cámara</h3>
+                <ul class="text-xs space-y-1 text-slate-400 code">
+                    <li>- Arquitectura: <span class="text-slate-300">ARM32 Little-Endian</span></li>
+                    <li>- Sensor: <span class="text-slate-300">1080p CMOS Sony Starvis</span></li>
+                    <li>- Filesystem: <span class="text-slate-300">SquashFS v4.0 (ARM)</span></li>
+                    <li>- Protocolos: <span class="text-slate-300">RTSP / ONVIF Profile S</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800/80 pt-4 text-center text-xs text-slate-500 code">
+        Whoami-Labs © 2026 — Track IoT Firmware Penetration Testing
+    </footer>
+</body>
+</html>
+"""
+
+class CamSecHandler(BaseHTTPRequestHandler):
+    def do_HEAD(self):
+        self.do_GET()
+
+    def do_GET(self):
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
+        
+        if path == "/" or path == "/index.html":
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(HTML_PORTAL.encode("utf-8"))
+            return
+            
+        elif path == "/firmware/camsec_v1.08.bin":
+            if FIRMWARE_PATH.exists():
+                data = FIRMWARE_PATH.read_bytes()
+                self.send_response(200)
+                self.send_header("Content-Type", "application/octet-stream")
+                self.send_header("Content-Disposition", 'attachment; filename="camsec_v1.08.bin"')
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            else:
+                self.send_error(404, "Firmware file not found on server")
+            return
+            
+        elif path == "/cgi-bin/wifi_status.cgi":
+            # HTTP Basic Authentication Check (support_eng : camera)
+            auth_header = self.headers.get("Authorization", "")
+            authenticated = False
+            if auth_header.startswith("Basic "):
+                try:
+                    b64_val = auth_header.split(" ", 1)[1].strip()
+                    creds = base64.b64decode(b64_val).decode("utf-8", errors="ignore")
+                    if creds == "support_eng:camera":
+                        authenticated = True
+                except Exception:
+                    authenticated = False
+
+            if not authenticated:
+                self.send_response(401)
+                self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.send_header("WWW-Authenticate", 'Basic realm="CamSec Pro Operator Console"')
+                self.end_headers()
+                self.wfile.write(b"401 Unauthorized: Valid support_eng credentials required.\n")
+                return
+
+            query = urllib.parse.parse_qs(parsed.query)
+            iface = query.get("interface", [""])[0]
+            
+            if not iface:
+                self.send_response(400)
+                self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(b"ERROR: Parameter interface is required. Usage: /cgi-bin/wifi_status.cgi?interface=wlan0\n")
+                return
+                
+            cmd = f"echo '[*] Interface status for {iface}'; ifconfig {iface} 2>&1 || true"
+            try:
+                support_user = pwd.getpwnam("support_eng")
+                def _demote():
+                    try:
+                        os.setgroups([support_user.pw_gid])
+                    except Exception:
+                        pass
+                    os.setgid(support_user.pw_gid)
+                    os.setuid(support_user.pw_uid)
+
+                proc = subprocess.Popen(
+                    cmd,
+                    shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    executable="/bin/sh",
+                    preexec_fn=_demote
+                )
+                output, _ = proc.communicate(timeout=10)
+            except Exception as e:
+                output = f"Execution error: {str(e)}\n".encode("utf-8")
+                
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain; charset=utf-8")
+            self.send_header("X-Powered-By", "CamSec-Embedded/ARM32-QEMU")
+            self.end_headers()
+            self.wfile.write(output)
+            return
+            
+        else:
+            self.send_error(404, "Not Found")
+
+    def log_message(self, format, *args):
+        pass
+
+def run(port=80):
+    server_address = ("0.0.0.0", port)
+    httpd = HTTPServer(server_address, CamSecHandler)
+    httpd.serve_forever()
+
+if __name__ == "__main__":
+    run(80)

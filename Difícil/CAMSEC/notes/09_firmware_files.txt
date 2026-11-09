@@ -1,0 +1,186 @@
+chifay@kali:~/CAMSEC$ id; pwd; hostname; date; ip -4 addr show docker0 | grep inet
+uid=1000(kali) gid=1000(kali) groups=1000(kali),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(us
+ers),106(netdev),118(wireshark),121(bluetooth),134(scanner),142(kaboxer),993(docker)
+/home/kali/Downloads/Labs/Dificil/CAMSEC
+Kali
+Mon Nov  9 11:26:45 CST 2026
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+chifay@kali:~/CAMSEC$ nmap -sS -p- --min-rate 5000 -T4 172.17.0.2 -oN TEMP/scans/nmap_allports.txt
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-09 11:26 -0600
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000030s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8000/tcp open  http-alt
+8443/tcp open  https-alt
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.64 seconds
+chifay@kali:~/CAMSEC$ nmap -sC -sV -p80,554,8000,8443 -oN TEMP/scans/nmap_services.txt 172.17.0.2
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-09 11:26 -0600
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000026s latency).
+
+PORT     STATE SERVICE   VERSION
+80/tcp   open  http      BaseHTTPServer 0.6 (Python 3.11.18)
+|_http-title: Whoami-CamSec-IoT v1.08 \xE2\x80\x94 IP Camera Console
+|_http-server-header: BaseHTTP/0.6 Python/3.11.18
+554/tcp  open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings:
+|   NULL:
+|     RTSP/1.0 200 OK
+|     CSeq: 1
+|_    Server: CamSec-StreamServer/1.08
+8000/tcp open  http-alt  ONVIF-DeviceService/2.4
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Site doesn't have a title (application/soap+xml).
+|_http-server-header: ONVIF-DeviceService/2.4
+| fingerprint-strings:
+|   NULL:
+|     HTTP/1.1 200 OK
+|     Server: ONVIF-DeviceService/2.4
+|     Content-Type: application/soap+xml
+|_    <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Body><tds:GetDeviceInformationResponse/></s:Body></s:
+Envelope>
+8443/tcp open  https-alt
+|_http-title: Site doesn't have a title (text/plain).
+| fingerprint-strings:
+|   NULL:
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain
+|_    Required
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at
+ https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,3E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x201\r\nServer:\x20CamSec-Stream
+SF:Server/1\.08\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,D7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20ONVIF-DeviceService/2\.4\r
+SF:\nContent-Type:\x20application/soap\+xml\r\n\r\n<s:Envelope\x20xmlns:s=
+SF:\"http://www\.w3\.org/2003/05/soap-envelope\"><s:Body><tds:GetDeviceInf
+SF:ormationResponse/></s:Body></s:Envelope>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,44,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/pla
+SF:in\r\n\r\nSSL\x20Required\r\n");
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 38.10 seconds
+chifay@kali:~/CAMSEC$ curl -sS -i http://172.17.0.2/ -o TEMP/loot/index_resp.txt; head -60 TEMP/loot/index_resp.txtwhatweb -
+a 3 http://172.17.0.2/ 2>/dev/null
+
+chifay@kali:~/CAMSEC$
+chifay@kali:~/CAMSEC$ curl -sS http://172.17.0.2/firmware/camsec_v1.08.bin -o TEMP/loot/camsec_v1.08.bin; ls -lh TEMP/loot/c
+amsec_v1.08.bin; file TEMP/loot/camsec_v1.08.bin; sha256sum TEMP/loot/camsec_v1.08.bin
+-rw-rw-r-- 1 kali kali 4.1K Nov  9 11:27 TEMP/loot/camsec_v1.08.bin
+TEMP/loot/camsec_v1.08.bin: u-boot legacy uImage, Whoami-CamSec-IoT v1.08 (ARM32), NetBSD/ARM, OS Kernel Image (gzip), 4096
+bytes, Mon Nov  9 03:38:21 2026, Load Address: 0X80000000, Entry Point: 0X80000000, Header CRC: 0X7B66D248, Data CRC: 0X19CB
+33
+1119374cb4f6646c4427e6325f6196d902d3770f6a2f166c649cbba016089862  TEMP/loot/camsec_v1.08.bin
+chifay@kali:~/CAMSEC$ binwalk TEMP/loot/camsec_v1.08.bin; echo ---; xxd TEMP/loot/camsec_v1.08.bin | head -20; echo ---; mkd
+ir -p TEMP/firmware_extract && cd TEMP/firmware_extract && binwalk -e ../loot/camsec_v1.08.bin 2>&1 | tail -20; find . -type
+ f -maxdepth 3 -ls
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             uImage header, header size: 64 bytes, header CRC: 0x7B66D248, created: 2026-11-09 03:38:21, im
+age size: 4096 bytes, Data Address: 0x80000000, Entry Point: 0x80000000, data CRC: 0x19CB33, OS: NetBSD, CPU: ARM, image typ
+e: OS Kernel Image, compression type: gzip, image name: "Whoami-CamSec-IoT v1.08 (ARM32)"
+64            0x40            Squashfs filesystem, little endian, version 4.0, compression:xz, size: 3550 bytes, 19 inodes,
+blocksize: 131072 bytes, created: 2026-11-09 03:38:21
+
+---
+00000000: 2705 1956 7b66 d248 6af1 402d 0000 1000  '..V{f.Hj.@-....
+00000010: 8000 0000 8000 0000 0019 cb33 0202 0201  ...........3....
+00000020: 5768 6f61 6d69 2d43 616d 5365 632d 496f  Whoami-CamSec-Io
+00000030: 5420 7631 2e30 3820 2841 524d 3332 2900  T v1.08 (ARM32).
+00000040: 6873 7173 1300 0000 2d40 f16a 0000 0200  hsqs....-@.j....
+00000050: 0100 0000 0400 1100 c000 0100 0400 0000  ................
+00000060: 4002 0000 0000 0000 de0d 0000 0000 0000  @...............
+00000070: d60d 0000 0000 0000 ffff ffff ffff ffff  ................
+00000080: 640b 0000 0000 0000 3a0c 0000 0000 0000  d.......:.......
+00000090: 520d 0000 0000 0000 c80d 0000 0000 0000  R...............
+000000a0: fd37 7a58 5a00 0001 6922 de36 03c0 c915  .7zXZ...i".6....
+000000b0: 8987 0121 010a 0000 9567 0c4c e043 880a  ...!.....g.L.C..
+000000c0: c15d 0011 8842 463d f416 3473 0a0d 8f97  .]...BF=..4s....
+000000d0: de77 46cf bc82 ac88 51f6 5f3f d489 0fb8  .wF.....Q._?....
+000000e0: 885f d23b 189a acd9 5ac3 c657 d557 b4a0  ._.;....Z..W.W..
+000000f0: 6fa2 9900 c431 33c3 38c0 c9a8 2949 8234  o....13.8...)I.4
+00000100: 23bf 6592 ce8e 9f65 b690 6344 27bc 3cb0  #.e....e..cD'.<.
+00000110: 9ad4 3f81 27b1 8021 9401 1534 5b18 9179  ..?.'..!...4[..y
+00000120: c6e9 d2f7 e2ba 381d 8cba 5f1a 9a59 66a6  ......8..._..Yf.
+00000130: 99b9 a7df 22bb f66c 8d13 00d2 cb0a 06cb  ...."..l........
+---
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+64            0x40            Squashfs filesystem, little endian, version 4.0, compression:xz, size: 3550 bytes, 19 inodes,
+blocksize: 131072 bytes, created: 2026-11-09 03:38:21
+
+WARNING: One or more files failed to extract: either no utility was found or it's unimplemented
+
+find: warning: you have specified the global option -maxdepth after the argument -type, but global options are not positiona
+l, i.e., -maxdepth affects tests specified before it as well as those specified after it.  Please specify global options bef
+ore other arguments.
+  3571406      4 -rw-rw-r--   1 kali     kali         3550 Nov  9 11:28 ./_camsec_v1.08.bin.extracted/40.squashfs
+chifay@kali:~/CAMSEC$ unsquashfs -l TEMP/firmware_extract/_camsec_v1.08.bin.extracted/40.squashfs; echo ---; unsquashfs -d T
+EMP/firmware_extract/rootfs TEMP/firmware_extract/_camsec_v1.08.bin.extracted/40.squashfs >/dev/null 2>&1; find TEMP/firmwar
+e_extract/rootfs -type f -o -type l | sort
+Could not open TEMP/firmware_extract/_camsec_v1.08.bin.extracted/40.squashfs, because No such file or directory
+---
+find: ‘TEMP/firmware_extract/rootfs’: No such file or directory
+chifay@kali:~/CAMSEC$ cd /home/kali/Downloads/Labs/Dificil/CAMSEC && pwd && find TEMP/firmware_extract -type f -ls
+/home/kali/Downloads/Labs/Dificil/CAMSEC
+  3571406      4 -rw-rw-r--   1 kali     kali         3550 Nov  9 11:28 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/40
+.squashfs
+  3571425      4 -rwxr-xr-x   1 kali     kali          419 Nov  8 21:38 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/sq
+uashfs-root/www/cgi-bin/wifi_status.cgi
+  3571420     16 -rwxr-xr-x   1 kali     kali        16288 Nov  8 21:38 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/sq
+uashfs-root/usr/bin/cam_diag
+  3571411      4 -rwxr-xr-x   1 kali     kali          335 Nov  8 21:38 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/sq
+uashfs-root/etc/init.d/S99telemetry
+  3571412      4 -rw-r--r--   1 kali     kali           92 Nov  8 21:38 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/sq
+uashfs-root/etc/passwd
+  3571413      4 -rw-------   1 kali     kali          155 Nov  8 21:38 TEMP/firmware_extract/_camsec_v1.08.bin.extracted/sq
+uashfs-root/etc/shadow
+chifay@kali:~/CAMSEC$ R=TEMP/firmware_extract/_camsec_v1.08.bin.extracted/squashfs-root; echo "=== passwd ==="; cat $R/etc/p
+asswd; echo "=== shadow ==="; cat $R/etc/shadow; echo "=== wifi_status.cgi ==="; cat $R/www/cgi-bin/wifi_status.cgi; echo "=
+== S99telemetry ==="; cat $R/etc/init.d/S99telemetry; echo "=== cam_diag file ==="; file $R/usr/bin/cam_diag
+=== passwd ===
+root:x:0:0:root:/root:/bin/sh
+support_eng:x:1000:1000:support_eng:/home/support_eng:/bin/sh
+=== shadow ===
+root:*:19500:0:99999:7:::
+support_eng:$6$W4m1C4m$9J84guN4Uwn7tKW/xAhs62BdkoryANgoXLx4rwo0S0hDMy2ftS7t2NqggdQM3/ml/.blmkss/VyX84A3QlIZl.:19500:0:99999:
+7:::
+=== wifi_status.cgi ===
+#!/bin/sh
+# CamSec IoT WiFi Network Diagnostic Interface
+echo "Content-type: text/plain"
+echo ""
+IFACE=$(echo "$QUERY_STRING" | sed -n 's/^.*interface=\([^&]*\).*$/\1/p' | sed 's/%20/ /g' | sed 's/+/ /g' | sed 's/%3B/;/g'
+ | sed 's/%26/\&/g')
+if [ -z "$IFACE" ]; then
+  echo 'Usage: wifi_status.cgi?interface=wlan0'
+  exit 1
+fi
+eval "echo '[*] Interface status for '$IFACE; iwconfig $IFACE 2>&1 || ifconfig $IFACE 2>&1"
+=== S99telemetry ===
+#!/bin/sh
+# CamSec Internal Cloud Telemetry Daemon v1.08
+# Target C2: http://c2.camsec-cloud.internal:9090/telemetry
+DEVICE_SERIAL='CAMSEC-ARM32-9982-PRO'
+DEVICE_TOKEN='camsec_telemetry_auth_token_9982_arm'
+CLOUD_URL='http://telemetry.camsec.internal/api/ping'
+# curl -s -X POST -H 'X-Token: '$DEVICE_TOKEN $CLOUD_URL > /dev/null 2>&1
+=== cam_diag file ===
+TEMP/firmware_extract/_camsec_v1.08.bin.extracted/squashfs-root/usr/bin/cam_diag: ELF 64-bit LSB pie executable, x86-64, ver
+sion 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=af1ce0e43e9a684f2bc947a180c20c448e
+53722e, for GNU/Linux 3.2.0, not stripped
+chifay@kali:~/CAMSEC$

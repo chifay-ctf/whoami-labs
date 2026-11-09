@@ -1,0 +1,36 @@
+chifay@kali:~/CAMSEC$ lynx -dump http://172.17.0.2/ | head -50
+CamSec-Pro IP Camera v1.08 (ARM32)
+
+   STREAM: FEED-01 (1080p H.264) | HTTP: 80
+
+   📹 CANAL 01: PASILLO DATA CENTER ● REC (30 FPS)
+   🎥
+   [VIDEO FEED ENCRIPTADO AES-128] SERIAL: CAMSEC-ARM32-9982-PRO
+
+🔒 Módulo de Diagnóstico de Hardware y Telemetría
+
+   El acceso a la interfaz de diagnóstico de hardware y parámetros de
+   señal de radio está restringido exclusivamente a ingenieros de soporte
+   técnico autorizados. Las invocaciones no autenticadas son bloqueadas y
+   registradas en auditoría.
+   ESTADO DEL SERVICIO: ACTIVO AUTENTICACIÓN REQUERIDA (RFC 2617)
+
+📦 Descarga Oficial de Firmware
+
+   Descarga la imagen oficial para análisis forense offline de
+   arquitectura ARM32.
+   [1]⬇️ Descargar camsec_v1.08.bin (ARM32 / SquashFS)
+
+🎯 Especificaciones de Cámara
+
+     * - Arquitectura: ARM32 Little-Endian
+     * - Sensor: 1080p CMOS Sony Starvis
+     * - Filesystem: SquashFS v4.0 (ARM)
+     * - Protocolos: RTSP / ONVIF Profile S
+
+   Whoami-Labs © 2026 — Track IoT Firmware Penetration Testing
+
+References
+
+   1. http://172.17.0.2/firmware/camsec_v1.08.bin
+chifay@kali:~/CAMSEC$ 

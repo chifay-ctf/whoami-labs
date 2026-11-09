@@ -1,0 +1,51 @@
+# Nmap 7.991 scan initiated Mon Nov  9 11:26:57 2026 as: /usr/lib/nmap/nmap --privileged -sC -sV -p80,554,8000,8443 -oN TEMP/scans/nmap_services.txt 172.17.0.2
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000026s latency).
+
+PORT     STATE SERVICE   VERSION
+80/tcp   open  http      BaseHTTPServer 0.6 (Python 3.11.18)
+|_http-title: Whoami-CamSec-IoT v1.08 \xE2\x80\x94 IP Camera Console
+|_http-server-header: BaseHTTP/0.6 Python/3.11.18
+554/tcp  open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   NULL: 
+|     RTSP/1.0 200 OK
+|     CSeq: 1
+|_    Server: CamSec-StreamServer/1.08
+8000/tcp open  http-alt  ONVIF-DeviceService/2.4
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Site doesn't have a title (application/soap+xml).
+|_http-server-header: ONVIF-DeviceService/2.4
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.1 200 OK
+|     Server: ONVIF-DeviceService/2.4
+|     Content-Type: application/soap+xml
+|_    <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Body><tds:GetDeviceInformationResponse/></s:Body></s:Envelope>
+8443/tcp open  https-alt
+|_http-title: Site doesn't have a title (text/plain).
+| fingerprint-strings: 
+|   NULL: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain
+|_    Required
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,3E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x201\r\nServer:\x20CamSec-Stream
+SF:Server/1\.08\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,D7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20ONVIF-DeviceService/2\.4\r
+SF:\nContent-Type:\x20application/soap\+xml\r\n\r\n<s:Envelope\x20xmlns:s=
+SF:\"http://www\.w3\.org/2003/05/soap-envelope\"><s:Body><tds:GetDeviceInf
+SF:ormationResponse/></s:Body></s:Envelope>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,44,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/pla
+SF:in\r\n\r\nSSL\x20Required\r\n");
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  9 11:27:35 2026 -- 1 IP address (1 host up) scanned in 38.10 seconds

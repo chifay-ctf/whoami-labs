@@ -1,0 +1,86 @@
+chifay@kali:~/CAMSEC$ id; pwd; hostname; date; ip -4 addr show docker0 | grep inet
+uid=1000(kali) gid=1000(kali) groups=1000(kali),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(us
+ers),106(netdev),118(wireshark),121(bluetooth),134(scanner),142(kaboxer),993(docker)
+/home/kali/Downloads/Labs/Dificil/CAMSEC
+Kali
+Mon Nov  9 11:26:45 CST 2026
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+chifay@kali:~/CAMSEC$ nmap -sS -p- --min-rate 5000 -T4 172.17.0.2 -oN TEMP/scans/nmap_allports.txt
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-09 11:26 -0600
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000030s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8000/tcp open  http-alt
+8443/tcp open  https-alt
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.64 seconds
+chifay@kali:~/CAMSEC$ nmap -sC -sV -p80,554,8000,8443 -oN TEMP/scans/nmap_services.txt 172.17.0.2
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-09 11:26 -0600
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.000026s latency).
+
+PORT     STATE SERVICE   VERSION
+80/tcp   open  http      BaseHTTPServer 0.6 (Python 3.11.18)
+|_http-title: Whoami-CamSec-IoT v1.08 \xE2\x80\x94 IP Camera Console
+|_http-server-header: BaseHTTP/0.6 Python/3.11.18
+554/tcp  open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings:
+|   NULL:
+|     RTSP/1.0 200 OK
+|     CSeq: 1
+|_    Server: CamSec-StreamServer/1.08
+8000/tcp open  http-alt  ONVIF-DeviceService/2.4
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Site doesn't have a title (application/soap+xml).
+|_http-server-header: ONVIF-DeviceService/2.4
+| fingerprint-strings:
+|   NULL:
+|     HTTP/1.1 200 OK
+|     Server: ONVIF-DeviceService/2.4
+|     Content-Type: application/soap+xml
+|_    <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Body><tds:GetDeviceInformationResponse/></s:Body></s:
+Envelope>
+8443/tcp open  https-alt
+|_http-title: Site doesn't have a title (text/plain).
+| fingerprint-strings:
+|   NULL:
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain
+|_    Required
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at
+ https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,3E,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x201\r\nServer:\x20CamSec-Stream
+SF:Server/1\.08\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,D7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20ONVIF-DeviceService/2\.4\r
+SF:\nContent-Type:\x20application/soap\+xml\r\n\r\n<s:Envelope\x20xmlns:s=
+SF:\"http://www\.w3\.org/2003/05/soap-envelope\"><s:Body><tds:GetDeviceInf
+SF:ormationResponse/></s:Body></s:Envelope>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.991%I=7%D=11/9%Time=6AF20262%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,44,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/pla
+SF:in\r\n\r\nSSL\x20Required\r\n");
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 38.10 seconds
+chifay@kali:~/CAMSEC$ curl -sS -i http://172.17.0.2/ -o TEMP/loot/index_resp.txt; head -60 TEMP/loot/index_resp.txtwhatweb -
+a 3 http://172.17.0.2/ 2>/dev/null
+
+chifay@kali:~/CAMSEC$
+chifay@kali:~/CAMSEC$ curl -sS http://172.17.0.2/firmware/camsec_v1.08.bin -o TEMP/loot/camsec_v1.08.bin; ls -lh TEMP/loot/c
+amsec_v1.08.bin; file TEMP/loot/camsec_v1.08.bin; sha256sum TEMP/loot/camsec_v1.08.bin
+-rw-rw-r-- 1 kali kali 4.1K Nov  9 11:27 TEMP/loot/camsec_v1.08.bin
+TEMP/loot/camsec_v1.08.bin: u-boot legacy uImage, Whoami-CamSec-IoT v1.08 (ARM32), NetBSD/ARM, OS Kernel Image (gzip), 4096
+bytes, Mon Nov  9 03:38:21 2026, Load Address: 0X80000000, Entry Point: 0X80000000, Header CRC: 0X7B66D248, Data CRC: 0X19CB
+33
+1119374cb4f6646c4427e6325f6196d902d3770f6a2f166c649cbba016089862  TEMP/loot/camsec_v1.08.bin
+chifay@kali:~/CAMSEC$

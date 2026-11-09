@@ -1,0 +1,30 @@
+chifay@kali:~/CAMSEC$ id; pwd; hostname; date; ip -4 addr show docker0 | grep inet
+uid=1000(kali) gid=1000(kali) groups=1000(kali),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(us
+ers),106(netdev),118(wireshark),121(bluetooth),134(scanner),142(kaboxer),993(docker)
+/home/kali/Downloads/Labs/Dificil/CAMSEC
+Kali
+Mon Nov  9 11:26:45 CST 2026
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+chifay@kali:~/CAMSEC$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

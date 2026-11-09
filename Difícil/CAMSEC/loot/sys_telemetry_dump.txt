@@ -1,0 +1,58 @@
+[*] Interface status for wlan0;/tmp/rootsh -p -c "cat /app/sys_telemetry.py"
+wlan0: error fetching interface information: Device not found
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import socket
+import threading
+import time
+
+def run_rtsp_service():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind(("0.0.0.0", 554))
+    s.listen(5)
+    while True:
+        try:
+            client, _ = s.accept()
+            client.sendall(b"RTSP/1.0 200 OK\r\nCSeq: 1\r\nServer: CamSec-StreamServer/1.08\r\n\r\n")
+            time.sleep(0.5)
+            client.close()
+        except:
+            pass
+
+def run_onvif_service():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind(("0.0.0.0", 8000))
+    s.listen(5)
+    while True:
+        try:
+            client, _ = s.accept()
+            client.sendall(b"HTTP/1.1 200 OK\r\nServer: ONVIF-DeviceService/2.4\r\nContent-Type: application/soap+xml\r\n\r\n<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><s:Body><tds:GetDeviceInformationResponse/></s:Body></s:Envelope>")
+            time.sleep(0.5)
+            client.close()
+        except:
+            pass
+
+def run_ssl_service():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind(("0.0.0.0", 8443))
+    s.listen(5)
+    while True:
+        try:
+            client, _ = s.accept()
+            client.sendall(b"HTTP/1.1 400 Bad Request\r\nContent-Type: text/plain\r\n\r\nSSL Required\r\n")
+            client.close()
+        except:
+            pass
+
+if __name__ == "__main__":
+    t1 = threading.Thread(target=run_rtsp_service, daemon=True)
+    t2 = threading.Thread(target=run_onvif_service, daemon=True)
+    t3 = threading.Thread(target=run_ssl_service, daemon=True)
+    t1.start()
+    t2.start()
+    t3.start()
+    while True:
+        time.sleep(3600)

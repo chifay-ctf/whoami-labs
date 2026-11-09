@@ -1,0 +1,18 @@
+chifay@kali:~/CAMSEC$ file TEMP/firmware_extract/_camsec_v1.08.bin.extracted/squashfs-root/usr/bin/cam_diag; echo '=== strings relevantes ==='; strings -a TEMP/firmware_extract/_camsec_v1.08.bin.extracted/squashfs-root/usr/bin/cam_diag | grep -E 'setuid|setgid|netstat|CamSec|Checking'
+TEMP/firmware_extract/_camsec_v1.08.bin.extracted/squashfs-root/usr/bin/cam_diag: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=af1ce0e43e9a684f2bc947a180c20c448e53722e, for GNU/Linux 3.2.0, not stripped
+=== strings relevantes ===
+setgid
+setuid
+setuid
+setgid
+netstat -i
+[*] CamSec Hardware Diagnostics Utility v1.08
+[*] Checking network interface integrity...
+setgid@GLIBC_2.2.5
+setuid@GLIBC_2.2.5
+chifay@kali:~/CAMSEC$ 
+
+
+
+
+

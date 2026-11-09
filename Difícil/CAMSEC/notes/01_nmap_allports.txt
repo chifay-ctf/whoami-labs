@@ -1,0 +1,30 @@
+chifay@kali:~/CAMSEC$ id; pwd; hostname; date; ip -4 addr show docker0 | grep inet
+uid=1000(kali) gid=1000(kali) groups=1000(kali),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(us
+ers),106(netdev),118(wireshark),121(bluetooth),134(scanner),142(kaboxer),993(docker)
+/home/kali/Downloads/Labs/Dificil/CAMSEC
+Kali
+Mon Nov  9 11:26:45 CST 2026
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+chifay@kali:~/CAMSEC$ nmap -sS -p- --min-rate 5000 -T4 172.17.0.2 -oN TEMP/scans/nmap_allports.txt
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-11-09 11:26 -0600
+Nmap scan report for metasploitable.vm (172.17.0.2)
+Host is up (0.0000030s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+8000/tcp open  http-alt
+8443/tcp open  https-alt
+MAC Address: 42:9C:A6:3C:4F:D7 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.64 seconds
+chifay@kali:~/CAMSEC$
+
+
+
+
+
+
+
+
+
