@@ -570,8 +570,8 @@ Whoami{...}
 
 *`/tmp/rootsh -p -c "id; hostname; cat /root/flag.txt"`: `euid=0(root)` y flag final.*
 
-La flag se validó contra el contenedor con `docker exec whoami-camsec-iot cat /root/flag.txt`,
-obteniendo el mismo valor.
+La flag se validó contra el script startlab.sh
+![Validacion_de_la_flag](captures/flag_validation.png)
 
 ![Cadena de explotación completa reproducible](captures/37_exploit_chain.png)
 
