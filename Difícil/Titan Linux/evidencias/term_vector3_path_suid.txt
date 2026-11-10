@@ -1,0 +1,4 @@
+uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd),1000(ubuntu)
+---FLAG---
+CPENT{l1nux_pr1v3sc_r00t_c0nqu3r_2026}
+[+] Comprobando estado de los servicios del sistema...

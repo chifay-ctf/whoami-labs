@@ -1,0 +1,8 @@
+lo               UNKNOWN        127.0.0.1/8 
+ens33            UP             192.168.60.132/24 metric 100 
+dummy0           UNKNOWN        10.10.50.1/24 
+
+default via 192.168.60.2 dev ens33 proto dhcp src 192.168.60.132 metric 100 
+10.10.50.0/24 dev dummy0 proto kernel scope link src 10.10.50.1 
+192.168.60.0/24 dev ens33 proto kernel scope link src 192.168.60.132 metric 100 
+192.168.60.2 dev ens33 proto dhcp scope link src 192.168.60.132 metric 100 

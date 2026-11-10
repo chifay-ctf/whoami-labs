@@ -1,0 +1,3 @@
+[sudo] password for ubuntu: uid=0(root) gid=0(root) groups=0(root)
+--- FLAG ROOT ---
+CPENT{l1nux_pr1v3sc_r00t_c0nqu3r_2026}
