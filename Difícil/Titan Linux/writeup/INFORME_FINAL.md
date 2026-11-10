@@ -517,7 +517,6 @@ curl -s http://10.10.50.1:8080
 
 Todos los comandos están documentados en las secciones correspondientes. Los scripts de captura y explotación se encuentran en `scripts/`:
 
-- `scripts/captura_evidencia.sh` — captura genérica de terminal + salida en crudo.
 - `scripts/stage0_recon.sh` — reconocimiento y acceso.
 - `scripts/stage1_cap_setuid.sh` — Vector 1.
 - `scripts/stage2_ld_preload.sh` — Vector 2.
