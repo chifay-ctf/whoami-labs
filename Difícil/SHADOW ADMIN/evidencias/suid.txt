@@ -1,0 +1,12 @@
+/bin/su
+/bin/bash
+/bin/mount
+/bin/umount
+/usr/bin/watch
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/find
+/usr/bin/chsh
+/usr/bin/sudo

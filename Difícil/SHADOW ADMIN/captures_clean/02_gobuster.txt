@@ -1,0 +1,45 @@
+chifay@kali:~/SHADOW ADMIN$ gobuster dir -u http://172.17.0.2/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -x php,txt,bak,zip,old -t 30 --no-error
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://172.17.0.2/
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Extensions:              php,txt,bak,zip,old
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+.hta                 (Status: 403) [Size: 275]
+.hta.zip             (Status: 403) [Size: 275]
+.hta.bak             (Status: 403) [Size: 275]
+.hta.old             (Status: 403) [Size: 275]
+.hta.php             (Status: 403) [Size: 275]
+.htaccess.zip        (Status: 403) [Size: 275]
+.htaccess.old        (Status: 403) [Size: 275]
+.htaccess            (Status: 403) [Size: 275]
+.htaccess.txt        (Status: 403) [Size: 275]
+.hta.txt             (Status: 403) [Size: 275]
+.htaccess.php        (Status: 403) [Size: 275]
+.htaccess.bak        (Status: 403) [Size: 275]
+.htpasswd.bak        (Status: 403) [Size: 275]
+.htpasswd            (Status: 403) [Size: 275]
+.htpasswd.php        (Status: 403) [Size: 275]
+.htpasswd.txt        (Status: 403) [Size: 275]
+.htpasswd.old        (Status: 403) [Size: 275]
+.htpasswd.zip        (Status: 403) [Size: 275]
+backups              (Status: 301) [Size: 310] [--> http://172.17.0.2/backups/]
+index.php            (Status: 200) [Size: 0]
+index.html           (Status: 200) [Size: 59]
+index.php            (Status: 200) [Size: 0]
+profile.php          (Status: 200) [Size: 123]
+server-status        (Status: 403) [Size: 275]
+===============================================================
+Finished
+===============================================================
+chifay@kali:~/SHADOW ADMIN$ exit
+exit
