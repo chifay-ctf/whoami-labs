@@ -13,7 +13,7 @@ Writeup de la auditoría del laboratorio **Shadow Pivot** de Whoami-Labs: una ca
 ## Contenido
 
 ```text
-GitHub/
+SHADOW PIVOT/
 ├── README.md
 ├── WRITEUP.md
 ├── scans/
