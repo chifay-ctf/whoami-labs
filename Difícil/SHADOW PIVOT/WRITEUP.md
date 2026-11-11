@@ -397,7 +397,7 @@ curl -s --socks5-hostname 127.0.0.1:1081 http://172.25.3.30:9090/ \
 <p><a href="/view.php?page=status">Inspect Cluster Component Status</a></p>
 ```
 
-El parámetro `page` es una posible vulnerabilidad de LFI inclujo:
+El parámetro `page` es una posible vulnerabilidad de LFI:
 
 ![LFI: /etc/passwd](screenshots/15_vault_lfi_passwd.png)
 
