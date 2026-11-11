@@ -1,0 +1,37 @@
+# Nmap 7.991 scan initiated Wed Nov 11 11:01:23 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sT -sV -sC -p21,22,25,80,110,3306,8088 --version-all -oN scans/nmap_services.txt 172.25.1.10
+Nmap scan report for 172.25.1.10
+Host is up (0.00011s latency).
+
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 3.0.5
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.18 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 49:a5:08:4b:90:6a:9b:b4:79:a5:99:20:64:b3:45:6e (ECDSA)
+|_  256 7c:13:a4:54:2b:69:4d:ec:ab:19:66:65:8e:5b:1c:1d (ED25519)
+25/tcp   open  smtp    Postfix smtpd
+|_smtp-commands: Ok
+80/tcp   open  http    Werkzeug httpd 3.1.9 (Python 3.10.12)
+|_http-title: NetPulse Systems v2.4 | Perimeter Gateway
+|_http-server-header: Werkzeug/3.1.9 Python/3.10.12
+110/tcp  open  pop3    Dovecot pop3d
+|_pop3-capabilities: ERROR: Script execution failed (use -d to debug)
+3306/tcp open  mysql   MySQL 8.0.35
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.35
+|   Thread ID: 13
+|   Capabilities flags: 65535
+|   Some Capabilities: FoundRows, Speaks41ProtocolOld, Support41Auth, SupportsTransactions, IgnoreSpaceBeforeParenthesis, SwitchToSSLAfterHandshake, Speaks41ProtocolNew, LongPassword, LongColumnFlag, InteractiveClient, DontAllowDatabaseTableColumn, IgnoreSigpipes, ODBCClient, SupportsLoadDataLocal, ConnectWithDatabase, SupportsCompression, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: \x1F~+!O98\x12\x1D\x07&L4\3M-6%1
+|_  Auth Plugin Name: mysql_native_password
+8088/tcp open  http    MiniServ 2.000 (Webmin httpd)
+|_http-title: Site doesn't have a title (text/html).
+| http-auth: 
+| HTTP/1.0 401 Unauthorized\x0D
+|_  Basic realm=NetPulse Remote Console
+|_http-server-header: MiniServ/2.000
+Service Info: Host:  edge.netpulse.local; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 11 11:01:31 2026 -- 1 IP address (1 host up) scanned in 7.91 seconds

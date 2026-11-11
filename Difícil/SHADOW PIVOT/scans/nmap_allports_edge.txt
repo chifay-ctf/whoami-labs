@@ -1,0 +1,15 @@
+# Nmap 7.991 scan initiated Wed Nov 11 11:11:59 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sT -p- --min-rate 2000 -oN scans/nmap_allports_edge.txt 172.25.1.10
+Nmap scan report for 172.25.1.10
+Host is up (0.000031s latency).
+Not shown: 65527 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+25/tcp   open  smtp
+80/tcp   open  http
+110/tcp  open  pop3
+3306/tcp open  mysql
+8088/tcp open  radan-http
+9090/tcp open  zeus-admin
+
+# Nmap done at Wed Nov 11 11:12:01 2026 -- 1 IP address (1 host up) scanned in 1.11 seconds
