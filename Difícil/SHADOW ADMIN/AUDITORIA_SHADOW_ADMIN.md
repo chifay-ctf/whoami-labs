@@ -820,7 +820,7 @@ d629832893cb3ef478e481f6c5a032464f15ac993e926d0e041e0df18a72c917  capturas_png/1
 
 - `capturas_png/`: capturas de pantalla PNG, incrustadas en la sección 5.
 - `capturas_png/11_validacion_flag.png`: captura de la validación de la flag en la plataforma.
-- `captures_clean/`: capturas de la salida de los comandos usados.
+- `captures_clean/`: capturas de la salida de los comandos usados (texto).
 - `captures_clean/01_nmap.txt` … `captures_clean/10_watch_bridge.txt`.
 
 ### A.4 IOC útil para detección
