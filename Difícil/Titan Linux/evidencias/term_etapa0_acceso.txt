@@ -1,0 +1,5 @@
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+cpent-victim
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+User ubuntu may run the following commands on cpent-victim:
+    (ALL : ALL) ALL

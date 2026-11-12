@@ -1,0 +1,3 @@
+uid=0(root) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),101(lxd)
+---FLAG---
+CPENT{REDACTADO}

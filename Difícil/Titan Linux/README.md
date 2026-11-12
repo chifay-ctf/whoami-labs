@@ -1,56 +1,79 @@
-# Titan Linux - CPENT Victim | Informe de auditoría
+# Titan Linux — Writeup público (CPENT Victim)
 
-Auditoría de seguridad del laboratorio **Titan Linux** (https://whoami-labs.com/laboratorios/titan-linux),
-víctima Ubuntu 24.04.1 LTS desplegada en `192.168.60.132` y atacada desde Kali `192.168.60.128`.
+Auditoría de seguridad del laboratorio **Titan Linux** de [Whoami-Labs](https://whoami-labs.com/laboratorios/titan-linux): una víctima Ubuntu 24.04.1 LTS con tres vectores independientes de escalada a `root` y una red interna oculta accesible mediante pivoting.
 
-## Entregables principales
+> **Entorno autorizado:** todas las pruebas se realizaron sobre una máquina virtual de laboratorio propia. No utilices estas técnicas contra sistemas de terceros sin autorización escrita.
 
-| Archivo | Descripción |
-|---------|-------------|
-| `writeup/INFORME_FINAL.md` | Informe final completo en Markdown |
-| `notas/flags_loot.txt` | Registro de credenciales, flags y comandos clave |
-| `loot/flag_pivoting_desde_kali.txt` | Flag de pivoting obtenida desde Kali |
-| `loot/flag_root.txt` | Flag de root |
-
-## Estructura
-
-```
-Titan Linux/
-├── capturas/                  # Capturas de pantalla de la terminal Kali
-├── evidencias/                # Salida en crudo (TXT/HTML) de cada comando
-├── loot/                      # Flags y loot extraído
-├── notas/                     # usuarios.txt, passwords_lab.txt, flags_loot.txt
-├── scripts/                   # Scripts de explotación y generación del informe
-│   ├── stage0_recon.sh
-│   ├── stage1_cap_setuid.sh
-│   ├── stage2_ld_preload.sh
-│   ├── stage3_path_suid.sh
-│   ├── stage4_pivoting.sh
-│   ├── stage5_pivot_kali.sh
-│   └── libhijack.c
-└── writeup/                   # Informe final
-```
-
-## Capturas
-
-Todas las capturas fueron tomadas de una terminal con los comandos y su salida en crudo.
+---
 
 ## Resumen del compromiso
 
-- **Acceso inicial:** `XXXXX:YYYYY` (Hydra; `YYYYY` está en la línea 1384 de rockyou).
-- **Hallazgo extra:** `XXXXX` tiene sudo total `(ALL : ALL) ALL`.
-- **Vector 1:** `cap_setuid=ep` en `/usr/bin/python3.12` → root.
-- **Vector 2:** `env_keep += LD_PRELOAD` + `NOPASSWD: /usr/bin/find` en `/etc/sudoers.d/developer_privesc` → root.
-- **Vector 3:** `/usr/local/bin/status_check` SUID root llama `service apache2 status` sin ruta absoluta → PATH hijacking → root.
-- **Vector 4:** interfaz `dummy0` `10.10.50.1/24` + servicio interno `http://10.10.50.1:8080` → flag de pivoting.
-- **Pivoting desde Kali:** `ssh -D 1080 -N -f XXXXX@192.168.60.132` + `curl --socks5-hostname 127.0.0.1:1080 http://10.10.50.1:8080`.
+| Fase | Resultado |
+|------|-----------|
+| Reconocimiento | `22/tcp` — OpenSSH 9.6p1 Ubuntu |
+| Acceso inicial | Credenciales SSH débiles obtenidas con Hydra |
+| Escalada 1 | `cap_setuid=ep` en `/usr/bin/python3.12` → `root` |
+| Escalada 2 | `env_keep += LD_PRELOAD` + `NOPASSWD: /usr/bin/find` → `root` |
+| Escalada 3 | `status_check` SUID + PATH hijacking → `root` |
+| Pivoting | Interfaz `dummy0` (`10.10.50.1/24`) + túnel SOCKS SSH → bóveda interna |
 
-## Flags
+**Flags:** `CPENT{REDACTADO}` (root) y `CPENT{REDACTADO}` (pivoting).
 
-- `CPENT{...}` — root.
-- `CPENT{...}` — pivoting.
+---
+
+## Contenido del repositorio
+
+| Ruta | Descripción |
+|------|-------------|
+| [`writeup/INFORME_FINAL.md`](writeup/INFORME_FINAL.md) | Informe completo en Markdown |
+| [`writeup/INFORME_FINAL.html`](writeup/INFORME_FINAL.html) | Versión HTML autocontenida (imágenes embebidas) |
+| [`writeup/INFORME_FINAL.pdf`](writeup/INFORME_FINAL.pdf) | Informe imprimible en PDF |
+| [`capturas/`](capturas/) | Capturas de terminal usadas en el informe |
+| [`evidencias/`](evidencias/) | Salidas en crudo de los comandos principales |
+| [`scripts/libhijack.c`](scripts/libhijack.c) | PoC de la biblioteca usada en el secuestro `LD_PRELOAD` |
+| [`scripts/md_to_html.py`](scripts/md_to_html.py) | Conversor de Markdown a HTML autocontenido |
+
+---
+
+## Vectores explotados
+
+| # | Técnica | MITRE ATT&CK | Resultado |
+|---|---------|--------------|-----------|
+| 1 | `cap_setuid` en Python 3.12 | T1548 — Abuse Elevation Control | `root` |
+| 2 | `LD_PRELOAD` + `sudo find` | T1574.006 — Dynamic Linker Hijacking | `root` |
+| 3 | PATH hijacking en SUID `status_check` | T1574.007 — Path Interception | `root` |
+| 4 | Descubrimiento de subred oculta y pivoting SOCKS | T1018 / T1090 — Discovery / Proxy | Acceso a red interna |
+
+El detalle de cada fase, la kill chain consolidada, la matriz de riesgo y las recomendaciones de remediación están en el [informe final](writeup/INFORME_FINAL.md).
+
+---
+
+## Redacción de información sensible
+
+Al tratarse de una publicación, se ha aplicado la siguiente redacción:
+
+- **Flags:** se conserva el prefijo `CPENT{` y el cierre `}`, pero el contenido interno está redactado en el informe y difuminado en las capturas.
+- **Credenciales:** las contraseñas están redactadas en el texto y difuminadas en las imágenes.
+- **Archivos no publicados:** notas internas, listas de contraseñas, loot con flags, transcripción de la sesión y capturas de trabajo no referenciadas por el informe.
+
+---
+
+## Reproducir el informe
+
+Desde la raíz del repositorio:
+
+```bash
+python3 scripts/md_to_html.py
+
+URL=$(python3 -c 'from pathlib import Path; print(Path("writeup/INFORME_FINAL.html").resolve().as_uri())')
+chromium --headless=new --no-sandbox --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf=writeup/INFORME_FINAL.pdf "$URL"
+```
+
+Dependencias: `python3`, el paquete `markdown` y Chromium (o un navegador compatible con impresión headless).
+
+---
 
 ## Aviso legal
 
-Laboratorio autorizado y controlado. No ejecutes estas técnicas contra sistemas de terceros
-sin permiso explícito y por escrito.
+Este repositorio tiene fines exclusivamente educativos y documentales. El laboratorio Titan Linux pertenece a Whoami-Labs y fue desplegado en un entorno controlado. El autor no se responsabiliza del uso indebido de las técnicas descritas.
