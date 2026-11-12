@@ -1,3 +1,0 @@
-<head><title>TitanCorp Internal Vault</title></head>
-  <h1 style="color:#ef4444;">🛡️ TitanCorp Core Database & Internal Vault</h1>
-    <p style="font-family:monospace; font-size:18px; color:#fde047;">CPENT{l1g0l0_p1v0t_s3cr3t_v4ult_2026}</p>
