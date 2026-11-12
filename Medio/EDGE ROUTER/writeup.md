@@ -48,7 +48,7 @@ HTTP/80 → firmware/edgerouter.bin → SquashFS → /etc/shadow + id_rsa + CGI
 | Objetivo | `172.17.0.2` (contenedor `whoami-edgerouter`) |
 | Puertos publicados por el lab | Host `8088→80`, `2121→21`, `2323→23`, `8443→8443` |
 | Enfoque | Reconocimiento, enumeración web, análisis de firmware, explotación y post-explotación |
-| Herramientas | `nmap`, `curl`, `wget`, `binwalk`, `unsquashfs`, `john`, `ssh-keygen`, `nc`, `qterminal` (capturas) |
+| Herramientas | `nmap`, `curl`, `wget`, `binwalk`, `unsquashfs`, `john`, `ssh-keygen`, `nc` |
 | Credenciales obtenidas | `admin_support:<PASSWORD_REDACTADA>` |
 | Resultado | `root` + flag |
 
