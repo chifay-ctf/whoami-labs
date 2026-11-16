@@ -53,13 +53,4 @@ Los artefactos originales (`nmap/`, `web/`, `ssh/`, `privesc/`, `loot/`) no se p
 | `screenshots/07_escape.png` | Escape de `rbash` |
 | `screenshots/08_suid_flag.png` | SUID y lectura de la flag |
 
-## Reproducir el PDF
-
-El PDF se regenera desde el HTML incluido con `weasyprint`:
-
-```bash
-cd BOARD
-weasyprint WRITEUP_BOARD.html WRITEUP_BOARD.pdf
-```
-
 > **Aviso:** las credenciales, hashes y rutas documentadas pertenecen exclusivamente al entorno de laboratorio. No deben reutilizarse fuera de un entorno autorizado.
