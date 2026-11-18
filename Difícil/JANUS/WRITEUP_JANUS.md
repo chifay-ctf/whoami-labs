@@ -2,7 +2,7 @@
 
 **Objetivo:** `172.17.0.2`  
 **Fecha:** 18 de noviembre de 2026  
-** Analista:** chifay  
+**Analista:** chifay  
 **Enfoque:** Blackbox externo (sin credenciales ni código fuente previo)  
 **Resultado:** Compromiso total del contenedor, incluyendo `root` y ambas flags  
 **Dificultad del laboratorio:** Hard  
