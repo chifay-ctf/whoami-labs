@@ -1,0 +1,14 @@
+=== ejs version ===
+3.1.9
+
+=== ejs.js lines 518-520 ===
+  options.client = opts.client || false;
+  options.escapeFunction = opts.escape || opts.escapeFunction || utils.escapeXML;
+  options.compileDebug = opts.compileDebug !== false;
+
+=== ejs.js lines 636-640 ===
+    if (opts.client) {
+      src = 'escapeFn = escapeFn || ' + escapeFn.toString() + ';' + '\n' + src;
+      if (opts.compileDebug) {
+        src = 'rethrow = rethrow || ' + rethrow.toString() + ';' + '\n' + src;
+      }

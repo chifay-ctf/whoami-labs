@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Allow: GET,HEAD,POST
+Content-Type: text/html; charset=utf-8
+Content-Length: 13
+ETag: W/"d-bMedpZYGrVt1nR4x+qdNZ2GqyRo"
+Date: Wed, 18 Nov 2026 00:20:13 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+GET,HEAD,POST

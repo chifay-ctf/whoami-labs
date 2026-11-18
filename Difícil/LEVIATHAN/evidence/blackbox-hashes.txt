@@ -1,0 +1,5 @@
+# Hashes de los archivos recuperados por HTTP
+
+fb22477db887587cdb64bc639fb9c323e741f5a25606e528cb7276a2af6a3917  server.js
+b6ef0901a3fa02ce6705e2ee00372893f7c937539363baab4441b65e41453f19  package.json
+b17d46b71d620f61a09fb710b151071b17fe42ed68d02ef4fb2eee84ac100970  views/index.ejs

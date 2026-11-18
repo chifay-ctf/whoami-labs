@@ -1,0 +1,2 @@
+199:        // Discovery script for players
+202:                const response = await fetch('/api/profile');
