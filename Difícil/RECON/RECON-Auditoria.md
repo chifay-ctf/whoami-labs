@@ -13,14 +13,6 @@
 
 ---
 
-<div class="pagebreak"></div>
-
-<div class="toc-title">Tabla de contenido</div>
-
-[TOC]
-
----
-
 ## 1. Resumen ejecutivo
 
 Se realizó una auditoría de seguridad ofensiva sobre el host `172.17.0.2`. El reconocimiento identificó tres servicios TCP expuestos: **SSH (22/tcp)**, **HTTP (80/tcp)** y **RDP (3389/tcp)**. El portal web **ORION Tactical Reconnaissance Command** permitía el acceso con credenciales débiles (`voss:REDACTED`).
